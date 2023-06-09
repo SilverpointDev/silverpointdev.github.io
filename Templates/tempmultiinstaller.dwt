@@ -1,0 +1,150 @@
+<html><!-- InstanceBegin template="/Templates/temp02.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Silverpoint Development</title>
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="head" --><!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable --><!-- InstanceEndEditable -->
+<link href="../styles.css" rel="stylesheet" type="text/css">
+<!-- InstanceParam name="OptionalRegion1" type="boolean" value="true" -->
+</head>
+<body>
+<table width="1024" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="8" rowspan="5" background="../images/shadowleft.png"></td>
+          <td height="85" colspan="2" background="../images/topbg.png">
+          <div align="center">
+          <div align="center" id="logo"><a href="/"><img src="../images/logotemp.png" width="494" height="59" border="0"></a></div>
+          </div>
+          <td width="8" rowspan="5" background="../images/shadowright.png"></td>
+        </tr>
+        <tr>
+          <td height="26" colspan="2" valign="middle" background="../images/barbg.png" class="simple"><p class="simplemenu"><a href="/">Home</a> <img src="../images/div.png" width="2" height="9"> <a href="/sptbxlib/" class="simplemenu">SpTBXLib</a>  <img src="../images/div.png" width="2" height="9"> <a href="/velvex/">VELVEx</a>  <img src="../images/div.png" width="2" height="9"> <a href="/multiinstaller/">MultiInstaller</a>  <img src="../images/div.png" width="2" height="9"> <a href="/skineditor/">Skin Editor</a> </p>          </td>
+        </tr>
+        <tr>
+          <td height="60" colspan="2" align="left" valign="middle" background="../images/gradient.png" class="content"><!-- InstanceBeginEditable name="edtop" -->
+          <h2>Silverpoint MultiInstaller</h2> 
+          <!-- InstanceEndEditable -->         </td>
+        </tr>
+        <tr>
+          <td width="843" rowspan="2" align="left" valign="top" bgcolor="#FFFFFF" class="content"><!-- InstanceBeginEditable name="edtleft" -->
+            <p>content1</p>
+            <p>content2</p>
+            <p>content3</p>
+            <p>&nbsp;</p>
+            <table width="100%" border="0" cellpadding="2" cellspacing="2">
+              <tr align="center">
+                <td colspan="4" class="tableHeaderBlue">Downloads<a name="downloads"></a></td>
+              </tr>
+              <tr align="center" bgcolor="#CCCCCC" class="tableHeaderGray">
+                <td width="28%">Filename</td>
+                <td width="19%">Date</td>
+                <td width="8%">Size</td>
+                <td width="45%">Description</td>
+              </tr>
+              <tr valign="middle" class="tableBackground">
+                <td><p><a href="MultiInstaller.1.0.zip">MultiInstaller.1.0.zip</a></p></td>
+                <td align="right"><p>18 August 2005</p></td>
+                <td align="right"><p>107KB</p></td>
+                <td><p>Silverpoint MultiInstaller</p></td>
+              </tr>
+              <tr valign="middle" class="tableBackground">
+                <td><p><a href="MultiInstallerSource.1.0.zip">MultiInstallerSource.1.0.zip</a></p></td>
+                <td align="right"><p>18 August 2005</p></td>
+                <td align="right"><p>70KB</p></td>
+                <td><p>Silverpoint MultiInstaller source code</p></td>
+              </tr>
+              <tr align="center">
+                <td colspan="4" class="tableHeaderBlue">Template Setup.Ini files <a name="templates" id="templates"></a></td>
+              </tr>
+              <tr align="center" bgcolor="#CCCCCC" class="tableHeaderGray">
+                <td>Filename</td>
+                <td>Date</td>
+                <td>Size</td>
+                <td>Description</td>
+              </tr>
+              <tr valign="middle" class="tableBackground">
+                <td><p><a href="Setup-SpTBXLib.1.2.zip">Setup-SpTBXLib.1.2.zip</a></p></td>
+                <td align="right"><p>28 December 2005</p></td>
+                <td align="right"><p>2KB</p></td>
+                <td><p>Installation Setup.Ini for:<br>
+        SpTBXLib 1.2 + TB2K 2.16 + TBX 2.1 beta 1 + TBXPatch216 + TNT 2.1.17 </p></td>
+              </tr>
+              <tr valign="middle" class="tableBackground">
+                <td><p><a href="Setup-TBXforTB2K.2.16.zip">Setup-TBXforTB2K.2.16.zip</a></p></td>
+                <td align="right"><p>18 August 2005</p></td>
+                <td align="right"><p>2KB</p></td>
+                <td><p>Installation Setup.Ini for:<br>
+        TB2K 2.16 + TBX 2.1 beta 1 + TBXPatch216</p></td>
+              </tr>
+              <tr align="center">
+                <td colspan="4" class="tableHeaderBlue">Release History <a name="history"></a></td>
+              </tr>
+              <tr>
+                <td colspan="4">
+                  <pre>18 August 2005 - version 1.0
+  - Initial release.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </pre>
+                </td>
+              </tr>
+            </table>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>ddd</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+          <!-- InstanceEndEditable --></td>
+          <td width="159" height="405" align="left" valign="top" bgcolor="#FFFFFF"><!-- InstanceBeginEditable name="edtright" -->
+            <table width="145"  border="0" align="center" cellpadding="0" cellspacing="0" class="menu">
+              <tr>
+                <td valign="top" class="menuMiddle">
+                  <p><span class="menuTitle">MultiInstaller</span><a href="../multiinstaller/index.htm">Home</a><a href="#downloads">Downloads</a><a href="#history">Release History</a><span class="menuTitle">Support</span><a href="#license">License</a><a href="#donations">Donations</a><a href="#gettingstarted">Getting Started</a></p>
+                </td>
+              </tr>
+          </table>
+            <!-- TemplateBeginEditable name="edright2" --><!-- TemplateEndEditable -->
+            <!-- InstanceEndEditable -->
+            <p>&nbsp;</p>						
+	  <div align="center">
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="2533519">
+<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG_global.gif" border="0" name="submit" alt="">
+<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+	  </div>			
+            <p>&nbsp;</p>			
+          <p>&nbsp;</p>		  </td>
+        </tr>
+        <tr>
+          <td width="159" align="left" valign="bottom" bgcolor="#FFFFFF">
+            <p>&nbsp;</p>					  
+          <p>&nbsp;</p></td>
+        </tr>
+        <tr>
+          <td background="../images/footerleft.png">&nbsp;</td>
+          <td colspan="2" valign="top" background="../images/footer.png" bgcolor="#FFFFFF"><p align="center" class="footer">&nbsp;</p>          </td>
+          <td background="../images/footerright.png">&nbsp;</td>
+        </tr>
+</table>      
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+<!-- InstanceEnd --></html>
