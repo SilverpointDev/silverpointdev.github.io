@@ -1,0 +1,456 @@
+<html><!-- InstanceBegin template="/Templates/tempmultiinstaller.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Silverpoint Development</title>
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="head" -->
+<style type="text/css">
+<!--
+.code {
+	font-family: "Courier New", Courier, mono;
+	font-size: 10pt;
+	margin: 10px;
+	border: 1px dotted #000000;
+	padding: 5px;
+	background-color: #FFFFCC;
+}
+-->
+</style>
+<!-- InstanceEndEditable -->
+<link href="../styles.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<table width="1024" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="8" rowspan="5" background="../images/shadowleft.png"></td>
+          <td height="85" colspan="2" background="../images/topbg.png">
+          <div align="center">
+          <div align="center" id="logo"><a href="http://www.silverpointdevelopment.com"><img src="../images/logotemp.png" width="494" height="59" border="0"></a></div>
+          </div>
+          <td width="8" rowspan="5" background="../images/shadowright.png"></td>
+        </tr>
+        <tr>
+          <td height="26" colspan="2" valign="middle" background="../images/barbg.png" class="simple"><p class="simplemenu"><a href="http://www.silverpointdevelopment.com">Home</a> <img src="../images/div.png" width="2" height="9"> <a href="http://www.silverpointdevelopment.com/sptbxlib/index.htm" class="simplemenu">SpTBXLib</a>  <img src="../images/div.png" width="2" height="9"> <a href="http://www.silverpointdevelopment.com/velvex/index.htm">VELVEx</a>  <img src="../images/div.png" width="2" height="9"> <a href="http://www.silverpointdevelopment.com/multiinstaller/index.htm">MultiInstaller</a>  <img src="../images/div.png" width="2" height="9"> <a href="http://www.silverpointdevelopment.com/skineditor/index.htm">Skin Editor</a> </p>          </td>
+        </tr>
+        <tr>
+          <td height="60" colspan="2" align="left" valign="middle" background="../images/gradient.png" class="content"><!-- InstanceBeginEditable name="edtop" -->
+          <h2>Silverpoint MultiInstaller</h2> 
+          <!-- InstanceEndEditable -->         </td>
+        </tr>
+        <tr>
+          <td width="843" rowspan="2" align="left" valign="top" bgcolor="#FFFFFF" class="content"><!-- InstanceBeginEditable name="edtleft" -->
+            <p>Silverpoint MultiInstaller is a multi component package installer for <a href="http://www.embarcadero.com">Embarcadero Delphi and C++Builder</a>, it was created to ease the components installation on the IDE.</p>
+            <p>Silverpoint MultiInstaller can help you install multiple  component packs in  a few clicks.<br>
+          Just download the zips or get the .git file (to GIT clone from a local or remote repository like GitHub, Bitbucket, etc) and select the destination folder, all the components will be uninstalled from the IDE if they were previously installed, unziped, patched, compiled and installed on the RAD Studio IDE.</p>
+            <h3>Getting Started<a name="gettingstarted"></a></h3>
+            <p>To install a component pack with  MultiInstaller you have to follow these steps:<br>
+  1) Read the licenses of the component packs you want to install.<br>
+  2) Get the zip files of component packs.<br>
+  3) Get the Silverpoint MultiInstaller.<br>
+  4) Get the Setup.ini file for that component pack installation or create one.</p>
+          <p>For example, if you want to install TB2K +  SpTBXLib:<br>
+  1) Create a new folder for the installation.<br>
+  2) Download all the component zips to the created folder: <a href="../sptbxlib/downloads.htm">SpTBXLib</a> + <a href="http://www.jrsoftware.org/tb2kdl.php">TB2K</a><br>
+  3) Download  <a href="#downloads">Silverpoint MultiInstaller</a><br>
+          4) Download the  <a href="#downloads">Setup.Ini</a> file.</p>
+          <p>The installation folder will end up with this files: </p>
+            <pre class="code">C:\MyInstall
+       |-  SpTBXLib.zip
+       |-  tb2k-2.2.2.zip
+       |-  MultiInstaller.exe
+       |-  Setup.ini</pre>
+            <p>You are ready to install the component packages, just run the MultiInstaller, select the destination folder, and all the components will be unziped, patched, compiled and installed on the Delphi IDE.</p>
+            <p align="center"><img src="ss1.png" width="542" height="452"></p>
+            <h3>Creating a customized Setup.Ini</h3>
+            <p>The Setup.Ini file is a text ini file that has 2 types of sections, package sections and general options section.<br>
+  To create a customized Setup.Ini file modify one of the <a href="#templates">templates</a>.</p>
+            <p> The package order in the Ini file IS relevant.<br>
+               Silverpoint MultiInstaller will execute in the following order:            </p>
+            <ol>
+              <li> Unzip files in order or GIT clone from a local or remote repository (like GitHub, Bitbucket, etc)</li>
+              <li> Run all the execute commands in order</li>
+              <li> Compile and install the packages in order </li>
+            </ol>
+            <table width="100%" border="0" cellpadding="2" cellspacing="2">
+              <tr align="center">
+                <td colspan="2" class="tableHeaderBlue">Package Section Format</td>
+              </tr>
+              <tr align="center" bgcolor="#CCCCCC" class="tableHeaderGray">
+                <td width="28%">Key Name </td>
+                <td> Value </td>
+              </tr>
+              <tr valign="middle" class="tableBackground">
+                <td><p><strong>[Package - &lt;name&gt;]</strong></p></td>
+                <td><p>&nbsp;</p></td>
+              </tr>
+              <tr valign="middle" class="tableBackground">
+                <td><p>Name</p></td>
+                <td><p>Component package description.</p></td>
+              </tr>
+              <tr valign="middle" class="tableBackground">
+                <td><p>Zip</p></td>
+                <td><p>Zip filename.</p></td>
+              </tr>
+              <tr valign="middle" class="tableBackground">
+                <td><p>Git</p>                </td>
+                <td><p>Git repository  to clone.</p>
+                  <p>For example:<br>
+                  https://github.com/SilverpointDev/sptbxlib.git</p>                </td>
+              </tr>
+              <tr valign="middle" class="tableBackground">
+                <td><p>Folder</p></td>
+                <td><p>Destination folder  relative to the install folder.<br>
+        For example if you want to unzip and install the component in C:\Components\SpTBXLib<br>
+        It should be: Folder = SpTBXLib</p>                </td>
+              </tr>
+              <tr valign="middle" class="tableBackground">
+                <td><p>SearchPath</p></td>
+                <td><p>Folder in the zip folder structure to be added to the search path.<br>
+        This is typically the Source folder.<br>
+                If ommited the components root folder is used.<br>
+                For example if the zip file has this structure::</p>
+                  <pre class="code">SpTBXLib.zip
+      |-  Demos
+      |-  Packages
+      |-  Source</pre>                    <p>It should be: SearchPath = Source<br>
+      You can add multiple folders to the SearchPath, the strings must be enclosed by double quotes and separated by comma.<br>
+      Examples: <br>
+                    SearchPath = Source<br>
+              SearchPath = &quot;Source1&quot;, &quot;Source2&quot;<br>
+              SearchPath = &quot;&quot;, &quot;Source1&quot;, &quot;Source2&quot;<br>
+              Here the empty string represents the root folder.
+      </p>      </td>
+              </tr>
+              <tr valign="middle" class="tableBackground">
+                <td><p>Includes</p></td>
+                <td><p>Includes directories.<br>
+        The strings must be enclosed by double quotes and separated by comma.<br>
+        Can be omitted if no include files are used by the package.<br>
+        <strong>$BaseFolder</strong> environment variable can be used to represent the components destination folder.</p>
+                    <p> For example:<br>
+        Includes = &quot;$BaseFolder\TNT\Source&quot;, &quot;c:\include2&quot;</p></td>
+              </tr>
+              <tr valign="middle" class="tableBackground">
+                <td><p>D*</p></td>
+                <td><p>Packages in the zip folder structure, where * represents the IDE version.<br>
+        Can be one of the following:</p>
+                  <pre class="code">D28 Delphi 11 Alexandria
+D27 Delphi 10.4 Sydney
+D26 Delphi 10.3 Rio
+D25 Delphi 10.2 Tokyo
+D24 Delphi 10.1 Berlin
+D23 Delphi 10 Seattle
+D22 Delphi XE8
+D21 Delphi XE7
+D20 Delphi XE6
+D19 Delphi XE5
+D18 Delphi XE4
+D17 Delphi XE3
+D16 Delphi XE2
+D15 Delphi XE
+D14 Delphi 2010
+<em><strong>D13 Doesn't exist!</strong></em>
+D12 Delphi 2009
+D11 Delphi 2007
+D10 Delphi 2006
+D9 Delphi 2005
+<em><strong>D8 Doesn't exist! It was Delphi 8.NET</strong></em>
+D7 Delphi 7 (minimum supported IDE version)</pre>
+                  <p>                    The string value must be enclosed by double quotes and separated by comma.<br>
+                    <strong>The runtime packages must be placed before the designtime packages.</strong><br>
+        For example if the component package zip file has this structure:</p>
+                  <pre class="code">SpTBXLib.zip
+      |- DelphiXE2  
+           |- SpTBXLib.dpk
+           |- SpTBXLibDsgn.dpk
+      |- DelphiXE3
+           |- SpTBXLib.dpk
+           |- SpTBXLibDsgn.dpk</pre>                    
+                    <p>It should be: <br>
+                    D16 = &quot;Packages\DelphiXE2\SpTBXLib.dpk&quot;, &quot;Packages\DelphiXE2\SpTBXLibDsgn.dpk&quot;<br>
+                    D17 = &quot;Packages\DelphiXE3\SpTBXLib.dpk&quot;, &quot;Packages\DelphiXE3\SpTBXLibDsgn.dpk&quot;</p></td>
+              </tr>
+              <tr valign="middle" class="tableBackground">
+                <td><p>Installable</p></td>
+                <td><p>0 if the package is not installable<br>
+                  1 if the package needs to be installed<br>
+                  2 if the package is not installable but needs to add the SearchPath 
+                  to the registry, this is useful when installing utility libraries 
+                  that doesn't have components to install, for example GraphicEx, 
+                  GDI+, DirectX, etc.</p>
+                  <p>If omitted the default value is 1</p>                  </td>
+              </tr>
+              <tr valign="middle" class="tableBackground">
+                <td><p>GroupIndex</p></td>
+                <td><p>Used to group the component packages.<br>
+        Can be omitted, the default value is 0</p>                </td>
+              </tr>
+              <tr valign="middle" class="tableBackground">
+                <td><p>ExecuteCount</p></td>
+                <td><p>Number of entries in the execute list.<br>
+        Can be omitted, the default value is 0</p></td>
+              </tr>
+              <tr valign="middle" class="tableBackground">
+                <td><p>Execute&lt;index&gt;</p></td>
+                <td><p>Execute list, use this if you need to copy or execute some files before installing the packages.<br>
+        This is useful to patch source files.</p>
+                    <p>Use the following format: <br>
+        Execute&lt;index&gt; = &quot;&lt;Action&gt;&quot;, &quot;&lt;Origin&gt;&quot;, &quot;&lt;Destination&gt;&quot;<br>
+        Commas are not optional.<br>
+        Action can be &quot;copy&quot;, &quot;copyandrun&quot;, &quot;delete&quot; or &quot;run&quot;<br>
+        Origin is the file or folder to copy or delete<br>
+        Destination is the destination folder<br>
+        When Action is &quot;copyandrun&quot; the file will be copied and run from the destination folder.<br>
+        <strong>$BaseFolder</strong> environment variable can be used to represent the components destination folder.</p>
+                    <p>Example:<br>
+                      ExecuteCount=3<br>
+                      Execute0=&quot;copy&quot;, &quot;$BaseFolder\TBX\patch.exe&quot;, &quot;$BaseFolder\TB2K\Source\&quot;<br>
+                      Execute1=&quot;copy&quot;, &quot;$BaseFolder\TBX\_tb2k_patch.diff.txt&quot;, &quot;$BaseFolder\TB2K\Source\&quot;<br>
+                      Execute2=&quot;copyandrun&quot;, &quot;$BaseFolder\TBX\patch.bat&quot;, &quot;$BaseFolder\TB2K\Source\&quot;</p></td>
+              </tr>
+              <tr align="center">
+                <td colspan="2" class="tableHeaderBlue">Options Section Format</td>
+              </tr>
+              <tr align="center" bgcolor="#CCCCCC" class="tableHeaderGray">
+                <td>Key Name</td>
+                <td>Value</td>
+              </tr>
+              <tr valign="middle" class="tableBackground">
+                <td><p><strong>[Options]</strong></p></td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr valign="middle" class="tableBackground">
+                <td><p>MinimumIDEVersion</p></td>
+                <td><p>Minimum Delphi IDE version that is supported by the packages.<br>
+                For example: MinimumIDEVersion = D7</p></td>
+              </tr>
+              <tr valign="middle" class="tableBackground">
+                <td><p>DefaultInstallFolder</p></td>
+                <td><p>Default install folder that should be selected to install.<br>
+                For example: DefaultInstallFolder = C:\Components </p></td>
+              </tr>
+              <tr valign="middle" class="tableBackground">
+                <td><p>DefaultInstallIDE</p></td>
+                <td><p>Default Delphi IDE version that should be selected to install.<br>
+                For example: DefaultInstallIDE = D7</p></td>
+              </tr>
+            </table>
+            <h3>Support</h3>
+            <p>Direct e-mail contact:<br>
+              <img src="../mail.png" width="150" height="10"></p>
+            <h3>License<a name="license"></a></h3>
+          <p>The contents of this package are licensed under a disjunctive tri-license giving you the choice of one of the  three following sets of free software/open source licensing terms:</p>
+            <ul>
+              <li><a href="http://www.mozilla.org/MPL/MPL-1.1.html">Mozilla Public License, version 1.1</a></li>
+              <li><a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU General Public License, version 2.0</a></li>
+              <li><a href="http://www.gnu.org/licenses/lgpl-2.1.html">GNU Lesser General Public License, version 2.1</a></li>
+            </ul>
+            <p>Software is distributed on an &quot;AS IS&quot; basis, WITHOUT WARRANTY OF ANY KIND, either express or implied.</p>
+            <p> The initial developer of this package is Robert Lee.</p>
+            <h3>Donations</h3>
+            <p>Silverpoint MultiInstaller is free, however, if you wish to express your appreciation for the time and resources the authors have expended developing and supporting it over the years, we do accept and appreciate donations.</p>
+            <p>Donations are accepted via  PayPal:</p>
+          <blockquote>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="image" src="https://www.paypal.com/en_US/i/btn/x-click-but04.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
+<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+">
+<a href="http://store.kagi.com/?6FDEC_LIVE&lang=en"></a>
+            </form>
+          </blockquote>
+            <p>Thank you for your support.</p>
+            <h3>Downloads<a name="downloads"></a></h3>
+            <table width="100%" border="0" cellpadding="2" cellspacing="2">
+              <tr align="center">
+                <td colspan="4" class="tableHeaderBlue">Downloads</td>
+              </tr>
+              <tr align="center" bgcolor="#CCCCCC" class="tableHeaderGray">
+                <td width="31%">Filename</td>
+                <td width="21%">Date</td>
+                <td width="9%">Size</td>
+                <td width="39%">Description</td>
+              </tr>
+              <tr valign="middle" class="tableBackground">
+                <td><p><a href="MultiInstaller.exe">MultiInstaller</a></p></td>
+                <td align="right"><p>18  January 2022</p></td>
+                <td align="right"><p>711KB</p></td>
+                <td><p>Silverpoint MultiInstaller</p></td>
+              </tr>
+              <tr valign="middle" class="tableBackground">
+                <td><p><a href="MultiInstallerSource.3.5.8.zip">MultiInstallerSource.3.5.8.zip</a></p></td>
+                <td align="right"><p>18  January 2022</p></td>
+                <td align="right"><p>44KB</p></td>
+                <td><p>Silverpoint MultiInstaller source code</p></td>
+              </tr>
+              <tr align="center">
+                <td colspan="4" class="tableHeaderBlue"> Setup.Ini template files <a name="templates" id="templates"></a></td>
+              </tr>
+              <tr align="center" bgcolor="#CCCCCC" class="tableHeaderGray">
+                <td>Filename</td>
+                <td>Date</td>
+                <td>Size</td>
+                <td>Description</td>
+              </tr>
+              <tr valign="middle" class="tableBackground">
+                <td><p><a href="Setup.ini">Setup.ini</a></p></td>
+                <td align="right"><p>18  January 2022</p></td>
+                <td align="right"><p>2KB</p></td>
+                <td><p>Installation Setup:<br>
+                  SpTBXLib  + TB2K 2.2.2 + Patch<br>
+                Including GIT source </p></td>
+              </tr>
+              <tr align="center">
+                <td colspan="4" class="tableHeaderBlue">Release History <a name="history"></a></td>
+              </tr>
+              <tr>
+                <td colspan="4">
+                <pre>18 January 2022 - version 3.5.8
+  - Added RAD Studio Alexandria support.
+  - New checkbox added to prioritize GIT over ZIP, simplifying setup files, 
+    the setup files should include ZIP and GIT info.
+  
+24 December 2020 - version 3.5.7
+  - Added RAD Studio 10.4 Sydney support.
+  
+22 January 2020 - version 3.5.6
+  - Code cleanup
+  
+26 November 2018 - version 3.5.5
+  - Added RAD Studio 10.3 Rio support
+  - Added GIT support, thanks to PyScripter.
+  
+21 September 2018 - version 3.5.4
+  - Added RAD Studio 10.2 Tokyo support.
+  
+21 May 2016 - version 2.5.3
+  - Added support for RAD Studio XE8, RAD Studio 10 Seattle and
+    RAD Studio 10.1 Berlin
+  
+28 October 2014 - version 3.5.2
+  - Added RAD Studio XE7 support.
+    
+28 May 2014 - version 3.5.1
+  - Added RAD Studio XE6 support.
+    
+18 March 2014 - version 3.5
+  - Added RAD Studio XE4 and XE5 support.
+  
+20 April 2013 - version 3.4.8
+  - Added Delphi XE3 and C++ Builder XE3 support.
+    
+7 February 2012 - version 3.4.7
+  - Added Delphi XE2 and C++ Builder XE2 support.
+  				  
+25 June 2011 - version 3.4.6
+  - Added Delphi XE and C++ Builder XE support.
+  
+13 September 2009 - version 3.4.5
+  - Added Delphi 2010 and C++ Builder 2010 support.
+  
+15 March 2009 - version 3.4.4
+  - MultiInstaller is now tri-licensed, you can choose between
+    MPL, GPL and LGPL.
+  
+1 March 2009 - version 3.4.3
+  - Stéphane Wierzbicki improved the SpExecuteDosCommand utility
+    function and added multiple SearchPaths handling, like
+    the Includes parameter, the SearchPath parameter should either
+    contain one source directory or multiple ones. For the later,
+    strings must be enclosed by double quotes and separated by comma.
+  
+17 January 2009 - version 3.4.2
+  - Fixed incorrect French translation of the RAD Studio Project
+    directory, thanks to Stéphane Wierzbicki for reporting it.
+   
+26 September 2008 - version 3.4.1
+  - Added Delphi 2009 and C++ Builder 2009 support.
+   
+4 September 2007 - version 3.4
+  - Added Delphi 2007 and C++ Builder 2007 support.
+    
+24 November 2006 - version 3.3.1
+  - Added extra check to use -JL compiler switch, it will be used
+    only if the C++Builder personality is installed.
+	  
+27 August 2006 - version 3.3
+  - New Logo.
+  - Exe compressed with UPX.
+  - Minor fixes.  
+   	  
+27 June 2006 - version 3.2
+  - Added multilanguage support for Delphi and C++Builder, it
+    now supports English, French, German and Japanese IDEs.
+	   
+15 June 2006 - version 3.1
+  - Added Environment Variables Overrides support, thanks to
+    Wyk for implementing this.
+  - Added -R dcc32.exe compiler switch support to make the
+    components source directory the default *.dcr search
+    folder, thanks to Wyk for reporting this.
+  - Improved the "Intallable" directive, it is now possible to install a
+    package that doesn't have components, this is useful when installing
+    utility libraries, for example GraphicEx, GDI+, DirectX, etc.
+	  
+27 February 2006 - version 3.0
+  - Added support for C++Builder 2006.
+     
+10 February 2006 - version 2.0
+  - Added support for BDS 2006.
+  - Added support for $LIBSUFFIX package compiler directive.
+  - Added DefaultInstallFolder and DefaultInstallIDE Ini key options.  
+  - Replaced the zip library for Abbrevia.
+    
+18 August 2005 - version 1.0
+  - Initial release.
+
+
+
+
+</pre>                </td>
+              </tr>
+            </table>
+            <p>&nbsp;</p>
+            <!-- InstanceEndEditable --></td>
+          <td width="159" height="405" align="left" valign="top" bgcolor="#FFFFFF">
+            <table width="145"  border="0" align="center" cellpadding="0" cellspacing="0" class="menu">
+              <tr>
+                <td valign="top" class="menuMiddle">
+                  <p><span class="menuTitle">MultiInstaller</span><a href="index.htm">Home</a><a href="#downloads">Downloads</a><a href="#history">Release History</a><span class="menuTitle">Support</span><a href="#license">License</a><a href="#donations">Donations</a><a href="#gettingstarted">Getting Started</a></p>
+                </td>
+              </tr>
+          </table>
+            <!-- InstanceBeginEditable name="edright2" --><!-- InstanceEndEditable -->
+            
+            <p>&nbsp;</p>						
+	  <div align="center">
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="2533519">
+<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG_global.gif" border="0" name="submit" alt="">
+<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+	  </div>			
+            <p>&nbsp;</p>			
+          <p>&nbsp;</p>		  </td>
+        </tr>
+        <tr>
+          <td width="159" align="left" valign="bottom" bgcolor="#FFFFFF">
+            <p>&nbsp;</p>					  
+          <p>&nbsp;</p></td>
+        </tr>
+        <tr>
+          <td background="../images/footerleft.png">&nbsp;</td>
+          <td colspan="2" valign="top" background="../images/footer.png" bgcolor="#FFFFFF"><p align="center" class="footer">&nbsp;</p>          </td>
+          <td background="../images/footerright.png">&nbsp;</td>
+        </tr>
+</table>      
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+<!-- InstanceEnd --></html>
