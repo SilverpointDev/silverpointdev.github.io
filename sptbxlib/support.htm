@@ -1,0 +1,299 @@
+<html><!-- InstanceBegin template="/Templates/tempsptbxlib.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Silverpoint Development</title>
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="head" -->
+<style type="text/css">
+<!--
+.style1 {color: #FF0000}
+-->
+</style><!-- InstanceEndEditable -->
+<link href="../styles.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<table width="1024" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="8" rowspan="5" background="../images/shadowleft.png"></td>
+          <td height="85" colspan="2" background="../images/topbg.png">
+          <div align="center">
+          <div align="center" id="logo"><a href="/"><img src="../images/logotemp.png" width="494" height="59" border="0"></a></div>
+          </div>
+          <td width="8" rowspan="5" background="../images/shadowright.png"></td>
+        </tr>
+        <tr>
+          <td height="26" colspan="2" valign="middle" background="../images/barbg.png" class="simple"><p class="simplemenu"><a href="/">Home</a> <img src="../images/div.png" width="2" height="9"> <a href="/sptbxlib/" class="simplemenu">SpTBXLib</a>  <img src="../images/div.png" width="2" height="9"> <a href="/velvex/">VELVEx</a>  <img src="../images/div.png" width="2" height="9"> <a href="/multiinstaller/">MultiInstaller</a>  <img src="../images/div.png" width="2" height="9"> <a href="/skineditor/">Skin Editor</a> </p>          </td>
+        </tr>
+        <tr>
+          <td height="60" colspan="2" align="left" valign="middle" background="../images/gradient.png" class="content"><!-- InstanceBeginEditable name="edtop" -->
+          <h2>Support</h2> 
+          <!-- InstanceEndEditable -->         </td>
+        </tr>
+        <tr>
+          <td width="843" rowspan="2" align="left" valign="top" bgcolor="#FFFFFF" class="content"><!-- InstanceBeginEditable name="edtleft" -->
+            <p>The discussion on SpTBXLib package as well as other Toolbar2000 extensions is hosted by Jordan Russel's news server at: <a href="news://news.jrsoftware.org/jrsoftware.toolbar2000.thirdparty">jrsoftware.toolbar2000.thirdparty</a> (<a href="http://news.jrsoftware.org/read/thread.php?group=jrsoftware.toolbar2000.thirdparty">web based</a>). Please, address general questions to the newsgroup.</p>
+          <p>Direct e-mail contact:<br>
+              <img src="../mail.png" width="150" height="10"></p>
+            <p>For information on Toolbar2000 components, visit <a href="http://www.jrsoftware.org">http://www.jrsoftware.org</a></p>
+            <h3>License<a name="license"></a></h3>
+          <p>Use and/or distribution of the files requires compliance with the SpTBXLib License, found at:<br>
+              <a href="SpTBXLib-LICENSE.htm">SpTBXLib-LICENSE</a></p>
+            <p>Alternatively, at your option, the files may be used and/or distributed under the terms of the Mozilla Public License Version 1.1, found at: <br>
+                <a href="http://www.mozilla.org/MPL"> http://www.mozilla.org/MPL</a></p>
+            <p>Software is distributed on an &quot;AS IS&quot; basis, WITHOUT WARRANTY OF ANY KIND, either express or implied.</p>
+            <p> The initial developer of this package is Robert Lee.</p>
+            <h3>Do I need to register?</h3>
+            <p>Registration is required only if you choose the <a href="SpTBXLib-LICENSE.htm">SpTBXLib License</a> which allows you to not include an acknowledgement in your application's about box or help file, and also allows you to keep the modifications you've made to SpTBXLib without having to make them public.<br>
+  To register <a href="registration.htm">click here</a>.</p>
+            <p>No registration is required if you choose to use SpTBXLib under the <a href="http://www.mozilla.org/MPL">Mozilla Public License Version 1.1</a>.<br>
+  However, if you wish to express your appreciation for the time I spend on developing, documenting and supporting it, I do accept and appreciate donations.<br>
+  To donate  <a href="registration.htm">click here</a>.</p>
+            <p>Thank you for your support.</p>
+            <h3>Installation<a name="installation"></a></h3>
+          <p>Requirements:</p>
+          <ul>
+            <li> RAD Studio XE or newer</li>
+            <li>  Jordan Russell's Toolbar 2000 (<a href="http://www.jrsoftware.org">http://www.jrsoftware.org</a>)</li>
+            <li> TB2K patch (<a href="http://www.silverpointdevelopment.com/sptbxlib/downloads.htm">http://www.silverpointdevelopment.com/sptbxlib/downloads.htm</a>)</li>
+          </ul>
+          <p>To install SpTBXLib manually:</p>
+          <ul>
+            <li> Install TB2K and apply  <a href="downloads.htm">TB2K patch</a> or make the changes manually <a href="http://www.silverpointdevelopment.com/sptbxlib/support.htm#1">http://www.silverpointdevelopment.com/sptbxlib/support.htm#1</a></li>
+            <li> If you have a previous version of SpTBXLib installed in the IDE remove it from Component-&gt;Install Packages, select SpTBXLib from the list and press the Remove button.</li>
+            <li> Add the SpTBXLib 'Source' directory to Tools-&gt;Options-&gt;Environment Options-&gt;Library-&gt;Library Path</li>
+            <li> Open the <strong>SpTBXLibDsgn_*.dpk</strong> design package corresponding to the IDE version, press <strong>Compile</strong> and then press <strong>Install</strong>, close the package window (don't save the changes).</li>
+          </ul>
+          <p>To install SpTBXLib with <a href="../multiinstaller/index.htm">Silverpoint MultiInstaller</a>:</p>
+          <ul>
+            <li> Create a new folder for the installation</li>
+            <li> Download all the component zips  to the created folder: <a href="downloads.htm">SpTBXLib</a> + <a href="http://www.jrsoftware.org">TB2K</a></li>
+            <li> Download  <a href="../multiinstaller/index.htm#downloads">Silverpoint MultiInstaller</a></li>
+            <li> Download a premade Setup.ini for the installation or create one from a template. In this example we are going to use this <a href="../multiinstaller/index.htm#downloads">Setup.Ini</a> file, <strong>unzip</strong> it in the folder. </li>
+          </ul>
+          <p>The installation folder will end up with this files: </p>
+          <pre>C:\MyInstall
+       |-  SpTBXLib.zip
+       |-  tb2k-2.2.2.zip
+
+       |-  MultiInstaller.exe
+       |-  Setup.ini </pre>
+            <p>You are ready to install the component packages, just run  MultiInstaller, select the destination folder, and all the components will be unziped,  compiled and installed on the Delphi IDE.</p>
+            <p>If you already have TB2K installed and only want to update SpTBXLib uncheck it on the MultiInstaller CheckListbox.</p>
+            <h3>Getting Started<a name="gettingstarted"></a></h3>
+            <p>When the TSpTBXLib package is installed a new 'TSpTBXLib' tab is created on the Components Palette that holds all the package components.<br>
+  The Toolbar Designer also suffers some changes, it has an additional toolbar that contains all the TSpTBXLib toolbar items.</p>
+            <p align="center"><img src="images/toolbardesigner.png" width="448" height="256"></p>
+            <p align="left">All the TSpTBXLib components and items are marked with a small green '+' sign. </p>
+            <p align="left">When creating applications with SpTBXLib package, you should try to use SpTBXLib items instead of Toolbar2000  items if you want to use this added features: </p>
+            <ul>
+              <li>Unicode captions</li>
+              <li>Unicode hints</li>
+              <li>Custom item size</li>
+              <li>Anchored items</li>
+              <li>Right aligned items</li>
+              <li>Accel char handling</li>
+              <li>Custom painting events </li>
+            </ul>
+            <p align="left">Like in TBX, using TTBImageList is not recommended, use the standard TImageList instead.</p>
+            <p align="left">For more information see the <a href="reference.htm">Components Reference</a> and <a href="items.htm">Items Reference</a> sections. </p>
+            <h3 align="left">FAQ<a name="faq"></a></h3>
+            <table width="100%" border="0" cellpadding="2" cellspacing="2">
+              <tr>
+                <td width="100%" class="tableBackground"><ol>
+                  <li><a href="#1">How to install TB2K on Delphi 2009 and up</a></li>
+                  <li>                    <a href="#2">How do I assign a unicode text to an item at designtime?</a></li>
+                  <li>                    <a href="#3">How can I use anchored items?</a></li>
+                  <li>                    <a href="#4">How can I right align an item?</a></li>
+                  <li> <a href="#5">How can I anchor a control inside a toolbar?</a></li>
+                  <li><a href="#6">How can I custom paint a control or toolbar item?</a></li>
+                  <li><a href="#7">How can I rightalign the MDI buttons?</a></li>
+                  <li><a href="#8">How do I get rid of the button's focus rectangle?</a></li>
+                  <li><a href="#9">How to focus an edit/combobox/spin edit item?</a></li>
+                  <li> <a href="#10">How to add scrollers to the TSpTBXTabControl/TSpTBXTabSet</a></li>
+                  <li><a href="#11">How to use Padding and Margins</a></li>
+                  <li><a href="#12">How to trap mouse events on  the item area of compound components?</a></li>
+                </ol></td>
+              </tr>
+              <tr>
+                <td class="tableHeaderBlue">1. How to install TB2K on Delphi 2009 and up<a name="1"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p>You have 2 options to install TB2K:</p>
+                  <ol>
+                    <li> Use <a href="../multiinstaller/index.htm">MultiInstaller</a> to install TB2K and <a href="downloads.htm">TB2K patch</a> </li>
+                    <li> Install TB2K and apply <a href="downloads.htm">TB2K patch</a> manually.</li>
+                  </ol>                </td>
+              </tr>
+              <tr>
+                <td class="tableHeaderBlue">2. How do I assign a unicode text to an item at designtime?<a name="2"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p>At designtime just set the Caption property in the Object Inspector.</p>                </td>
+              </tr>
+              <tr>
+                <td class="tableHeaderBlue">3. How can I use anchored items?<a name="3"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p>The item should be placed on a TSpTBXToolbar with <strong>Stretched</strong> setted to True, and ShrinkMode setted to <strong>tbsmNone</strong>.<br>
+      Just set the item's Anchored property to true, you can use the CustomWidth and CustomHeight properties to set the initial size value. </p></td>
+              </tr>
+              <tr>
+                <td class="tableHeaderBlue">4. How can I right align an item?<a name="4"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p>The item should be placed on a TSpTBXToolbar with Stretched setted to True, and ShrinkMode setted to tbsmNone.<br>
+      Just add a TSpTBXRightAlignSpacerItem above the item. </p>
+                    <p align="center"><img src="images/rightaligneditem.png" width="449" height="292"></p></td>
+              </tr>
+              <tr>
+                <td class="tableHeaderBlue">5. How can I anchor a control inside a toolbar?<a name="5"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p>The control should be placed on a TSpTBXToolbar with Stretched setted to True, and ShrinkMode setted to tbsmNone.<br>
+      Drop a control on the toolbar and set the control's Align property to alClient or set the Anchors property to include akRight.</p></td>
+              </tr>
+              <tr valign="top">
+                <td class="tableHeaderBlue">6. How can I custom paint a control or toolbar item?<a name="custompainting"></a><a name="6"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p>You can custom paint toolbar items and controls using this events:</p>
+                  <ul>
+                    <li>OnDrawItem/OnDrawBackground: to custom paint the item background </li>
+                    <li>OnDrawCaption: to custom paint the item caption </li>
+                    <li>OnDrawImage: to custom paint the item image icon</li>
+                    <li>OnDrawHint: to custom paint the item hint</li>
+                  </ul>                  
+                <p>All these events have 2 important parameters: PaintStage and PaintDefault.<br>
+                  PaintStage indicates the current stage in the drawing process.<br>
+                  DefaultDraw indicates whether the control should continue with the default painting after the event handler exits. Set DefaultDraw to false to prevent the drawing of the control after the event handler exits. If DefaultDraw remains set to true, the control continues with the default painting process.</p>
+                <p>Example:</p>
+                <pre>procedure TForm1.SpTBXItem1DrawItem(Sender: TObject; ACanvas: TCanvas;
+  ARect: TRect; ItemInfo: TSpTBXMenuItemInfo;
+  const PaintStage: TSpTBXPaintStage; var PaintDefault: Boolean);
+
+begin
+  if PaintStage = pstPrePaint then begin
+    // Override the default painting, we are going to take care
+    // of all the painting here
+    PaintDefault := False;
+    // Paint the item in red
+    ACanvas.Brush.Color := clRed;
+    ACanvas.Rectangle(ARect);
+  end;
+end;&nbsp;</pre>
+                <p>&nbsp;                </p></td>
+              </tr>
+              <tr valign="top">
+                <td class="tableHeaderBlue">7. How can I rightalign the MDI buttons?<a name="7"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p>You have to set the toolbar's FullSize to true and ShrinkMode to tbsmWrap.</p>                </td>
+              </tr>
+              <tr valign="top">
+                <td class="tableHeaderBlue">8. How do I get rid of the button's focus rectangle?<a name="8"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p>                  To disable the focus rectangle painting on button controls (TSpTBXButton, TSpTBXCheckBox, TSpTBXRadioButton) use the OnDrawCaption event, the focus rectangle is painted after the caption painting is done: </p>
+                  <pre>procedure TForm1.SpTBXButton1DrawCaption(Sender: TObject; 
+  ACanvas: TCanvas; ClientAreaRect: TRect; var ACaption: WideString; 
+  var CaptionRect: TRect; IsTextRotated: Boolean; 
+  const PaintStage: TSpTBXPaintStage; var PaintDefault: Boolean);
+begin
+  if PaintStage = pstPostPaint then
+    PaintDefault := False;
+end;</pre>
+                  <p>&nbsp;</p></td>
+              </tr>
+              <tr valign="top">
+                <td class="tableHeaderBlue">9. How to focus an edit/combobox/spinedit item?<a name="9"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p>Use the SpFocusEditItem utility function located in the SpTBXEditors.pas unit. The first parameter is the editor item, the second parameter is the View where the item is located, normally a toolbar view:</p>
+                  <pre>procedure TForm1.Button1Click(Sender: TObject);
+begin
+  SpFocusEditItem(SpTBXComboBoxItem1, SpTBXToolbar1.View);
+
+end;</pre>
+                  <p>&nbsp;</p></td>
+              </tr>
+              <tr valign="top">
+                <td class="tableHeaderBlue">10. How to add scrollers to the TSpTBXTabControl/TSpTBXTabSet <a name="10"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p>This is not done automatically by the control, you have to create the   buttons yourself, take a look at the Overview demo.<br>
+                I choose to leave it to the component user because there are many ways   to handle this: scrollers, buttons, popups, chevron, different   positions, etc. <br>
+                  You can also use the TabAutofit property to resize the tabs without the need to use scrollers, like Firefox.</p>                  </td>
+              </tr>
+              <tr valign="top">
+                <td class="tableHeaderBlue">11. How to use Padding and Margins<a name="11"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p>In Delphi, margins are used to specify the space around the control, and padding the  offseting inside the control.<br>
+                  Padding, Margins and AlignWithMargins properties were introduced in BDS 4</p>                </td>
+              </tr>
+              <tr valign="top">
+                <td class="tableHeaderBlue">12. How to trap mouse events on  the item area of compound components? <a name="12" id="12"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p>The compound components  such as the TSpTBXDockablePanel or the TSpTBXTabControl/TSpTBXTabSet have a Toolbar public property, access this property and use the mouse events of the internal toolbar:</p>
+                  <pre>procedure TForm1.FormShow(Sender: TObject);
+begin
+  SpTBXDockablePanel1.Toolbar.OnMouseDown := MyMouseDownEvent;
+end;
+  
+procedure TForm1.MyMouseDownEvent(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y: Integer);
+var
+  IV: TTBItemViewer;
+begin
+  IV := SpTBXDockablePanel1.View.ViewerFromPoint(Point(X, Y));
+  if Assigned(IV) then
+    Caption := IV.Item.Name;
+end;
+</pre>                </td>
+              </tr>
+            </table>
+            <p>&nbsp;</p>
+            <!-- InstanceEndEditable --></td>
+          <td width="159" height="405" align="left" valign="top" bgcolor="#FFFFFF">
+            <table width="145"  border="0" align="center" cellpadding="0" cellspacing="0" class="menu">
+              <tr>
+                <td valign="top" class="menuMiddle">
+                  <p><span class="menuTitle">SpTBXLib</span><a href="index.htm">Home</a><a href="../skineditor/index.htm">Skin Editor</a><a href="registration.htm">Register</a><a href="downloads.htm">Downloads</a><a href="Release%20History.txt">Release History</a>
+                    <span class="menuTitle">Support</span><a href="support.htm">Support</a><a href="support.htm#license">License</a><a href="support.htm#installation">Installation</a><a href="support.htm#gettingstarted">Getting Started</a><a href="support.htm#faq">FAQ</a><a href="reference.htm">Reference</a> <a href="items.htm">Items Reference</a> 
+                    <span class="menuTitle">Resources</span><a href="http://www.jrsoftware.org">TB2K</a></p>
+                </td>
+              </tr>
+          </table>
+            <!-- InstanceBeginEditable name="edright2" --><!-- InstanceEndEditable -->
+            <p>&nbsp;</p>						
+	  <div align="center">
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="2533519">
+<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG_global.gif" border="0" name="submit" alt="">
+<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+	  </div>			
+            <p>&nbsp;</p>			
+          <p>&nbsp;</p>		  </td>
+        </tr>
+        <tr>
+          <td width="159" align="left" valign="bottom" bgcolor="#FFFFFF">
+            <p>&nbsp;</p>					  
+          <p>&nbsp;</p></td>
+        </tr>
+        <tr>
+          <td background="../images/footerleft.png">&nbsp;</td>
+          <td colspan="2" valign="top" background="../images/footer.png" bgcolor="#FFFFFF"><p align="center" class="footer">&nbsp;</p>          </td>
+          <td background="../images/footerright.png">&nbsp;</td>
+        </tr>
+</table>      
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+<!-- InstanceEnd --></html>

@@ -1,0 +1,139 @@
+<html><!-- InstanceBegin template="/Templates/tempvelvex.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Silverpoint Development</title>
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+<link href="../styles.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<table width="1024" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="8" rowspan="5" background="../images/shadowleft.png"></td>
+          <td height="85" colspan="2" background="../images/topbg.png">
+          <div align="center">
+          <div align="center" id="logo"><a href="/"><img src="../images/logotemp.png" width="494" height="59" border="0"></a></div>
+          </div>
+          <td width="8" rowspan="5" background="../images/shadowright.png"></td>
+        </tr>
+        <tr>
+          <td height="26" colspan="2" valign="middle" background="../images/barbg.png" class="simple"><p class="simplemenu"><a href="/">Home</a> <img src="../images/div.png" width="2" height="9"> <a href="/sptbxlib/" class="simplemenu">SpTBXLib</a>  <img src="../images/div.png" width="2" height="9"> <a href="/velvex/">VELVEx</a>  <img src="../images/div.png" width="2" height="9"> <a href="/multiinstaller/">MultiInstaller</a>  <img src="../images/div.png" width="2" height="9"> <a href="/skineditor/">Skin Editor</a> </p>          </td>
+        </tr>
+        <tr>
+          <td height="60" colspan="2" align="left" valign="middle" background="../images/gradient.png" class="content"><!-- InstanceBeginEditable name="edtop" -->
+          <h2>Reference</h2> 
+          <!-- InstanceEndEditable -->         </td>
+        </tr>
+        <tr>
+          <td width="843" rowspan="2" align="left" valign="top" bgcolor="#FFFFFF" class="content"><!-- InstanceBeginEditable name="edtleft" -->
+            <table width="100%" border="0" cellpadding="2" cellspacing="2">
+              <tr align="center">
+                <td width="100%" class="tableHeaderBlue"><div align="left">TVirtualExplorerListviewEx</div></td>
+              </tr>
+              <tr valign="top">
+                <td><p><strong>Unit:<br>
+                </strong> VirtualExplorerListviewEx</p>
+                    <p><strong></strong><strong>Hierarchy:<br>
+                    </strong> TVirtualExplorerListview - TCustomVirtualExplorerListviewEx - TVirtualExplorerListviewEx</p>
+                  <p><strong>Description:<br>
+                      </strong> TVirtualExplorerListviewEx (VELVEx) is a control derived from TVirtualExplorerListview that adds Icon, Small Icon, List, and Thumbnail view styles.<br>
+      The VirtualExplorerListviewEx component creates a Unicode enabled TListview (thanks to Troy Wolbrink's Unicode enabled VCL code) that is implemented by and kept synchronized to the VirtualExplorerListviewEx.</p>
+                    <p>It adds the following methods, properties and events:</p>
+                    <p><strong>Public:</strong></p>
+                    <ul>
+                      <li> procedure SyncInvalidate;<br>
+        Forces a repaint in the component Canvas.</li>
+                      <li>procedure SyncItemsCount;<br>
+        Syncs the items count between the VT and the ChildListview, this is used internally.</li>
+                      <li>procedure SyncOptions;<br>
+        Syncs the options between the VT and the ChildListview. Normally used when the VT options are changed by code at runtime and the ViewStyle is not vsxReport.</li>
+                      <li>procedure SyncSelectedItems(UpdateChildListview: boolean = True);<br>
+        Syncs the selected and focused items between the VT and the ChildListview. Normally used when a Node is focused or selected by code at runtime and the current ViewStyle is not vsxReport, read the <a href="support.htm#faq2">FAQ</a> section for more information.</li>
+                      <li> property ImageLibrary: TThumbnailImageLibrary;<br>
+        TThumbnailImageLibrary = (timNone, timGraphicEx, timImageEn, timEnvision, timImageMagick);<br>
+        Specifies the image library that is being used.</li>
+                      <li> property ChildListview: TOLEListview;<br>
+        The VCL TListview that is synchronized with the virtual tree, use this property to access the TListview properties when the ViewStyle is not vsxReport. </li>
+                      <li>property ExtensionsList: TExtensionsList;<br>
+        A list that contains all the known image file type extensions that VELVEx can load in thumbnail mode. </li>
+                      <li>property ExtensionsExclusionList: TExtensionsList;<br>
+        A list that contains the file extensions that should be excluded from creating the thumbnails.</li>
+                      <li>property ShellExtractExtensionsList: TExtensionsList;<br>
+        A list that contains the file extensions that should be loaded by the shell even if UseShellExtract is False. Suppose you only want images + html thumbnails, then you should turn off UseShellExtract to disable the extraction of additional shell supported files (doc, xls, etc) and then add '.html' to the ShellExtractExtensionsList. </li>
+                    </ul>
+                    <p><strong>Published:</strong></p>
+                    <ul>
+                      <li>property ThumbsOptions: TThumbsOptions;<br>
+        General thumbnail options, see TThumbsOptions for more info. </li>
+                      <li>property ViewStyle: TViewStyleEx;<br>
+        TViewStyleEx = (vsxIcon, vsxSmallIcon, vsxList, vsxReport, vsxThumbs);<br>
+        Indicates how the listview displays the items.</li>
+                      <li> OnThumbThreadClass<br>
+        Occurs when the thumbnail thread needs to be created, use this event to use a custom thread to create the thumbnails. </li>
+                      <li> OnThumbsCacheItemAdd<br>
+        Occurs when a thumbnail is about to be added to the cache after it was processed. This event could be used to store the thumbnail in an external database.</li>
+                      <li> OnThumbsCacheItemLoad<br>
+        Occurs when a thumbnail was loaded from the cache. This event could be used to reload or change the loaded thumbnail. </li>
+                      <li> OnThumbsCacheItemRead<br>
+        Occurs when a thumbnail must be read from the cache. This event could be used to provide the thumbnail from an external database. </li>
+                      <li>OnThumbsCacheItemProcessing<br>
+        Occurs when a thumbnail must be created. This event could be used to override the default thumbnail creation.</li>
+                      <li> OnThumbsCacheLoad<br>
+        Occurs when the cache was loaded from file. This event could be used to load the cache from an external database.</li>
+                      <li>OnThumbsCacheSave<br>
+                        Occurs when the cache is about to be saved. This event could be used to save the cache to an external database.</li>
+                      <li>OnThumbsDrawBefore<br>
+        Occurs before the thumbnail is painted. Typically used to paint the background of the thumbnail. </li>
+                      <li>OnThumbsDrawAfter<br>
+        Occurs after the thumbnail is painted. Typically used to paint borders or text on top of the drawed thumbnail. </li>
+                      <li> OnThumbsDrawHint<br>
+        Occurs when the hint must be painted. </li>
+                      <li> OnThumbsGetDetails<br>
+        Occurs when the file details must be painted in the thumbnail. Use this event to change the details of the file. </li>
+                  </ul></td>
+              </tr>
+            </table>
+            <p>&nbsp;</p>
+            <!-- InstanceEndEditable --></td>
+          <td width="159" height="405" align="left" valign="top" bgcolor="#FFFFFF">
+            <table width="145"  border="0" align="center" cellpadding="0" cellspacing="0" class="menu">
+              <tr>
+                <td valign="top" class="menuMiddle">
+                  <p><span class="menuTitle">VELVEx</span><a href="index.htm">Home</a><a href="downloads.htm">Downloads</a><a href="downloads.htm#history">Release History</a>
+				  <span class="menuTitle">Support</span><a href="support.htm#license">License</a><a href="support.htm#installation">Installation</a><a href="support.htm#gettingstarted">Getting Started</a><a href="support.htm#faq">FAQ</a><a href="reference.htm">Reference</a>
+				  <span class="menuTitle">Resources</span><a href="http://www.soft-gems.net">VirtualTreeView</a><a href="http://www.mustangpeak.net">VirtualShellTools</a><a href="http://www.mustangpeak.net">EasyListview</a></p>
+                </td>
+              </tr>
+          </table>
+            <!-- InstanceBeginEditable name="edright2" --><!-- InstanceEndEditable -->
+            <p>&nbsp;</p>						
+	  <div align="center">
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="2533519">
+<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG_global.gif" border="0" name="submit" alt="">
+<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+	  </div>			
+            <p>&nbsp;</p>			
+          <p>&nbsp;</p>		  </td>
+        </tr>
+        <tr>
+          <td width="159" align="left" valign="bottom" bgcolor="#FFFFFF">
+            <p>&nbsp;</p>					  
+          <p>&nbsp;</p></td>
+        </tr>
+        <tr>
+          <td background="../images/footerleft.png">&nbsp;</td>
+          <td colspan="2" valign="top" background="../images/footer.png" bgcolor="#FFFFFF"><p align="center" class="footer">&nbsp;</p>          </td>
+          <td background="../images/footerright.png">&nbsp;</td>
+        </tr>
+</table>      
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+<!-- InstanceEnd --></html>

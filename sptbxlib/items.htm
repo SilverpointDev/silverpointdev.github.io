@@ -1,0 +1,429 @@
+<html><!-- InstanceBegin template="/Templates/tempsptbxlib.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Silverpoint Development</title>
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+<link href="../styles.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<table width="1024" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="8" rowspan="5" background="../images/shadowleft.png"></td>
+          <td height="85" colspan="2" background="../images/topbg.png">
+          <div align="center">
+          <div align="center" id="logo"><a href="/"><img src="../images/logotemp.png" width="494" height="59" border="0"></a></div>
+          </div>
+          <td width="8" rowspan="5" background="../images/shadowright.png"></td>
+        </tr>
+        <tr>
+          <td height="26" colspan="2" valign="middle" background="../images/barbg.png" class="simple"><p class="simplemenu"><a href="/">Home</a> <img src="../images/div.png" width="2" height="9"> <a href="/sptbxlib/" class="simplemenu">SpTBXLib</a>  <img src="../images/div.png" width="2" height="9"> <a href="/velvex/">VELVEx</a>  <img src="../images/div.png" width="2" height="9"> <a href="/multiinstaller/">MultiInstaller</a>  <img src="../images/div.png" width="2" height="9"> <a href="/skineditor/">Skin Editor</a> </p>          </td>
+        </tr>
+        <tr>
+          <td height="60" colspan="2" align="left" valign="middle" background="../images/gradient.png" class="content"><!-- InstanceBeginEditable name="edtop" -->
+          <h2>Items Reference</h2> 
+          <!-- InstanceEndEditable -->         </td>
+        </tr>
+        <tr>
+          <td width="843" rowspan="2" align="left" valign="top" bgcolor="#FFFFFF" class="content"><!-- InstanceBeginEditable name="edtleft" -->
+            <h3 align="center"><img src="images/toolbareditor.png" width="448" height="71" border="0" usemap="#Map">
+              <map name="Map">
+                <area shape="rect" coords="4,48,27,70" href="#tsptbxitem">
+                <area shape="rect" coords="27,48,50,70" href="#tsptbxsubmenuitem">
+                <area shape="rect" coords="50,48,73,70" href="#tsptbxseparatoritem">
+                <area shape="rect" coords="73,48,95,70" href="#tsptbxrightalignspaceritem">
+                <area shape="rect" coords="95,48,118,70" href="#tsptbxlabelitem">
+                <area shape="rect" coords="118,48,141,70" href="#tsptbxthemegroupitem">
+                <area shape="rect" coords="141,48,164,70" href="#tsptbxtabitem">
+                <area shape="rect" coords="164,48,187,70" href="#tsptbxedititem">
+                <area shape="rect" coords="187,48,210,70" href="#tsptbxspinedititem">
+                <area shape="rect" coords="210,48,233,70" href="#tsptbxtoolpalette">
+                <area shape="rect" coords="233,48,256,70" href="#tsptbxcolorpalette">
+                <area shape="rect" coords="256,48,279,70" href="#tsptbxmrulistitem">
+                <area shape="rect" coords="279,48,302,70" href="#tsptbxmdiwindowitem">								
+              </map>
+          </h3>
+            <table width="100%" border="0" cellpadding="2" cellspacing="2">
+              <tr valign="top">
+                <td class="tableHeaderBlue">TSpTBXItem<a name="tsptbxitem" id="tsptbxitem"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p><strong>Unit:<br>
+                </strong> SpTBXItem</p>
+                    <p><strong>Hierarchy:<br>
+                    </strong> TTBCustomItem - TSpTBXCustomItem - TSpTBXItem</p>
+                    <p><strong>Description:<br>
+                      </strong> TSpTBXItem extends TTBItem with support for unicode hints and caption, custom item size, custom painting events and skin painting<br>
+        It adds the following properties and events:</p>
+                    <p><strong>Published:</strong></p>
+                    <ul>
+                      <li>property Alignment: TAlignment;<br>
+          TAlignment = (taLeftJustify, taRightJustify, taCenter);<br>
+          Controls the horizontal placement of the caption. Set Alignment to specify how the caption is justified within the ClientRect of the item.</li>
+                      <li>property Anchored: Boolean;<br>
+          Specifies if the item is anchored. The item should be placed on a TSpTBXToolbar with Stretched setted to True, and ShrinkMode setted to tbsmNone.<br>
+          You can also anchor dropped controls on the toolbar.</li>
+                      <li>property CaptionGlow: Boolean;<br>
+                        Specifies if the caption outline is painted or not. </li>
+                      <li>property CaptionGlowColor: TColor;<br>
+                        Specifies the caption outline color.</li>
+                      <li>property Control: TControl;<br>
+          Specifies the associated visibility toggle control. The checked property toggles the visibility of the control, use this property instead of using the TTBXVisibilityToggleItem.</li>
+                      <li>property CustomWidth: Integer;<br>
+          Determines the item width. If the property is setted to -1 the item is autosized.</li>
+                      <li>property CustomHeight: Integer;<br>
+          Determines the item height. If the property is setted to -1 the item is autosized.</li>
+                      <li>property FontSettings: TSpTBXFontSettings;<br>
+                      Specifies the font properties that are used to paint the caption. </li>
+                      <li>property Wrapping: TTextWrapping;<br>
+          TTextWrapping = (twNone, twEndEllipsis, twPathEllipsis, twWrap);<br>
+          Determines the item caption wrapping. </li>
+                      <li>OnDrawCaption (Sender: TObject; ACanvas: TCanvas; ClientAreaRect: TRect; var ACaption: WideString; var CaptionRect: TRect; IsTextRotated: Boolean; const PaintStage: TSpTBXPaintStage; var PaintDefault: Boolean)<br>
+          Occurs when the item needs to paint the caption, the PaintStage indicates the current stage in the drawing process. DefaultDraw indicates whether the item should continue with the default painting after the event handler exits. Set DefaultDraw to false to prevent the drawing of the item after the event handler exits. If DefaultDraw remains set to true, the item continues with the default painting <br>
+          process.<br>
+          <a href="support.htm#custompainting">More info on custom painting events</a></li>
+                      <li>OnDrawHint (Sender: TObject; AHintBitmap: TBitmap; var AHint: WideString; var PaintDefault: Boolean);<br>
+          Occurs when the item needs to paint the hint, AHintBitmap represents the hint canvas, it can change the size, font, and background colors. AHint is the hint text to be painted, and PaintDefault indicates whether the control should continue with the default painting after the event handler exits. Set DefaultDraw to false to prevent the drawing of the item after the event handler exits. If DefaultDraw remains set to true, the item continues with the default painting process.<br>
+          <a href="support.htm#custompainting">More info on custom painting events</a></li>
+                      <li>OnDrawImage (Sender: TObject; ACanvas: TCanvas; const ItemInfo: TTBXItemInfo; const PaintStage: TSpTBXPaintStage; AImageList: TCustomImageList; var AImageIndex: integer; var ARect: TRect; var PaintDefault: Boolean);<br>
+          Occurs when the icon image needs to be painted, the PaintStage indicates the current stage in the drawing process. DefaultDraw indicates whether the item should continue with the default painting after the event handler exits. Set DefaultDraw to false to prevent the drawing of the item after the event handler exits. If DefaultDraw remains set to true, the control continues with the default painting process.<br>
+          <a href="support.htm#custompainting">More info on custom painting events</a> </li>
+                      <li>OnDrawItem (Sender: TObject; ACanvas: TCanvas; ARect: TRect; const PaintStage: TSpTBXPaintStage; var PaintDefault: Boolean);<br>
+          Occurs when the item needs to be painted, the PaintStage indicates the current stage in the drawing process. DefaultDraw indicates whether the item should continue with the default painting after the event handler exits. Set DefaultDraw to false to prevent the drawing of the item after the event handler exits. If DefaultDraw remains set to true, the control continues with the default painting process.<br>
+          <a href="support.htm#custompainting">More info on custom painting events</a></li>
+                  </ul></td>
+              </tr>
+              <tr valign="top">
+                <td class="tableHeaderBlue">TSpTBXSubmenuItem<a name="tsptbxsubmenuitem"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p><strong>Unit:<br>
+                </strong> SpTBXItem</p>
+                    <p><strong>Hierarchy:<br>
+                    </strong> TTBCustomItem - TSpTBXCustomItem - TSpTBXItem - TSpTBXSubmenuItem</p>
+                    <p><strong>Description:<br>
+                    </strong> TSpTBXSubmenuItem extends TTBSubmenuItem with support for unicode hints and caption, custom item size, custom painting events and skin painting.</p>
+                    <p> TSpTBXSubmenuItem inherits many properties, methods, and events from <a href="#tsptbxitem">TSpTBXItem</a>; see its help topic for details on the properties, methods, and events not listed here.</p>
+                    <p><strong>Published:</strong></p>
+                    <ul>
+                      <li> property DropdownCombo: Boolean;<br>
+                        When True the item will behave as a both clickable button and a dropdown menu. Clicking on the left side generates an OnClick event, clicking on the right side of the button generates an OnPopup event and displays the dropdown menu</li>
+                      <li>property HideEmptyPopup: Boolean;<br>
+                        When 
+the submenu has no items and this property is set the 
+popup window will not be showed.</li>
+                      <li>                        property ToolbarStylePopup: Boolean;<br>
+                      When True it displays the sub items as a horizontal toolbar.</li>
+                      <li>                        property ToolBoxPopup: Boolean;<br>
+                      Determines if the popup items are rendered with toolbar style, for example use this property when you want to create a color-picker style popup using the TSpTBXColorPallette item.</li>
+                      </ul></td>
+              </tr>
+              <tr valign="top">
+                <td class="tableHeaderBlue">TSpTBXSeparatorItem<a name="tsptbxseparatoritem"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p><strong>Unit:<br>
+                </strong> SpTBXItem</p>
+                    <p><strong>Hierarchy:<br>
+                    </strong> TTBSeparatorItem - TSpTBXSeparatorItem</p>
+                    <p><strong>Description:<br>
+                  </strong> TSpTBXSeparatorItem is a replacement for TTBSeparatorItem that supports skin painting.</p></td>
+              </tr>
+              <tr valign="top">
+                <td class="tableHeaderBlue">TSpTBXRightAlignSpacerItem<a name="tsptbxrightalignspaceritem"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p><strong>Unit:<br>
+                </strong> SpTBXItem</p>
+                    <p><strong>Hierarchy:<br>
+                    </strong> TTBCustomItem - TSpTBXCustomItem - TSpTBXCustomLabelItem - TSpTBXRightAlignSpacerItem</p>
+                    <p><strong>Description:<br>
+                    </strong> TSpTBXRightAlignSpacerItem is a spacer used to right align items.</p>
+                    <p>Right alignment only works on TSpTBXToolbar with Stretched setted to True, and ShrinkMode setted to tbsmNone.</p></td>
+              </tr>
+              <tr valign="top">
+                <td class="tableHeaderBlue">TSpTBXLabelItem<a name="tsptbxlabelitem"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p><strong>Unit:<br>
+                </strong> SpTBXItem</p>
+                    <p><strong>Hierarchy:<br>
+                    </strong> TTBCustomItem - TSpTBXCustomItem - TSpTBXCustomLabelItem - TSpTBXLabelItem</p>
+                    <p><strong>Description:<br>
+                    </strong> TSpTBXLabelItem extends TTBLabelItem with support for unicode hints and caption, custom item size, custom painting events and skin painting.</p>
+                    <p> TSpTBXLabelItem inherits many properties, methods, and events from <a href="#tsptbxitem">TSpTBXItem</a>; see its help topic for details on the properties, methods, and events not listed here.</p></td>
+              </tr>
+              <tr valign="top">
+                <td class="tableHeaderBlue">TSpTBXSkinGroupItem<a name="tsptbxskingroupitem" id="tsptbxskingroupitem"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p><strong>Unit:<br>
+                </strong> SpTBXItem</p>
+                    <p><strong>Hierarchy:<br>
+                    </strong> TTBGroupItem - TSpTBXSkinGroupItem</p>
+                    <p><strong>Description:<br>
+                      </strong> TSpTBXSkinGroupItem is a group item that expands into multiple items which list all the available skins, and let the user switch between them. The list is expanded at runtime only.<br>
+        The TSpTBXSkinGroupItem can be placed inside a submenu item for better results.</p>
+                    <p align="center"><img src="images/themegroupitem.png" width="175" height="352"></p>
+                    <p>It adds the following methods, properties and events:</p>
+                    <p><strong>Public:</strong></p>
+                    <ul>
+                      <li> procedure Recreate;<br>
+          Recreates the list of skins items. </li>
+                      <li>property DefaultIndex: Integer;<br>
+                        Index where the list of theme items should be inserted. The group item can have previously setted items.</li>
+                  </ul>
+                    <p><strong>Published:</strong></p>
+                    <ul>
+                      <li>OnClick (Sender: TObject);<br>
+          Event fired when a theme item is checked.</li>
+                      <li>OnGetCaption (Sender: TObject; var ThemeName: WideString);<br>
+          Use this event to rename the theme items.</li>
+                      <li>OnSkinChange (Sender: TObject);<br>
+                        Occurs when the active skin is changed.</li>
+                      <li>OnUpdate (Sender: TObject);<br>
+          Event fired when the theme item list is recreated. </li>
+                  </ul></td>
+              </tr>
+              <tr valign="top">
+                <td class="tableHeaderBlue">TSpTBXTabItem<a name="tsptbxtabitem"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p><strong>Unit:<br>
+                </strong> SpTBXTabs</p>
+                    <p><strong>Hierarchy:<br>
+                    </strong> TTBCustomItem - TSpTBXCustomItem - TSpTBXTabItem</p>
+                    <p><strong>Description:<br>
+                    </strong> TSpTBXTabItem represents a tab on a tab based control, like <a href="reference.htm#tsptbxtabset">TSpTBXTabSet</a> or <a href="reference.htm#tsptbxtabcontrol">TSpTBXTabControl</a>.</p>
+                    <p align="center"><img src="images/tabset.png" width="449" height="293"></p>
+                    <p> TSpTBXTabItem inherits many properties, methods, and events from <a href="#tsptbxitem">TSpTBXItem</a>; see its help topic for details on the properties, methods, and events not listed here.</p>
+                    <p><strong>Public:</strong></p>
+                    <ul>
+                      <li>function GetNextTab(GoForward: Boolean; SearchType: TSpTBXSearchItemViewerType): TSpTBXTabItem;<br>
+          Function that returns the previous or next tab item in the tab set.</li>
+                      <li>function IsFirstVisibleTab: Boolean;<br>
+          Returns true if it's the first tab in the tab set. </li>
+                      <li>function IsLastVisibleTab: Boolean;<br>
+          Returns true if it's the last tab in the tab set.</li>
+                      <li>procedure TabClose;<br>
+                      Closes the tab. When a tab is closed it is not deleted nor freed, it's just hidden.</li>
+                    </ul>
+                    <p><strong>Published:</strong></p>
+                    <ul>
+                      <li>property SkinType: TSpTBXSkinType;<br>
+                        TSpTBXSkinType = (sknNone, sknWindows, sknSkin);<br>
+                        Determines the control skin painting. When SkinType is sknNone no skin is used and the control is painted using the standard Win32 controls style. If it's setted to sknWindows uses the WinXP theme when available and sknSkin uses the active skin to paint the control.<br>
+          This property is read-only when placed on a tab based control like <a href="reference.htm#tsptbxtabset">TSpTBXTabSet</a> or <a href="reference.htm#tsptbxtabcontrol">TSpTBXTabControl</a>.</li>
+                      <li>OnDrawTabCloseButton (Sender: TObject; ACanvas: TCanvas; 
+State: TSpTBXSkinStatesType; const PaintStage: TSpTBXPaintStage; 
+var AImageList: TCustomImageList; var AImageIndex: Integer;
+var ARect: TRect; var PaintDefault: Boolean);<br>
+Occurs when the close button  image needs to be painted, the PaintStage indicates the current stage in the drawing process. DefaultDraw indicates whether the item should continue with the default painting after the event handler exits. Set DefaultDraw to false to prevent the drawing of the item after the event handler exits. If DefaultDraw remains set to true, the control continues with the default painting process.<br>
+                      <a href="support.htm#custompainting">More info on custom painting events</a> </li>
+                      <li>OnTabClose (Sender: TObject);<br>
+                      Occurs when the tab is closed. </li>
+                      <li>OnTabClosing (Sender: TObject; var Allow: Boolean);<br>
+                      Occurs when the tab is about to be closed.</li>
+                  </ul></td>
+              </tr>
+              <tr valign="top">
+                <td class="tableHeaderBlue">TSpTBXEditItem<a name="tsptbxedititem"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p><strong>Unit:<br>
+                </strong> SpTBXEditors</p>
+                    <p><strong>Hierarchy:<br>
+                    </strong> TTBCustomItem - TTBEditItem - TSpTBXEditItem</p>
+                    <p><strong>Description:<br>
+                    </strong> TSpTBXEditItem extends TTBEditItem with support for unicode hints and caption, custom item size,  custom painting events and skins.</p>
+                    <p> TSpTBXEditItem inherits many properties, methods, and events from TTBEditItem; see its help topic for details on the properties, methods, and events not listed here.</p>
+                    <p><strong>Published:</strong></p>
+                    <ul>
+                      <li>property EditImageIndex: TImageIndex;<br>
+                        Specifies the icon image that should be painted
+on the left of the EditCaption when the item is on a menu.</li>
+                    </ul></td>
+              </tr>
+              <tr valign="top">
+                <td class="tableHeaderBlue">TSpTBXSpinEditItem<a name="tsptbxspinedititem" id="tsptbxspinedititem"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p><strong>Unit:<br>
+                </strong>SpTBXEditors</p>
+                  <p><strong>Hierarchy:<br>
+                    </strong> TTBCustomItem - TTBEditItem - TSpTBXEditItem - TSpTBXSpinEditItem</p>
+                  <p><strong>Description:<br>
+                    </strong> TSpTBXSpinEditItem is a spin edit toolbar item  with support for unicode hints and caption, custom item size,  custom painting events and skins painting. </p>
+                  <p> TSpTBXSpinEditItem inherits many properties, methods, and events from <a href="#tsptbxedititem">TSpTBXEditItem</a>; see its help topic for details on the properties, methods, and events not listed here.</p>
+                  <p><strong>Published:</strong></p>
+                  <ul>
+                    <li>property SpinOptions: TSpTBXSpinEditOptions;<br>
+                    Property that holds the spin edit options, refer to <a href="reference.htm#tsptbxspineditoptions">TSpTBXSpinEditOptions</a> for more info. </li>
+                    <li> property Value: Extended;<br>
+                      This property conains the numeric value displayed by the control in floaging point format.<br>
+                      When ValueType if set to evtInteger or evtHex, the Value property is automatically rounded to the nearest integer. In this case it may also be convenient to access the numeric value using the AsInteger property. </li>
+                    <li> OnValueChanged (Sender: TObject);<br>
+                      Occurs when the value property is changed.</li>
+                    </ul></td>
+              </tr>
+              <tr valign="top">
+                <td class="tableHeaderBlue">TSpTBXToolPalette<a name="tsptbxtoolpalette"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p><strong>Unit:<br>
+                </strong>SpTBXItems</p>
+                  <p><strong>Hierarchy:<br>
+                  </strong>TTBCustomItem - TSpTBXCustomItem - TSpTBXCustomToolPalette - TSpTBXToolPalette</p>
+                  <p><strong>Description:<br>
+                  </strong> Tool palettes contain a grid of cells, each acting as a separate subitem. Notice however, that each tool palette is a single toolbar item and the cells are not the same toolbar items as the child items in a SubmenuItem.</p>
+                  <p>The images displayed in each cell are obtained from the Images property. By default, the upper left cell gets the image with index 0, the second cell in this row has index 1, etc.</p>
+                  <p>It implements the following properties and events:</p>
+                  <p><strong>Public:</strong></p>
+                  <ul>
+                    <li> property SelectedCell: TPoint;<br>
+                    Returns the selected cell position.</li>
+                    </ul>
+                  <p><strong>Published:</strong></p>
+                  <ul>
+                    <li> property ColCount: Integer;<br>
+                    The number of columns on the grid.</li>
+                    <li>                      property RowCount: Integer;<br>
+                    The number of rows on the grid.</li>
+                    <li>                       OnChange (Sender: TObject);<br>
+                    OnChange is fired each time when the SelectedCell property changes.</li>
+                    <li>OnCellClick (Sender: TObject; ACol, ARow: Integer; var Allow: Boolean);<br>
+                    Handle this event to respond to changes in the selection initiated by user. In addition, you can customize the cell selectivity by altering the AllowChange parameter.</li>
+                    <li> OnDrawCellImage (Sender: TObject; ACanvas: TCanvas; 
+ARect: TRect; ACol, ARow: Integer; Selected, HotTrack, Enabled: Boolean);<br>
+                    Occurs when the cell needs to be painted.                    <a href="support.htm#custompainting"></a></li>
+                    <li>                       OnGetCellHint (Sender: TObject; ACol, ARow: Integer; var AHint: WideString);<br>
+                    In OnGetCellHint event handler, you can customize the hint string appearing next to each item in the palette. This event will be regularly fired by the tool palette while the mouse is moved from one cell to another.</li>
+                    </ul></td>
+              </tr>
+              <tr valign="top">
+                <td class="tableHeaderBlue">TSpTBXColorPalette<a name="tsptbxcolorpalette"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p><strong>Unit:<br>
+                </strong>SpTBXItems</p>
+                  <p><strong>Hierarchy:<br>
+                  </strong>TTBCustomItem - TSpTBXCustomItem - TSpTBXCustomToolPalette - TSpTBXColorPalette</p>
+                  <p><strong>Description:<br>
+                  </strong>TSpTBXColorPalette is a tool palette descendant modified to display a color palette.</p>
+                  <p>TSpTBXColorPalette inherits many properties, methods, and events from <a href="#tsptbxtoolpalette">TSpTBXToolPalette</a>; see its help topic for details on the properties, methods, and events not listed here.</p>
+                  <p><strong></strong><strong>Public:</strong></p>
+                  <ul>
+                    <li>function FindCell(AColor: TColor): TPoint;<br>
+                      Finds the position of a color in the grid. </li>
+                  </ul>
+                  <p><strong>Published:</strong></p>
+                  <ul>
+                    <li>property ColCount: Integer;<br>
+                    The number of columns on the grid when CustomColors is False.</li>
+                    <li> property Color: TColor;<br>
+                    The selected Color, clNone if there's no color selected.</li>
+                    <li>property CustomColors: Boolean;<br>
+                      When True it will use custom colors obtained using the OnGetColor event. When False it will use the default colors on a 8x5 grid.</li>
+                    <li>property RowCount: Integer;<br>
+                    The number of rows on the grid when CustomColors is False.</li>
+                    <li>OnGetColor (Sender: TObject; ACol, ARow: Integer; var Color: TColor; var Name: WideString);<br>
+                    Use this event to fill the grid with custom colors. The Name param is used when the hint of the cell must be displayed.</li>
+                  </ul></td>
+              </tr>
+              <tr valign="top" class="tableHeaderBlue">
+                <td>TSpTBXMRUListItem<a name="tsptbxmrulistitem"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p><strong>Unit:<br>
+                  </strong> SpTBXMDIMRU</p>
+                    <p><strong>Hierarchy:<br>
+                    </strong> TTBCustomItem - TSpTBXMRUListItem</p>
+                  <p><strong>Description:<br>
+                  </strong> TSpTBXMRUListItem is a replacement for TTBMRUListItem that has unicode support and skinning.<br>
+                  The use of a TTBMRUList is not needed.</p>
+                  <p>It implements the following properties and events:</p>
+                  <p><strong></strong><strong>Public:</strong></p>
+                  <ul>
+                    <li>procedure GetMRUFilenames(MRUFilenames: TStrings);<br>
+                    Returns the list of MRU Filenames. </li>
+                    <li>function IndexOfMRU(Filename: WideString): Integer;<br>
+                      Returns the index of the MRU item that is associated with the Filename param. </li>
+                    <li> procedure MRUAdd(Filename: WideString);<br>
+                      Adds a Filename to the MRU list.</li>
+                    <li>function MRUClick(Filename: WideString): Boolean;<br>
+                    Clicks the MRU item  that is associated with the Filename param.</li>
+                    <li>                      procedure MRURemove(Filename: WideString);<br>
+                    Deletes a Filename from the MRU list.</li>
+                    <li>                      procedure MRUUpdateCaptions;<br>
+                      Updates the captions of the MRU list.</li>
+                    <li>procedure LoadFromIni(Ini: TCustomIniFile; const Section: string);<br>
+                    Loads the MRU list from an INI file.</li>
+                    <li>procedure SaveToIni(Ini: TCustomIniFile; const Section: string);<br>
+                    Saves the MRU list to an INI file. </li>
+                  </ul>
+                  <p><strong>Published:</strong></p>
+                  <ul>
+                    <li>     property HidePathExtension: Boolean;<br>
+                    When True, pathnames and file extensions will be hidden when the items are displayed. If your MRU list doesn't contain filenames, this property should be   changed to False.</li>
+                    <li> property MaxItems: Integer;<br>
+                      The maximum number of items the list may contain.</li>
+                    <li>                      property OnClick (Sender: TObject; const Filename: WideString);<br>
+                      Event fired when a MRU item is clicked.</li>
+                </ul></td>
+              </tr>
+              <tr valign="top">
+                <td class="tableHeaderBlue">TSpTBXMDIWindowItem<a name="tsptbxmdiwindowitem"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p><strong>Unit:<br>
+                  </strong>SpTBXMDIMRU</p>
+                    <p><strong>Hierarchy:<br>
+                    </strong> TTBCustomItem - TSpTBXMDIWindowItem</p>
+                    <p><strong>Description:<br>
+                  </strong> TSpTBXMDIWindowItem is a replacement for TTBMDIWindowItem that has unicode support and skinning.</p></td>
+              </tr>
+            </table>
+            <p>&nbsp;</p>
+            <!-- InstanceEndEditable --></td>
+          <td width="159" height="405" align="left" valign="top" bgcolor="#FFFFFF">
+            <table width="145"  border="0" align="center" cellpadding="0" cellspacing="0" class="menu">
+              <tr>
+                <td valign="top" class="menuMiddle">
+                  <p><span class="menuTitle">SpTBXLib</span><a href="index.htm">Home</a><a href="../skineditor/index.htm">Skin Editor</a><a href="registration.htm">Register</a><a href="downloads.htm">Downloads</a><a href="Release%20History.txt">Release History</a>
+                    <span class="menuTitle">Support</span><a href="support.htm">Support</a><a href="support.htm#license">License</a><a href="support.htm#installation">Installation</a><a href="support.htm#gettingstarted">Getting Started</a><a href="support.htm#faq">FAQ</a><a href="reference.htm">Reference</a> <a href="items.htm">Items Reference</a> 
+                    <span class="menuTitle">Resources</span><a href="http://www.jrsoftware.org">TB2K</a></p>
+                </td>
+              </tr>
+          </table>
+            <!-- InstanceBeginEditable name="edright2" --><!-- InstanceEndEditable -->
+            <p>&nbsp;</p>						
+	  <div align="center">
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="2533519">
+<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG_global.gif" border="0" name="submit" alt="">
+<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+	  </div>			
+            <p>&nbsp;</p>			
+          <p>&nbsp;</p>		  </td>
+        </tr>
+        <tr>
+          <td width="159" align="left" valign="bottom" bgcolor="#FFFFFF">
+            <p>&nbsp;</p>					  
+          <p>&nbsp;</p></td>
+        </tr>
+        <tr>
+          <td background="../images/footerleft.png">&nbsp;</td>
+          <td colspan="2" valign="top" background="../images/footer.png" bgcolor="#FFFFFF"><p align="center" class="footer">&nbsp;</p>          </td>
+          <td background="../images/footerright.png">&nbsp;</td>
+        </tr>
+</table>      
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+<!-- InstanceEnd --></html>

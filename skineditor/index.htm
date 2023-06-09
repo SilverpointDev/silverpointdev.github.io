@@ -1,0 +1,197 @@
+<html><!-- InstanceBegin template="/Templates/tempskineditor.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Silverpoint Development</title>
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+<link href="../styles.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<table width="1024" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="8" rowspan="5" background="../images/shadowleft.png"></td>
+          <td height="85" colspan="2" background="../images/topbg.png">
+          <div align="center">
+          <div align="center" id="logo"><a href="/"><img src="../images/logotemp.png" width="494" height="59" border="0"></a></div>
+          </div>
+          <td width="8" rowspan="5" background="../images/shadowright.png"></td>
+        </tr>
+        <tr>
+          <td height="26" colspan="2" valign="middle" background="../images/barbg.png" class="simple"><p class="simplemenu"><a href="/">Home</a> <img src="../images/div.png" width="2" height="9"> <a href="/sptbxlib/" class="simplemenu">SpTBXLib</a>  <img src="../images/div.png" width="2" height="9"> <a href="/velvex/">VELVEx</a>  <img src="../images/div.png" width="2" height="9"> <a href="/multiinstaller/">MultiInstaller</a>  <img src="../images/div.png" width="2" height="9"> <a href="/skineditor/">Skin Editor</a> </p>          </td>
+        </tr>
+        <tr>
+          <td height="60" colspan="2" align="left" valign="middle" background="../images/gradient.png" class="content"><!-- InstanceBeginEditable name="edtop" -->
+          <h2>Silverpoint Skin Editor</h2> 
+          <!-- InstanceEndEditable -->         </td>
+        </tr>
+        <tr>
+          <td width="843" rowspan="2" align="left" valign="top" bgcolor="#FFFFFF" class="content"><!-- InstanceBeginEditable name="edtleft" -->
+            <p>With the help of Silverpoint Skin Editor designers will be able to easily create and modify skins of applications based on <a href="../sptbxlib/index.htm">SpTBXLib</a>.</p>
+            <h3>Basic Concepts<a name="gettingstarted"></a></h3>
+            <p>The term skin refers to the concept of changing the software's look and feel, making it aesthetically pleasing.<br>
+              Software that is capable of having a skin applied is referred to as being skinnable, and the process of writing or applying such a skin is known as skinning.</p>
+            <p>A skin for Silverpoint Skin Studio is made of:</p>
+            <ul>
+              <li> SKN file describing the logical structure of the skin. This is a text file that follows a specific format and it is used by the skin engine to skin the application's controls.</li>
+              <li> <s>Many PNG files, for the images representing the different states of the controls. The PNG format allows setting a transparency mask wich will be used wherever the image needs to be displayed where only non-transparent or semi-transparent parts will be painted.</s> (currently on beta)</li>
+            </ul>
+            <h3>Getting Started</h3>
+            <p>When Skin Editor is opened you have the option to create a new skin, open an existing one or create a skin based on a template.</p>
+            <p>This is how Skin Editor looks like.</p>
+            <p align="center"><a href="images/skineditor.png" target="_blank"><img src="images/skineditor_thumb.png" alt="Skin Editor" width="555" height="422" border="0"></a></p>
+            <p>Skin Editor has 4 sections or panes:</p>
+            <ul>
+              <li><strong>Elements:</strong> this pane has a list of every control/element and their different states.</li>
+              <li><strong>Skin Properties:</strong>  shows the skin  properties and their values.<br>
+                Some of the properties you can change are:
+                <ul>
+        <li><strong>Name:</strong> the skin name.</li>
+                  <li><strong>Author:</strong> the skin author.</li>
+                  <li> <strong>Office Icons:</strong> when set to true the menu item icons are painted with shadows (imitating Office).</li>
+                </ul>
+                <blockquote>
+        <p align="center"><img src="images/skinproperties1.png" alt="Office Icons" width="196" height="38"></p>
+                </blockquote>
+                <ul>
+        <li><strong>Office Menu:</strong> when set to true the height of the separators on popup menus is 6 pixels (imitating Office), otherwise the size is 10 pixels. Also when the items are disabled the hottrack is not painted. </li>
+                  <li><strong>Office Statusbar:</strong> when set to true the Statusbar panels are painted with rectangular separators like Office.</li>
+                </ul>
+                <blockquote>
+        <p align="center"><img src="images/skinproperties2.png" alt="Office Statusbar" width="354" height="109"></p>
+                </blockquote>
+              </li>
+              <li><strong>Element Properties:</strong> shows the selected element properties.<br>
+  Some of the properties you can change are:
+    <ul>
+      <li><strong>Body:</strong> to edit the Body properties select the type of the Body and change the gradient colors, Solid uses 1 color, the Simple Gradients uses 2, and the rest uses 4 colors.</li>
+      <li><strong>Borders:</strong>  to edit the Borders properties select the type of the Borders and change the border colors. You can specify the external and internal borders. </li>
+      <li><strong>Text:</strong> specifies the text color. </li>
+    </ul>
+              </li>
+              <li><strong>Preview:</strong>  this pane shows the preview of the skin.</li>
+            </ul>
+            <h3>Creating a New Skin</h3>
+          <p>1) Create a new project by clicking the <strong>New</strong> button on the toolbar.</p>
+          <p align="center"><img src="images/newskin.png" alt="New Skin" width="381" height="274"></p>
+    <p>2)               Specify the Skin <strong>Name</strong> and <strong>Author</strong> on the New Skin dialog.<br>
+              You can also create a skin based upon a template.</p>
+            <p>3) You can now start editing the skin.<br>
+  An element can consist of several states, for instance the Button element has 6 states (Normal, Disabled, Hot, Pushed, Checked, Checked &amp; Hot), while other elements have just a few like the ProgressBar element that has only 2 states (Normal, Hot).<br>
+            To access a specific element property, you must first locate the element on the <strong>Elements</strong> pane and then select the corresponding state, when the state is selected the properties will be showed on the <strong>Element Properties</strong> pane.</p>
+            <h3>Support</h3>
+            <p>Direct e-mail contact:<br>
+                <img src="../mail.png" width="150" height="10"></p>
+            <h3>License<a name="license"></a></h3>
+            <p>The contents of this package are subject to the Mozilla Public License Version 1.1, you may not use this package except in compliance with the License.<br>
+You may obtain a copy of the License at: <a href="http://www.mozilla.org/MPL">http://www.mozilla.org/MPL</a></p>
+            <p>Software is distributed on an &quot;AS IS&quot; basis, WITHOUT WARRANTY OF ANY KIND, either express or implied.</p>
+            <p> The initial developer of this package is Robert Lee.</p>
+            <h3>Donations</h3>
+            <p>Silverpoint Skin Editor is free, however, if you wish to express your appreciation for the time and resources the authors have expended developing and supporting it over the years, we do accept and appreciate donations.</p>
+            <p>Donations are accepted via  PayPal. Please click the following link to donate:</p>
+            <blockquote>
+              <p><strong>PayPal</strong></p>
+              <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <input type="hidden" name="cmd2" value="_s-xclick">
+                <input type="image" src="https://www.paypal.com/en_US/i/btn/x-click-but04.gif" border="0" name="submit2" alt="Make payments with PayPal - it's fast, free and secure!">
+                <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+">
+              </form>
+              </blockquote>
+            <p>Thank you for your support.</p>
+            <h3>Downloads<a name="downloads"></a></h3>
+            <table width="100%" border="0" cellpadding="2" cellspacing="2">
+              <tr align="center">
+                <td colspan="4" class="tableHeaderBlue">Downloads</td>
+              </tr>
+              <tr align="center" bgcolor="#CCCCCC" class="tableHeaderGray">
+                <td width="28%">Filename</td>
+                <td width="21%">Date</td>
+                <td width="10%">Size</td>
+                <td width="41%">Description</td>
+              </tr>
+              <tr valign="middle" class="tableBackground">
+                <td><p><a href="SkinEditor.exe">SkinEditor 1.0.5</a></p></td>
+                <td align="right"><p>18 March 2014</p></td>
+                <td align="right"><p>963KB</p></td>
+                <td><p>Silverpoint SkinEditor </p></td>
+              </tr>
+              <tr valign="middle" class="tableBackground">
+                <td><p><a href="SkinEditorSource.1.0.5.zip">SkinEditorSource.1.0.5.zip</a></p></td>
+                <td align="right"><p>18 March 2014</p></td>
+                <td align="right"><p>72KB</p></td>
+                <td><p>Silverpoint SkinEditor source code</p></td>
+              </tr>
+              <tr align="center">
+                <td colspan="4" class="tableHeaderBlue">Release History <a name="history"></a></td>
+              </tr>
+              <tr>
+                <td colspan="4">
+                  <pre>18 March 2014 - version 1.0.5
+  - Added Delphi XE4 and XE5 support.
+  
+19 April 2013 - version 1.0.4
+  - Added Delphi XE3 support.
+    
+29 June 2011 - version 1.0.3
+  - Minor bug fixes.
+    
+24 April 2010 - version 1.0.2
+  - Minor bug fixes.
+   
+2 December 2009 - version 1.0.1
+  - Minor bug fixes.
+  
+13 September 2009 - version 1.0
+  - Initial release.
+
+
+
+
+            </pre>                </td>
+              </tr>
+            </table>
+            <p>&nbsp;</p>
+            <!-- InstanceEndEditable --></td>
+          <td width="159" height="405" align="left" valign="top" bgcolor="#FFFFFF">
+            <table width="145"  border="0" align="center" cellpadding="0" cellspacing="0" class="menu">
+              <tr>
+                <td valign="top" class="menuMiddle">
+                  <p><span class="menuTitle">Skin Editor </span><a href="index.htm">Home</a><a href="#downloads">Downloads</a><a href="#history">Release History</a><span class="menuTitle">Support</span><a href="#license">License</a><a href="#donations">Donations</a><a href="#gettingstarted">Getting Started</a></p>
+                </td>
+              </tr>
+          </table>
+            <!-- InstanceBeginEditable name="edright2" --><!-- InstanceEndEditable -->
+            
+            <p>&nbsp;</p>						
+	  <div align="center">
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="2533519">
+<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG_global.gif" border="0" name="submit" alt="">
+<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+	  </div>			
+            <p>&nbsp;</p>			
+          <p>&nbsp;</p>		  </td>
+        </tr>
+        <tr>
+          <td width="159" align="left" valign="bottom" bgcolor="#FFFFFF">
+            <p>&nbsp;</p>					  
+          <p>&nbsp;</p></td>
+        </tr>
+        <tr>
+          <td background="../images/footerleft.png">&nbsp;</td>
+          <td colspan="2" valign="top" background="../images/footer.png" bgcolor="#FFFFFF"><p align="center" class="footer">&nbsp;</p>          </td>
+          <td background="../images/footerright.png">&nbsp;</td>
+        </tr>
+</table>      
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+<!-- InstanceEnd --></html>

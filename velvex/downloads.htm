@@ -1,0 +1,601 @@
+<html><!-- InstanceBegin template="/Templates/tempvelvex.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Silverpoint Development</title>
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+<link href="../styles.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<table width="1024" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="8" rowspan="5" background="../images/shadowleft.png"></td>
+          <td height="85" colspan="2" background="../images/topbg.png">
+          <div align="center">
+          <div align="center" id="logo"><a href="/"><img src="../images/logotemp.png" width="494" height="59" border="0"></a></div>
+          </div>
+          <td width="8" rowspan="5" background="../images/shadowright.png"></td>
+        </tr>
+        <tr>
+          <td height="26" colspan="2" valign="middle" background="../images/barbg.png" class="simple"><p class="simplemenu"><a href="/">Home</a> <img src="../images/div.png" width="2" height="9"> <a href="/sptbxlib/" class="simplemenu">SpTBXLib</a>  <img src="../images/div.png" width="2" height="9"> <a href="/velvex/">VELVEx</a>  <img src="../images/div.png" width="2" height="9"> <a href="/multiinstaller/">MultiInstaller</a>  <img src="../images/div.png" width="2" height="9"> <a href="/skineditor/">Skin Editor</a> </p>          </td>
+        </tr>
+        <tr>
+          <td height="60" colspan="2" align="left" valign="middle" background="../images/gradient.png" class="content"><!-- InstanceBeginEditable name="edtop" -->
+          <h2>Downloads</h2> 
+          <!-- InstanceEndEditable -->         </td>
+        </tr>
+        <tr>
+          <td width="843" rowspan="2" align="left" valign="top" bgcolor="#FFFFFF" class="content"><!-- InstanceBeginEditable name="edtleft" -->
+            <h3>License</h3>
+            <p>The contents of this package are subject to the Mozilla Public License Version 1.1, you may not use this package except in compliance with the License.<br>
+  You may obtain a copy of the License at: <a href="http://www.mozilla.org/MPL">http://www.mozilla.org/MPL</a></p>
+            <p>Software is distributed on an &quot;AS IS&quot; basis, WITHOUT WARRANTY OF ANY KIND, either express or implied.</p>
+            <p> The initial developer of this package is Robert Lee.</p>
+            <h3>Donations</h3>
+            <p>VELVEx is free under the terms of the Mozilla Public License.</p>
+            <p>However, if you wish to express your appreciation for the time and resources the authors have expended developing and supporting it over the years, we do accept and appreciate donations.</p>
+            <p>Donations are accepted via  PayPal. Please click the following link to donate:</p>
+            <blockquote>
+              <p><strong>PayPal</strong></p>
+              <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <input type="hidden" name="cmd2" value="_s-xclick">
+                <input type="image" src="https://www.paypal.com/en_US/i/btn/x-click-but04.gif" border="0" name="submit2" alt="Make payments with PayPal - it's fast, free and secure!">
+                <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                <input type="hidden" name="encrypted2" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+">
+              </form>
+              </blockquote>
+            <p>Thank you for your support.</p>
+            <h3>Downloads<span class="tableHeaderBlue"><a name="downloads"></a></span></h3>
+            <table width="100%" border="0" cellpadding="2" cellspacing="2">
+              <tr align="center">
+                <td colspan="4" class="tableHeaderBlue">Downloads</td>
+              </tr>
+              <tr align="center" bgcolor="#CCCCCC" class="tableHeaderGray">
+                <td width="21%">Filename</td>
+                <td width="18%">Date</td>
+                <td width="11%">Size</td>
+                <td width="50%">Description</td>
+              </tr>
+              <tr valign="middle" class="tableBackground">
+                <td><p><a href="VELVEx.1.4.9.zip">VELVEx.1.4.9.zip</a></p></td>
+                <td align="right"><p>23 January 2006</p></td>
+                <td align="right"><p>108KB</p></td>
+                <td><p>VELVEx for Delphi 5-2006 and C++Builder 5-2006</p></td>
+              </tr>
+              <tr valign="middle" class="tableBackground">
+                <td><p><a href="VELVExDemo.zip">VELVExDemo.zip</a></p></td>
+                <td align="right"><p>31 May 2005</p></td>
+                <td align="right"><p>604KB</p></td>
+                <td><p>VELVEx compiled demos</p></td>
+              </tr>
+              <tr align="center">
+                <td colspan="4" class="tableHeaderBlue">Release History <a name="history"></a></td>
+              </tr>
+              <tr>
+                <td colspan="4">
+                  <pre>23 January 2006 - version 1.4.9
+  - Fixed ImageEn AV when creating the thumbnails.
+  - Fixed incorrect thumbnails details when using ImageEn.
+  - Fixed incorrect JPEG 2000 images loading with ImageEn.
+  - Improved the thumbnails shell extraction.
+  - Minor changes.
+ 
+3 December 2005 - version 1.4.8
+  - Fixed incorrect tbFit border painting.
+ 
+17 November 2005 - version 1.4.7
+  - Fixed incorrect icon selection painting.
+  - Fixed incorrect thumbnail details painting.
+  - Added ESC key handler to cancel cut or copy.
+   
+11 November 2005 - version 1.4.6
+  - Made GetChildByIndex function more robust.
+  - Fixed 0000017 Mantis entry: AV when deleting file.
+  - Fixed 0000023 Mantis entry: incorrect mouse click events when
+    HideCaptions or ComCtl6 was used.
+  - Fixed problem in CM_FONTCHANGED and Begin/End Update causing
+    TListview to access window handle during streaming, thanks to
+    Jim for the fix.
+  - Fixed incorrect focus painting when syncronizing the selection.
+  - Fixed incorrect icon selection painting.  
+  - Improved ImageEn support, thanks to Kai Brendel for reporting this.
+  - Added support for VT 4.4.2
+  - Added support for threaded enumeration of objects - Jim K
+  - Added new border styles, tbWindowed and tbFit.
+  - Added new SingleLineCaptions property to the ThumbsOptions.
+  - Added Ctrl-I shortcut to invert the selection.
+ 
+31 May 2005 - version 1.4.5
+  - Fixed AV when creating large Metafiles thumbnails, thanks to
+    Polo for the fix.
+  - Fixed incorrect drag image when DragImageKind was diNoImage, 
+    thanks to Thomas Bauer for reporting this.
+  - Denied Theme Manager subclassing.
+  - Added new property: ThumbsOptions.CacheOptions.AdjustIconSize to 
+    allow dynamic thumbnails resizing.
+ 
+21 December 2004 - version 1.4.4
+  - Added EditFile method, to easily browse for a file to select it 
+    and begin to edit it.
+  - Fixed incorrect checkboxes sync.
+  - Fixed incorrect mouse button click handling when ComCtrls 6 is 
+    used, thanks to Gabriel Cristescu for reporting this.
+ 
+30 August 2004 - version 1.4.3
+  - Added checkbox support for vsxThumbs viewstyle.
+  - Added partial background image support to non vsxReport 
+    ViewStyles, the background should be loaded in the listview
+    using the ListView_SetBkImage API:
+    var
+      BK: TLVBKImage;
+    begin
+      with LV.TreeOptions do
+        PaintOptions := PaintOptions + [toShowBackground];
+      // LVBKIF_SOURCE_HBITMAP is not supported by ListView_SetBkImage
+      // TLVBKImage.hbm is not supported by ListView_SetBkImage
+      Fillchar(BK, SizeOf(BK), 0);
+      BK.ulFlags := LVBKIF_SOURCE_URL or LVBKIF_STYLE_TILE;
+      BK.pszImage := PChar(Edit1.text);
+      ListView_SetBkImage(LV.ChildListview.Handle, @BK);
+    end;
+ 
+4 June 2004 - version 1.4.2
+  - Added support for toHideOverlay and toRestoreTopNodeOnRefresh
+    properties.
+  - Added new property: ThumbsOptions.CacheOptions.CacheProcessing
+    to allow ascending or descending sorting of the thread cache 
+    processing list.
+    When this property is tcpAscending the top files in the 
+    listview are thumbnailed first.
+  - Fixed incorrect selection painting, it now uses the values in
+    Colors.FocusedSelectionColor and Colors.UnFocusedSelectionColor.
+  - Fixed an incorrect call to OnEditCancelled.
+  - Fixed an incorrect call to OnDblClick.
+  - Reworked the internal cache events.
+ 
+5 March 2004 - version 1.4.1
+  - Compatible with VSTools 1.1.15
+  - Fixed drag and drop synchronization, it now correctly fires
+    OnDragDrop event when the ViewStyle <> vsxReport.
+  - Fixed incorrect icon spacing when the handle is recreated.
+ 
+20 December 2003 - version 1.4
+  - Compatible with VT 4.0.16 and VSTools 1.1.12c
+  - Changed the Cache StreamVersion, previous cache files will 
+    be reloaded.
+  - Fixed Drag&Drop synchronization, the OLE drop is disabled
+    by setting off toAcceptOLEDrop.
+  - Fixed incorrect focus painting.
+  - Fixed DetailedHints inconsistence.
+  - Fixed TCacheList problem with some exotic folder names.
+  - Fixed another VCL TListview bug, the edit control was not
+    correctly showed when using large fonts in vsxList and 
+    vsxSmallIcons ViewStyles, thanks to Boris for reporting this.
+  - Adem Baba added support for the ImageMagick graphic library 
+    (http://www.imagemagick.org) using Nils Haeck Delphi wrapper: 
+    http://www.simdesign.nl/components/imagemagick.html
+  - Added ImageLibrary property to get the image library type that
+    is being used.
+  - Added HideCaptions option to hide the thumbnails captions.
+  - Updated demo.
+  - New SpeedTest demo.
+ 
+16 October 2003 - version 1.3.5
+  - Fixed incorrect selection synchronization when the Listview
+    loses focus.
+  - Fixed drag and drop synchronization, it now correctly fires
+    OnStartDrag, OnEndDrag, OnDragDrop when the
+    ViewStyle <> vsxReport.
+  - ThumbsCache.Compressed is now defaulted to False, it 
+    improves the rendering speed performance when the cache
+    is not saved.
+  - Added full unicode support for ImageEn lib.
+  - LoadGraphic now has support for ImageEn lib.
+  - Added ShowXLIcons option to show XL-Icons in vsxThumbs mode
+    (it will only work on WinXP).
+  - Added ShellExtractExtensionsList to selectively load shell
+    supported thumbnails.
+    Suppose you only want images + html thumbnails, then you 
+    should turn off seShellExtract to disable the extraction of
+    additional shell supported files (doc, xls, etc) and then 
+    add '.html' to the ShellExtractExtensionsList.
+  - Mouse wheel will now scroll by thumbnail height.
+  - New IDE component palette icon.
+  - Updated Demo.
+ 
+21 August 2003 - version 1.3.4
+  - Fixed incorrect icon arrangement on vsxList mode.
+  - Fixed incorrect thumbnail reloading method.
+ 
+19 June 2003 - version 1.3.3
+  - Changed the DefaultStreamVersion of the cache.
+ 
+18 June 2003 - version 1.3.2
+  - Fixed AV when the RootFolder is renamed and the cache
+    saving is activated.
+  - Added UseSubsampling property to resize the thumbnails
+    smoothly without loss of image quality.
+  - Added Compressed property to the Cache options, it activates
+    the on-the-fly cache compression system. VELVEx uses JPEG
+    compression because it's the most effective compression method
+    for images, the drawback is that there's a loss of quality in the 
+    thumbnails, if you are looking for the highest quality rendering 
+    deactivate this property and set UseSubsampling to true.
+    Here are some tests on a folder with 200 images 
+    (120 x 120 thumbnails):
+      No compression: 7205 Kb, 0% compressed
+      ZLib: 5002 Kb, 30% compressed
+      JPEG: 441 Kb, 94% compressed
+  - Lossless Compression for small images.
+  - Greatly improved thumbnails rendering speed.
+  - Reduced flicker when scrolling.
+  - Updated Demo.
+ 
+23 May 2003 - version 1.3.1
+  - Fixed an AV on WinXP, changed SupportsShellExtract.
+ 
+20 May 2003 - version 1.3
+  - Added Stretch property to the thumbnail options, it
+    stretches the thumb images to fit the thumbnail size.
+  - Fixed incorrect drag image offset, thanks to Jim.
+  - Fixed drag images not showing on WinXP, thanks to Jim.
+  - Fixed incorrect mouse state when opening the context menu,
+    thanks to Jim.
+  - Fixed thumbnail renaming bug, when the file extension was
+    changed the thumbnail was not refreshed.
+  - Made a workaround of a TListview bug, when the Listview is
+    small enough to not fit 2 fully visible items the PageUp/PageDown
+    buttons don't work.
+  - Fixed thumbnail creation bug, the images were shrinked if
+    the thumb size was higher than the image size.
+  - SyncItemsCount was not called when the items were deleted.
+  - Fixed Details drawing in Win9x.
+  - Fixed a bug in MakeThumbFromFile, TJPEGImage doesn't accepts
+    images with 1 pixel width or heigth, the minimum size of the
+    thumbnails is now set to 2.
+  - Fixed a bug in ValidateListItem, it didn't work for the first
+    node in the list.
+  - Fixed a bug in the Drag&Drop mechanism, it now doesn't allow
+    to drop in the dragged item unless the right button is used
+    for the drag operation or when Ctrl, Alt, Shift keys are being
+    pressed.
+    The same goes for dropping in the background.
+  - Fixed a bug in the Drag&Drop mechanism, it didn't accept 
+    items outside the listview unless Ctrl, Alt or Shift keys was
+    pressed.
+  - Fixed a bug in the thumbnails cache saving mechanism, thanks
+    to Eric Fookes for pointing this out.
+ 
+7 April 2003 - version 1.2
+  - The cache is automatically updated when loaded. If an image
+    file was changed the thumbnail will be reloaded.
+  - Added DetailedHints property to the thumbnail options to show a
+    hint including file name, size, date, type, image size, and
+    shell icon. ShowHint must be true.
+  - Added OnThumbsGetDetails event to set a customized string for
+    the hints and thumbnails details.
+  - Fixed mem leak in MakeThumbFromFile for using StretchDraw,
+    which is not thread safe.
+  - Fixed a bug in the Drag&Drop mechanism, now it doesn't allow to
+    drop a file if the shell doesn't support it.
+  - Fixed the drawing of the multiple Drag&Drop bitmap.
+  - Fixed a TListview bug, in virtual mode when the icon arrangement
+    is iaLeft the arrow key press are scrambled.
+  - The Bevel and Border properties are now correctly synched.
+  - Demo updated.
+ 
+27 February 2003 - version 1.1
+  - Added OnThumbThreadClass event, to replace the thumbnail
+    thread with a custom one, thanks to Jim for implementing this.
+  - Added a new demo to showcase how to create a custom thumbnail
+    thread.
+  - Fixed an incorrect parameter in OnThumbsCacheAdd event.
+ 
+17 February 2003 - version 1.0
+  - Added UseShellExtraction property, it is used to let the shell
+    extract and create the thumbnail. Jim added support for
+    IExtractImage in the Thumbnails thread. HTML files, and most 
+    image files and any other format that is supported by windows or
+    a shell extension is shown as a thumbnail!
+    VELVEx will try to create the thumbnails with the image library,
+    if that fails and UseShellExtraction is enabled it will try
+    with the Shell IExtractImage interface.
+    I decided to leave the image files to the default image library
+    based on some tests:
+    With a folder of 180 jpg files:
+      Windows Explorer (IExtractImage): ~20 secs.
+      ACDSee: ~10 secs.
+      VELVEx: ~5 secs.
+    Cache file size:
+      Windows Explorer: ~1000 KB
+      ACDSee: unknown
+      VELVEx: ~270 KB
+  - Regrouped the thumbnails properties into ThumbOptions property
+  - Added ValidateListItem public method to get a valid TListitem
+    associated with a Node. 
+    The obtained ListItem gives you access to its properties and
+    methods, which will be sensible to use only when the ViewStyle
+    is not in vsxReport, for example:
+    var
+      L: TListItem;
+    begin
+      if LVEx.ValidateListItem(LVEx.FocusedNode, L) then
+        L.MakeVisible(false);
+    end;
+  - Added LoadAllAtOnce property to load all the thumbnails at once,
+    like ACDSee.
+  - Added ExtensionsExcludeList public property, is a list that 
+    contains the file extensions that should be excluded from creating 
+    the thumbnails.
+    This could be helpfull when you don't want the shell to create
+    thumbnails for a specific file extension.
+  - Added BorderSize property to set the thumbnails border width.
+  - Added ShowSmallIcon property to show the file small icon on the
+    top-right border of the thumbnails.
+  - OnEnter and OnExit events are now triggered correctly.
+  - Fixed a bug in the cache deleting method, when AutoLoad was true
+    and the thumbnail was reloaded, the cache was getting scrambled.
+  - Fixed a bug in the editing method, in Win9x if the Delete key was
+    pressed an AV was raised.
+  - Fixed a bug in the editing method, when an item was reselected
+    after the control was unfocused the item enters in edit mode.
+    It's a classic TListview bug.
+  - Minor bug fixes.
+  - Demo updated.
+ 
+29 December 2002 - version 0.9.9
+  - Fixed minor selection and focus issues, thanks to Boris.
+ 
+19 December 2002 - version 0.9.8
+  - Added a chance to change the items caption via DoGetVETText,
+    thanks to Jim for implementing this.
+  - Added ThumbsHighlight, ThumbsHighlightColor properties to
+    control the image files highlighting.
+  - Fixed a bug in TExtensionsList, it was not filled correctly
+    in Delphi 5.
+  - Fixed a bug in CreateNewFolder, it was giving an AV when the
+    ViewStyle was not vsxReport.
+  - Fixed a bug in the painting method, items were not properly
+    blended and cut items were not ghosted.
+  - Fixed a bug when Align and Constraints were setted at runtime
+    and the ViewStyle wasn't vsxReport it didn't worked as expected.
+ 
+7 December 2002 - version 0.9.7
+  - Reworked the cache mechanism, improved thumbnails creation and
+    painting speed.
+  - Added new public method for cache cleaning, 
+    ThumbsCacheOptions.ClearCache
+  - Added new public method for cache item reload, 
+    ThumbsCacheOptions.Reload
+  - Added new property, ThumbsCacheOptions.CompressionQuality, 
+    to control the thumbnail compression, default value of 60 
+    (1..100, 1 highest compression but lowest quality, 100 
+    lowest compression but highest quality).
+  - Updated demo.
+ 
+1 December 2002 - version 0.9.6
+  - Added support for ImageEn (http://www.hicomponents.com) and
+    Envision (http://www.intervalsoftware.com) image libraries.
+ 
+30 November 2002 - version 0.9.5
+  - Three new events added:
+    OnThumbsCacheAdd: fired when a thumbnail is added
+    to the cache.
+    OnThumbsCacheRead: fired when a thumbnail must be read 
+    from the cache.
+    OnThumbsCacheProcessing: fired when a thumbnail is about
+    to be processed.
+ 
+11 November 2002 - version 0.9.4
+  - Reworked the thumbnail cache to support unicode path names.
+  - Reworked the thumbnails creation mechanism to support unicode
+    path names.
+    VLVEx can now browse through unicode folders and create the correct
+    thumbnails, it is now one of the few thumbnail creation components
+    that has full unicode support.
+ 
+7 November 2002 - version 0.9.3
+  - The cache file is now compressed and the size is reduced by 10
+    times, thanks to Gerald Koeder for the tip.
+  - Improved the cache management, introduced a new property 
+    ThumbsCacheOptions.
+  - The cache will now be automatically loaded/saved when
+    ThumbsCacheOptions.AutoLoad/AutoSave is true.
+  - ThumbWidth and ThumbHeight now reflect the real pixel size of the
+    thumbnail.
+  - Updated the demo.
+ 
+7 October 2002 - version 0.9.2c
+  - Hidden files where not ghosted when ViewStyle was not vsxReport.
+  - ShellContextSubMenu now works when ViewStyle is not vsxReport.
+ 
+5 October 2002 - version 0.9.2
+  - Fixed a MS Listview control Shift-selection bug.
+ 
+23 September 2002 - version 0.9.1
+  - Improved the thumbnails cache to support comments.
+ 
+20 September 2002 - version 0.9
+  - Implemented a new threading system, thanks to Jim.
+  - The thumbnails cache can now be loaded and saved to disk, improved
+    demo to show this.
+ 
+8 September 2002 - version 0.8.3
+  - GraphicEx support, thanks to Jim.
+  - Fixed a bug in TListview not throwing a Change event when Shift 
+    selecting a block of items, thanks to Jim.
+ 
+4 September 2002 - version 0.8.2
+  - Fixed a thread bug in D7, thanks to Jim and Gerald.
+  - Fixed OnClick and OnDblClick not triggering, thanks to Matthias.
+ 
+25 August 2002 - version 0.8
+  - Greatly improved Listview custom drawing method and fixed 
+    all WinXP painting issues, thanks to Jim and Bill.
+  - Fixed icon arrangement issues.
+  - Improved drag image.
+  - Improved demo.
+ 
+17 August 2002 - version 0.7.3
+  - Fixed incorrect item column arrangement when the ViewStyle
+    is vsxList or vsxSmallIcon, thanks to Jim.
+  - Fixed painting issues in WinXP, thanks to Bill Miller.
+  - Fixed canvas not invalidated when resizing in WinXP.
+ 
+12 August 2002 - version 0.7.2
+  - Added 2 new properties that allows to show file and image 
+    properties in vsxThumbs ViewStyle: ThumbDetails and 
+    ThumbDetailsHeight.
+  - Added ThumbsOnlyBorder property, when true it shows 
+    borders only in valid image thumbnails when vsxThumbs 
+    ViewStyle, otherwise it shows borders for all the files 
+    and folders.
+  - Fixed items arrangement bug in vsxThumbs ViewStyle.
+  - Fixed visibility problem when OnEnumFolder is assigned.
+  - Fixed no editing mode on mouse click, thanks to Jim.
+  - Improved demo.
+  - Readme file created for version history, installation and
+    basic user guide.
+ 
+11 August 2002 - version 0.7.1
+  - Fixed no captions in W9x, thanks to Jim,
+  - Fixed no captions when the handle is recreated.
+  - VirtualExplorerListviewEx doesn't work with ThemeManager
+    version lower
+    than 1.9, please download the new version at:
+    http://www.delphi-gems.com/ThemeManager.html
+ 
+9 August 2002 - version 0.7
+  - Added unicode support, thanks to Troy Wolbrink.
+  - Fixed a positional bug in the child Listview Popupmenu,
+    added ContextMenu events notifications, thanks to Jim.
+  - Added VETColors support for file caption colors.
+  - Improved browse and selection speed (2000 files drag selection 
+    in Icon viewstyle 30 sec, before it was 55 sec. Win Explorer gets 
+    the job done in 10 sec... grrr. The problem lies in the 
+    CustomDrawing of the M$ Listview, it slows everything down, 
+    don't know how the heck  Win Explorer manages this
+    behavior).
+	 
+19 July 2002 - version 0.6 (Jim Kueneman)
+  - Added the long awaited Drag and Drop Support.  Please be
+    careful with this as it seems ok but if you delete you 
+    hard drive I take no responsibility. 
+    The drag image sucks but I spent all the time on TListview
+    I am going to trying to get it to create a better drag image,
+    it won't because of the custom draw and no image lists assiged
+    to the control (don't try to assign a image list with custom 
+    draw either!).
+  - Fixed bug with the new FNodeArray when the VT structure
+    change was detected and VLVEx called SyncItemsCount.
+    This method would change the number of items in the 
+    Listview but did not check to see if FNodeArray was big enough.
+ 
+14 July 2002 - version 0.5.1
+  - Fixed Listview visibility bug, thanks to Aaron
+ 
+4 July 2002 - version 0.5
+  - Jim Kuenaman adapted the VET Icon thread, thanks Jim.
+  - Implemented a Thumbnails cache to save bitmap handles, thanks to 
+    Werner Lehmann.
+  - Fixed clipboard, key and mouse sync, thanks to Bill Miller.
+ 
+30 April 2002 - version 0.4.4
+  - Fixed memory leak in DummyImageList creation, thanks to 
+    Milan Vandrovec.
+  - Added Focus sync, thanks to Bill Miller.
+ 
+28 April 2002 - version 0.4.2
+  - Fixed painting issues in the child VCL Listview on WinXP, woohoo.
+ 
+16 April 2002 - version 0.4.1
+  - Fixed Thread race condition.
+  - Fixed file deletion synch.
+ 
+15 April 2002 - version 0.4
+  - Unit and Class name changes to support VSTools RC 1.
+  - Created a base class with unpublished properties: 
+    TCustomVirtualExplorerListviewEx.
+  - Need to lock the canvas of the bitmap in MakeThumbFromFile.
+ 
+1 April 2002 - version 0.3
+  - Improved thread speed, and fixed some bugs.
+  - Fixed flicker when changing viewstyles.
+  - Added ThumbBorders.
+  - Added OnThumbsDrawBefore and OnThumbsDrawAfter event 
+    properties.
+  - Added SyncRepaint method to force repaint in the child VCL 
+    Listview
+  - Added GetThumbDrawingBounds method to get the real thumbs 
+    drawing bounds, instead of the Imagelib size.
+  - Removed OnThumbsFilter and added ExtensionsList instead, to
+    improve speed.
+  - ThumbSpaceWidth and ThumbSpaceHeight properties now represent the
+    true pixel space between thumbnails.
+ 
+30 March 2002 - version 0.2.1
+  - Corrected a bug that caused a lot of flicker when changing dirs.
+  - Added BorderStyle, Color, Ctrl3D, Cursor, and Font synchronizing,
+    thanks to Bill Miller.
+  - Corrected Delphi 4 and 5 package issues, thanks to Jim Kueneman.
+  - Corrected Delphi 4 and 5 problems with FListview.SelectAll, 
+    thanks to Jim Kueneman.
+ 
+27 March 2002 - version 0.2
+  - Corrected Delphi 4 and 5 package issues, thanks to Jim Kueneman.
+  - Constraints assignment bug fixed, thanks to Milan Vandrovec.
+  - F5, Ctrl+C, Ctrl+V, Ctrl+X and Delete keys implemented.
+ 
+24 March 2002 - version 0.1
+  - Thumbnails implemented.
+  - OnDataFind implemented, key navigation for the Listview.
+  - Ghosted items painted correctly now.
+  - Edit handling implemented, unicode not supported.
+              </pre>                </td>
+              </tr>
+            </table>
+            <p>&nbsp;</p>
+            <!-- InstanceEndEditable --></td>
+          <td width="159" height="405" align="left" valign="top" bgcolor="#FFFFFF">
+            <table width="145"  border="0" align="center" cellpadding="0" cellspacing="0" class="menu">
+              <tr>
+                <td valign="top" class="menuMiddle">
+                  <p><span class="menuTitle">VELVEx</span><a href="index.htm">Home</a><a href="downloads.htm">Downloads</a><a href="downloads.htm#history">Release History</a>
+				  <span class="menuTitle">Support</span><a href="support.htm#license">License</a><a href="support.htm#installation">Installation</a><a href="support.htm#gettingstarted">Getting Started</a><a href="support.htm#faq">FAQ</a><a href="reference.htm">Reference</a>
+				  <span class="menuTitle">Resources</span><a href="http://www.soft-gems.net">VirtualTreeView</a><a href="http://www.mustangpeak.net">VirtualShellTools</a><a href="http://www.mustangpeak.net">EasyListview</a></p>
+                </td>
+              </tr>
+          </table>
+            <!-- InstanceBeginEditable name="edright2" --><!-- InstanceEndEditable -->
+            <p>&nbsp;</p>						
+	  <div align="center">
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="2533519">
+<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG_global.gif" border="0" name="submit" alt="">
+<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+	  </div>			
+            <p>&nbsp;</p>			
+          <p>&nbsp;</p>		  </td>
+        </tr>
+        <tr>
+          <td width="159" align="left" valign="bottom" bgcolor="#FFFFFF">
+            <p>&nbsp;</p>					  
+          <p>&nbsp;</p></td>
+        </tr>
+        <tr>
+          <td background="../images/footerleft.png">&nbsp;</td>
+          <td colspan="2" valign="top" background="../images/footer.png" bgcolor="#FFFFFF"><p align="center" class="footer">&nbsp;</p>          </td>
+          <td background="../images/footerright.png">&nbsp;</td>
+        </tr>
+</table>      
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+<!-- InstanceEnd --></html>

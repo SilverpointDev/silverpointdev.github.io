@@ -1,0 +1,493 @@
+<html><!-- InstanceBegin template="/Templates/tempvelvex.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Silverpoint Development</title>
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="head" -->
+<style type="text/css">
+<!--
+pre {
+	font-family: "Courier New", Courier, mono;
+	font-size: 10pt;
+	margin: 10px;
+	border: 1px dotted #000000;
+	padding: 5px;
+	background-color: #FFFFCC;
+}
+-->
+</style>
+<!-- InstanceEndEditable -->
+<link href="../styles.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<table width="1024" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="8" rowspan="5" background="../images/shadowleft.png"></td>
+          <td height="85" colspan="2" background="../images/topbg.png">
+          <div align="center">
+          <div align="center" id="logo"><a href="/"><img src="../images/logotemp.png" width="494" height="59" border="0"></a></div>
+          </div>
+          <td width="8" rowspan="5" background="../images/shadowright.png"></td>
+        </tr>
+        <tr>
+          <td height="26" colspan="2" valign="middle" background="../images/barbg.png" class="simple"><p class="simplemenu"><a href="/">Home</a> <img src="../images/div.png" width="2" height="9"> <a href="/sptbxlib/" class="simplemenu">SpTBXLib</a>  <img src="../images/div.png" width="2" height="9"> <a href="/velvex/">VELVEx</a>  <img src="../images/div.png" width="2" height="9"> <a href="/multiinstaller/">MultiInstaller</a>  <img src="../images/div.png" width="2" height="9"> <a href="/skineditor/">Skin Editor</a> </p>          </td>
+        </tr>
+        <tr>
+          <td height="60" colspan="2" align="left" valign="middle" background="../images/gradient.png" class="content"><!-- InstanceBeginEditable name="edtop" -->
+          <h2>Support</h2> 
+          <!-- InstanceEndEditable -->         </td>
+        </tr>
+        <tr>
+          <td width="843" rowspan="2" align="left" valign="top" bgcolor="#FFFFFF" class="content"><!-- InstanceBeginEditable name="edtleft" -->
+            <p>The discussion on VELVEx package as well as other VELVEx extensions is hosted by Jim Kueneman's news server at: <a href="news://news.mustangpeak.net/support.virtualshelltools">news.mustangpeak.net/support.virtualshelltools</a> (<a href="http://www.mustangpeak.net">web based</a>). Please, address general questions to the newsgroup.</p>
+          <p>Direct e-mail contact:<br>
+              <img src="../mail.png" width="150" height="10"></p>
+            <p>For information on VirtualTreeview, visit <a href="http://www.soft-gems.net">http://www.soft-gems.net</a><br>
+  For information on VirtualShellTools, visit <a href="http://www.mustangpeak.net">http://www.mustangpeak.net</a></p>
+            <h3>License<a name="license"></a></h3>
+            <p>The contents of this package are subject to the Mozilla Public License Version 1.1 (the &quot;License&quot;); you may not use this package except in compliance with the License.<br>
+  You may obtain a copy of the License at: <a href="http://www.mozilla.org/MPL">http://www.mozilla.org/MPL</a></p>
+            <p>Software distributed under the License is distributed on an &quot;AS IS&quot; basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the specific language governing rights and limitations under the License.</p>
+            <p> The initial developer of this package is Robert Lee.</p>
+            <h3>Donations</h3>
+            <p>VELVEx is free under the terms of the Mozilla Public License.</p>
+            <p>However, if you wish to express your appreciation for the time and resources the authors have expended developing and supporting it over the years, we do accept and appreciate donations.</p>
+            <p>Donations are accepted via either PayPal (preferred) or Kagi. Please click one of the following links to donate:</p>
+            <blockquote>
+              <p><strong>PayPal</strong></p>
+              <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <input type="hidden" name="cmd2" value="_s-xclick">
+                <input type="image" src="https://www.paypal.com/en_US/i/btn/x-click-but04.gif" border="0" name="submit2" alt="Make payments with PayPal - it's fast, free and secure!">
+                <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                <input type="hidden" name="encrypted2" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+">
+              </form>
+              <p><strong>Kagi</strong></p>
+              <p><a href="http://store.kagi.com/?6FDEC_LIVE&lang=en"><img src="../kagi.gif" alt="Kagi" width="71" height="42" border="0" longdesc="Kagi"></a></p>
+            </blockquote>
+            <p>Thank you for your support.</p>
+            <h3>Installation<a name="installation"></a></h3>
+            <p> Requirements:<br>
+  - Mike Lischke's VirtualTreeview (<a href="http://www.soft-gems.net">http://www.soft-gems.net</a>)<br>
+  - Jim Kueneman's VirtualShellTools (<a href="http://www.mustangpeak.net">http://www.mustangpeak.net</a>)</p>
+            <p>VELVEx is now part of VSTools, you can get it at <a href="http://www.mustangpeak.net">http://www.mustangpeak.net<br>
+            </a>You can download the self installing executable or install manually from the zip file.</p>
+            <p>However the latest versions and patches of VELVEx will be availbable here. </p>
+            <p>Installation instructions:<br>
+  - If you have a previous version of VELVEx installed in the IDE remove it from Component-&gt;Install Packages, select VELVEx from the list and press the Remove button. <br>
+  - Add the VELVEx 'Source' directory to Tools-&gt;Environment Options-&gt;Library-&gt;Library Path.<br>
+  - Open the <strong>VirtualExplorerListviewExD*.dpk</strong> package corresponding to the IDE version, a dialog box will inform you that the resource file must be recreated, press OK, press <strong>Compile</strong> (do not Install the package) and close the package window, a dialog box will ask you to save the changes, press YES.<br>
+  - Open the <strong>VirtualExplorerListviewExD*D.dpk</strong> design package corresponding to the IDE version, a dialog box will inform you that the resource file must be recreated, press OK, press <strong>Compile</strong> and then press <strong>Install</strong>, close the package window, a dialog box will ask you to save the changes, press YES.</p>
+            <p>Another way to install VELVEx is using <a href="../multiinstaller/index.htm">Silverpoint MultiInstaller</a> </p>
+            <h3>Getting Started<a name="gettingstarted"></a></h3>
+            <p>VELVEx is installed under the &quot;VirtualShellTools&quot; tab in the Components Palette.</p>
+            <p> To start using it just drop a VELVEx component on the form and use the <strong>VirtualExplorerTreeview</strong> property to link it to a TVirtualExplorerTreeview component.<br>
+  You can also use the <strong>ExplorerCombobox</strong> property to link it to a TVirtualExplorerCombobox component.<br>
+  Set the <strong>Active</strong> property to true, it is a good practice to activate all the VSTools components at runtime on the Form.OnShow event.</p>
+            <p>For more information go to the <a href="reference.htm">reference</a> section.</p>
+            <h3>FAQ<a name="faq"></a></h3>
+            <table width="100%"  border="0" cellspacing="2" cellpadding="2">
+              <tr>
+                <td class="tableBackground"><ol>
+                  <li>How do I add support for a graphic format?</li>
+                  <li>The selection is not updated when it is manually changed at runtime.</li>
+                  <li>How do I add a background image to VELVEx?</li>
+                  <li>How do I set the header default properties like sort order and column width?</li>
+                  <li>How do I keep the sort order after the root folder is changed or refreshed?</li>
+                  <li>How do I add a custom column to VELVEx?</li>
+                  <li>How do I add incremental search to VELVEx?</li>
+                  <li>Drag and Drop from VET/VELVEx to a VCL control</li>
+                  <li>Drag and Drop from VET/VELVEx to a VirtualTree</li>
+                  <li>How does the file notifier system works?</li>
+                </ol>                  </td>
+              </tr>
+              <tr>
+                <td class="tableHeaderBlue">1. How do I add support for a graphic format?</td>
+              </tr>
+              <tr valign="top">
+                <td><p>You must have a TGraphic descendant that handles the kind of image you would like to add, like Anders Melander's <a href="http://groups.yahoo.com/group/JEDI-GIFImage/">TGifImage</a> for gifs image files, or a complete image library like Mike Lischke's <a href="http://www.soft-gems.net">GraphicEx</a>. </p>
+                    <p>Currently VELVEx automatically supports the following image libraries: </p>
+                    <ul>
+                      <li><a href="http://www.lischke-online.de/Graphics.php">GraphicEx</a>: To add support for this image library just uncomment the following line in the VSToolsAddIns.inc file located in your VSTool Include directory:<br>
+        //{$DEFINE USEGRAPHICEX}
+                      <li><a href="http://www.hicomponents.com">ImageEn</a>: To add support for this image library just uncomment the following line in the VSToolsAddIns.inc file located in your VSTool Include directory:<br>
+        //{$DEFINE USEIMAGEEN}<br>
+        To support GIF and TIFF images you'll have to add GifLZW and TIFLZW units in your application, and set a few global variables, for more information read the ImageEn help file.                                           
+                      <li><a href="http://www.intervalsoftware.com">Envision Image Library</a>: To add support for this image library just uncomment the following line in the VSToolsAddIns.inc file located in your VSTool Include directory:<br>
+        //{$DEFINE USEENVISION}</li>
+                      <li><a href="http://www.imagemagick.org">ImageMagick</a>: To add support for this image library just uncomment the following line in the VSToolsAddIns.inc file located in your VSTool Include directory:<br>
+        //{$DEFINE USEIMAGEMAGICK} <br>
+        You will also need the <a href="http://www.simdesign.nl/components/imagemagick.html">ImageMagick Delphi wrapper </a> </li>
+                    </ul>
+                    <p>If the image library you are using is not listed above, and it extends TGraphic class to add support for additional images then you only have to manually add the file extensions to the <strong>ExtensionsList</strong> property: </p>
+                    <pre>VLEVEx.ExtensionsList.Add('.gif');</pre>
+                    <p> And to remove an image file type: </p>
+                    <pre>VLEVEx.ExtensionsList.Remove('.gif');</pre>
+                    <p>If the file type is known by the shell (mpg, mpeg, avi, doc, xls, html, etc.) activate the UseShellExtraction property to let the shell extract the thumbnail.</p>
+                    <p>And if you want to extract the thumbnail from a custom file format you can use the VELVEx thread-enabled custom thumbnailer capabilities.<br>
+      For example the CustomThread demo shows how to extract the thumbnails from .pas files.</p></td>
+              </tr>
+              <tr>
+                <td class="tableHeaderBlue">2. The selection is not updated when it is manually changed at runtime.<a name="faq2"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p>You need to call SyncSelectedItems if the selection is changed at runtime and the ViewStyle is not vsxReport:</p>
+                    <pre>VELVEx.SelectAll(True); // selection changed
+if VELVEx.ViewStyle &lt;&gt; vsxReport then
+  VELVEx.SyncSelectedItems;</pre>                </td>
+              </tr>
+              <tr>
+                <td class="tableHeaderBlue">3. How do I add a background image to VELVEx?</td>
+              </tr>
+              <tr valign="top">
+                <td><p>If the ViewStyle is in vsxReport mode just use the <strong>Background</strong> property.<br>
+      When VELVEx is not in report mode you have to use the ListView_SetBkImage API to set the background image on the ChildListview:</p>
+                    <pre>var
+  BK: TLVBKImage;
+begin
+  with VELVEx.TreeOptions do
+    PaintOptions := PaintOptions + [toShowBackground];
+  // LVBKIF_SOURCE_HBITMAP is not supported by ListView_SetBkImage
+  // TLVBKImage.hbm is not supported by ListView_SetBkImage
+  Fillchar(BK, SizeOf(BK), 0);
+  BK.ulFlags := LVBKIF_SOURCE_URL or LVBKIF_STYLE_TILE;
+  BK.pszImage := PChar(Filename);
+  ListView_SetBkImage(LV.ChildListview.Handle, @BK);
+end;</pre>                </td>
+              </tr>
+              <tr>
+                <td class="tableHeaderBlue">4. How do I set the header default properties like sort order and column width?</td>
+              </tr>
+              <tr valign="top">
+                <td><p>You have to use OnHeaderRebuild to reset the default column properties.<br>
+      OnHeaderRebuild is called everytime the root folder is changed or refreshed.</p>
+                    <pre>procedure TForm1.VELVExHeaderRebuild(
+Sender: TCustomVirtualExplorerTree; Header: TVTHeader);
+var
+  C: TVirtualTreeColumn;
+begin
+  // Sort by size, descending
+  Header.SortColumn := 1;
+  Header.SortDirection := sdDescending;
+  Sender.Sort(nil, Header.SortColumn, Header.SortDirection);
+  
+  // Show the Atributes column only on filesystem folders
+  if Assigned(Sender.RootFolderNamespace) then
+    if Sender.RootFolderNamespace.FileSystem then begin
+      if IsWinXP then
+        C := Header.Columns[6]
+      else
+        C := Header.Columns[4];
+      C.Options := C.Options + [coVisible];		
+	end;
+end;</pre></td>
+              </tr>
+              <tr>
+                <td class="tableHeaderBlue">5. How do I keep the sort order after the root folder is changed or refreshed?</td>
+              </tr>
+              <tr valign="top">
+                <td><p>You have to use OnRootRebuild to save the current sort column and then use OnHeaderRebuild to reset the default column order.</p>
+                    <pre>var
+  CurrentSortColumn: TColumnIndex;
+  CurrentSortDirection: TSortDirection;
+  
+procedure TForm1.VELVExRootRebuild(
+  Sender: TCustomVirtualExplorerTree);
+begin
+  // Save the current sort column
+  if Assigned(VELVEx.RootFolderNamespace) then begin
+    CurrentSortColumn := VELVEx.Header.SortColumn;
+    CurrentSortDirection := VELVEx.Header.SortDirection;
+  end;
+end;
+  
+procedure TForm1.VELVExHeaderRebuild(
+Sender: TCustomVirtualExplorerTree; Header: TVTHeader);
+begin
+  // Reset the default sort order
+  Header.SortColumn := CurrentSortColumn;
+  Header.SortDirection := CurrentSortDirection;
+  Sender.Sort(nil, Header.SortColumn, Header.SortDirection);
+end;</pre></td>
+              </tr>
+              <tr>
+                <td class="tableHeaderBlue">6. How do I add a custom column to VELVEx?</td>
+              </tr>
+              <tr valign="top">
+                <td><p>In this example we are going to add a column for the files extension</p>
+                    <pre>1) Use OnHeaderRebuild to add the column and store the
+column index.
+
+var
+  MyCustomColumnIndex: Integer = -2;
+  
+procedure TForm1.VELVExHeaderRebuild(
+Sender: TCustomVirtualExplorerTree; Header: TVTHeader);
+var
+  Column: TVirtualTreeColumn;
+begin
+  // Add the column if we are on a file system folder
+  if Sender.RootFolderNamespace.FileSystem then begin
+    Column := Header.Columns.Add;
+    Column.Text := 'Extension';
+    Column.Width := 50;
+    Column.Position := 1;
+    MyCustomColumnIndex := Column.Index;
+    // Note: Column.Position <> Column.Index, never change the 
+    // Column.Index
+    // VT sorts by Column.Index and shows the columns in the header
+    // by Column.Position
+  end
+  else
+    MyCustomColumnIndex := -2; // -1 is used by VT
+end;
+
+2) Use OnGetVETText to retrieve the text for the column
+
+procedure TForm1.VELVExGetVETText(Sender: TCustomVirtualExplorerTree;
+  Column: TColumnIndex; Node: PVirtualNode; Namespace: TNamespace;
+  var Text: WideString);
+begin
+  if Column = MyCustomColumnIndex then
+    Text := Namespace.Extension;
+end;
+
+3) Use OnCustomColumnCompare to sort the column
+
+procedure TForm1.VELVExCustomColumnCompare(
+  Sender: TCustomVirtualExplorerTree; Column: TColumnIndex; 
+  Node1, Node2: PVirtualNode; var Result: Integer);
+var
+  NS1, NS2: TNamespace;
+begin
+  if (Column = MyCustomColumnIndex) and 
+    LV.ValidateNamespace(Node1, NS1) and 
+    LV.ValidateNamespace(Node2, NS2) then
+      Result := WideCompareText(NS1.Extension, NS2.Extension);
+end;</pre></td>
+              </tr>
+              <tr>
+                <td class="tableHeaderBlue">7. How do I add incremental search to VELVEx?</td>
+              </tr>
+              <tr valign="top">
+                <td><p>Just use the OnIncrementalSearch event: </p>
+                    <pre>
+uses
+  VirtualWideStrings, VirtualShellUtilities;
+ 
+function My_StrLICompW(W1, W2: PWideChar; 
+  MaxLen: Cardinal): Integer;
+begin
+  W1 := StrLCopyW(W1, W1, MaxLen);
+  W2 := StrLCopyW(W2, W2, MaxLen);
+  Result := StrICompW(W1, W2);
+end;
+ 
+procedure TForm1.VELVExIncrementalSearch(Sender: TBaseVirtualTree;
+ Node: PVirtualNode; const SearchText: WideString; 
+ var Result: Integer);
+var
+  NS: TNamespace;
+  W1, W2: PWideChar;
+begin
+  //Adapted from the VT Advanced demo (PropertiesDemo.pas):
+  if VELVEx.ValidateNamespace(Node, NS) then begin
+    W1 := PWideChar(SearchText);
+    W2 := PWideChar(NS.NameInFolder);
+    Result := My_StrLICompW(W1, W2, StrLenW(W1));
+  end;
+end;</pre></td>
+              </tr>
+              <tr>
+                <td class="tableHeaderBlue">8. Drag and Drop from VET/VELVEx to a VCL control</td>
+              </tr>
+              <tr valign="top">
+                <td><p>VSTools controls and the Shell uses OLE D&D, not VCL D&amp;D.<br>
+      The easiest way to make a VCL control OLE D&D aware is to do it with the D&D Component Suite: <a href="http://www.angusj.com/delphi/"> http://www.angusj.com/delphi/<br>
+    </a>The cheap and dirty way is to catch the WM_DROPFILES message of the TWinControl:</p>
+                    <pre>type
+  TForm1 = class(TForm)
+    ListBox1: TListbox;
+    procedure FormClose(Sender: TObject; 
+      var Action: TCloseAction);
+    procedure FormShow(Sender: TObject);
+  protected
+    procedure Hook(var Msg: TMessage);
+  end;
+  
+  THackListbox = class(TListbox);
+  
+uses
+  ShellAPI;
+  
+procedure TForm1.Hook(var Msg: TMessage);
+// Window Procedure Hook for the Listbox so we can look 
+// for the WM_DROPFILES message.
+var
+  Count, Size, I: Integer;
+  S: String;
+begin
+  if Msg.Msg = WM_DROPFILES then begin
+    Listbox1.Items.BeginUpdate;
+    try
+      Count := DragQueryFile(Msg.wParam, $FFFFFFFF, nil, 0);
+      for I := 0 to Count - 1 do begin
+        Size := DragQueryFile(Msg.wParam, I, nil, 0);
+        SetLength(s, Size - 1); // Don't need the null
+        DragQueryFile(Msg.wParam, i, PChar(s), Size);
+        Listbox1.Items.Add(s);
+      end;
+    finally
+      Listbox1.Items.EndUpdate;
+    end;
+  end 
+  else
+    THackListbox(ListBox1).WndProc(Msg);
+end; 
+ 
+procedure TForm1.FormShow(Sender: TObject);
+begin
+  DragAcceptFiles(Listbox1.Handle, True);
+  Listbox1.WindowProc := Hook
+end; 
+ 
+procedure TForm1.FormClose(Sender: TObject; 
+  var Action: TCloseAction);
+begin
+  DragAcceptFiles(Listbox1.Handle, False);
+end;</pre></td>
+              </tr>
+              <tr>
+                <td class="tableHeaderBlue">9. Drag and Drop from VET/VELVEx to a VirtualTree</td>
+              </tr>
+              <tr valign="top">
+                <td><p>Use the THDrop class to get the Just </p>
+                    <pre>uses
+  ActiveX, VirtualDataObject;
+ 
+function DataObjectIsHDrop(D: IDataObject): Boolean; 
+// Returns true if the DataObject supports CF_HDROP
+var
+  FormatEtc: TFormatEtc;
+begin
+  FormatEtc.cfFormat := CF_HDROP;
+  FormatEtc.ptd := nil;
+  FormatEtc.dwAspect := DVASPECT_CONTENT;
+  FormatEtc.lindex := -1;
+  FormatEtc.tymed := TYMED_HGLOBAL;
+  Result := Succeeded(D.QueryGetData(FormatEtc));
+end;
+ 
+procedure DataObjectExtractFileList(D: IDataObject; 
+  FileList: TWideStringList);
+// Returns the DataObject's file list
+var
+  HDRop: THDrop;
+  I: integer;
+begin
+  FileList.Clear;
+  if DataObjectIsHDrop(D) then begin
+    HDrop := THDrop.Create;
+    try
+      if HDrop.LoadFromDataObject(D) then
+        for I := 0 to HDrop.FileCount - 1 do
+          FileList.Add(HDrop.FileName(I));
+      //Note: there's no overloaded FileNames method
+      //to handle TWideStringList
+    finally
+      HDrop.Free;
+    end;
+  end;
+end;
+ 
+procedure TForm1.VirtualStringTree1DragOver(Sender: TBaseVirtualTree;
+  Source: TObject; Shift: TShiftState; State: TDragState; Pt: TPoint;
+  Mode: TDropMode; var Effect: Integer; var Accept: Boolean);
+begin
+  Accept := DataObjectIsHDrop(Sender.DragManager.DataObject);
+end;
+ 
+procedure TForm1.VirtualStringTree1DragDrop(Sender: TBaseVirtualTree;
+  Source: TObject; DataObject: IDataObject;
+  Formats: TFormatArray; Shift: TShiftState; Pt: TPoint; 
+  var Effect: Integer; Mode: TDropMode);
+var
+  DroppedFileList: TWideStringList;
+begin
+  DroppedFileList := TWideStringList.Create;
+  try
+    FileListFromDataObject(DataObject, DroppedFileList);
+  finally
+    DroppedFileList.Free;
+  end;
+end;</pre></td>
+              </tr>
+              <tr>
+                <td class="tableHeaderBlue">10. How does the file notifier system works?</td>
+              </tr>
+              <tr valign="top">
+                <td><p>The notifier system (the one that can be turned on in the properties) uses a recently documented subsystem in windows. You register a window for the subsystem to send message to when applications call SHChangeNotify to tell Windows a change in something occurred. When you get this message you extract a PIDL or 2 PIDLs out of the information. If something is created you get one, if something is changed you get 2, one PIDL for what the object was and one PIDL for what the object is now.</p>
+                    <p>Every version of Windows is different in how they handle this subsystem (that is why it was undocumented). Windows 2k was excellent, it sent notifications for every file event. Other systems have an overflow threshold. If too many files are deleted the system would send a few individual notifications then it would overflow and send an &quot;updateDirectory&quot; event, including XP. </p>
+                    <p>Due to the fact you can't rely on this and the performance implications during large file manipulations I decided to take all file changes and combine them into &quot;updateDirectory&quot; event. This all happens in the change notifier thread. Also the subsystem will often send the same notification several times with some operating systems. </p>
+                    <p>If you have the Kernel notification enabled in VET (see the VirtualExplorer demo) then you get more duplicates so all in all filtering all file operation into an &quot;updateDirectory&quot; event was the best way to go.</p>
+                    <p>There are 3 threads if you have Shell and Kernel notifiers on.<br>
+      One thread handles the Shell notifications, TVirtualShellChangeThread.<br>
+      One thread handles the Kernel notifications, TVirtualKernelChangeThread.<br>
+      They each filter the events into directories updates.</p>
+                    <p>They then add an event to a third, TVirtualChangeDispatchThread, that caches up the events for some defined time, VIRTUALSHELLNOTIFYREFRESHRATE.<br>
+      When the event is added it is first checked to see if it is a duplicate event, if it is it is not added and is freed.</p>
+                    <p>This third thread does a PostMessage to a window that was created by the TVirtualChangeNotifier object. This objects job is to receive the notification in the context of the main thread then dispatch it to all the windows in the application that have registered themselves. <br>
+      Note that ANY window can register itself not just VET windows. <br>
+      The registered windows will receive a WM_SHELLNOTIFY message.<br>
+      The PIDLs sent by the notification system are not &quot;real&quot; PIDLs. <br>
+      They are half baked PIDLs that will not work for some IShellFolder methods, for instance CompareID will fail when comparing them with each other.<br>
+      What is actually sent to this object is a TThreadList of all events. <br>
+      The thread list is reference counted. I set the reference count of the thread list to the number of registered windows (the window list is also a thread list just in case) then does a PostMessage to each window with the TThreadList as a parameter. As each window receives the message it does what it need to do with the events in the list then calls &quot;Release&quot; on the thread list. This should keep the list valid until the last registered window is finished with the list. <br>
+      On the last call to Release the list destroys itself.</p>
+                    <p>-Jim</p></td>
+              </tr>
+            </table>
+            <p>&nbsp;</p>
+            <!-- InstanceEndEditable --></td>
+          <td width="159" height="405" align="left" valign="top" bgcolor="#FFFFFF">
+            <table width="145"  border="0" align="center" cellpadding="0" cellspacing="0" class="menu">
+              <tr>
+                <td valign="top" class="menuMiddle">
+                  <p><span class="menuTitle">VELVEx</span><a href="index.htm">Home</a><a href="downloads.htm">Downloads</a><a href="downloads.htm#history">Release History</a>
+				  <span class="menuTitle">Support</span><a href="support.htm#license">License</a><a href="support.htm#installation">Installation</a><a href="support.htm#gettingstarted">Getting Started</a><a href="support.htm#faq">FAQ</a><a href="reference.htm">Reference</a>
+				  <span class="menuTitle">Resources</span><a href="http://www.soft-gems.net">VirtualTreeView</a><a href="http://www.mustangpeak.net">VirtualShellTools</a><a href="http://www.mustangpeak.net">EasyListview</a></p>
+                </td>
+              </tr>
+          </table>
+            <!-- InstanceBeginEditable name="edright2" --><!-- InstanceEndEditable -->
+            <p>&nbsp;</p>						
+	  <div align="center">
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="2533519">
+<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG_global.gif" border="0" name="submit" alt="">
+<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+	  </div>			
+            <p>&nbsp;</p>			
+          <p>&nbsp;</p>		  </td>
+        </tr>
+        <tr>
+          <td width="159" align="left" valign="bottom" bgcolor="#FFFFFF">
+            <p>&nbsp;</p>					  
+          <p>&nbsp;</p></td>
+        </tr>
+        <tr>
+          <td background="../images/footerleft.png">&nbsp;</td>
+          <td colspan="2" valign="top" background="../images/footer.png" bgcolor="#FFFFFF"><p align="center" class="footer">&nbsp;</p>          </td>
+          <td background="../images/footerright.png">&nbsp;</td>
+        </tr>
+</table>      
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+<!-- InstanceEnd --></html>

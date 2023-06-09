@@ -1,0 +1,1381 @@
+<html><!-- InstanceBegin template="/Templates/tempsptbxlib.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Silverpoint Development</title>
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+<link href="../styles.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<table width="1024" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="8" rowspan="5" background="../images/shadowleft.png"></td>
+          <td height="85" colspan="2" background="../images/topbg.png">
+          <div align="center">
+          <div align="center" id="logo"><a href="/"><img src="../images/logotemp.png" width="494" height="59" border="0"></a></div>
+          </div>
+          <td width="8" rowspan="5" background="../images/shadowright.png"></td>
+        </tr>
+        <tr>
+          <td height="26" colspan="2" valign="middle" background="../images/barbg.png" class="simple"><p class="simplemenu"><a href="/">Home</a> <img src="../images/div.png" width="2" height="9"> <a href="/sptbxlib/" class="simplemenu">SpTBXLib</a>  <img src="../images/div.png" width="2" height="9"> <a href="/velvex/">VELVEx</a>  <img src="../images/div.png" width="2" height="9"> <a href="/multiinstaller/">MultiInstaller</a>  <img src="../images/div.png" width="2" height="9"> <a href="/skineditor/">Skin Editor</a> </p>          </td>
+        </tr>
+        <tr>
+          <td height="60" colspan="2" align="left" valign="middle" background="../images/gradient.png" class="content"><!-- InstanceBeginEditable name="edtop" -->
+          <h2>Components Reference</h2> 
+          <!-- InstanceEndEditable -->         </td>
+        </tr>
+        <tr>
+          <td width="843" rowspan="2" align="left" valign="top" bgcolor="#FFFFFF" class="content"><!-- InstanceBeginEditable name="edtleft" -->
+            <p align="center"><img src="images/idepallete.png" width="531" height="80" border="0" usemap="#Map">
+              <map name="Map">
+                <area shape="rect" coords="5,21,35,50" href="#tsptbxdock">
+                <area shape="rect" coords="35,21,65,50" href="#tsptbxmultidock">
+                <area shape="rect" coords="65,21,95,50" href="#tsptbxtoolbar">
+                <area shape="rect" coords="95,21,125,50" href="#tsptbxtoolwindow">
+                <area shape="rect" coords="125,21,155,50" href="#tsptbxdockablepanel">
+                <area shape="rect" coords="155,21,185,50" href="#tsptbxtabset">
+                <area shape="rect" coords="185,21,215,50" href="#tsptbxtabcontrol">
+                <area shape="rect" coords="215,21,245,50" href="#tsptbxstatusbar">
+                <area shape="rect" coords="245,21,275,50" href="#tsptbxpopupmenu">
+                <area shape="rect" coords="275,21,305,50" href="#tsptbxformpopupmenu">
+                <area shape="rect" coords="305,21,335,50" href="#tsptbxmdihandler">
+                <area shape="rect" coords="335,21,365,50" href="#tsptbxtitlebar">
+                <area shape="rect" coords="365,21,395,50" href="#tsptbxlabel">
+                <area shape="rect" coords="395,21,425,50" href="#tsptbxcheckbox">
+                <area shape="rect" coords="425,21,455,50" href="#tsptbxradiobutton">
+                <area shape="rect" coords="455,21,485,50" href="#tsptbxbutton">
+                <area shape="rect" coords="485,21,515,50" href="#tsptbxspeedbutton">
+                <area shape="rect" coords="5,50,35,79" href="#tsptbxprogressbar">
+                <area shape="rect" coords="35,49,65,78" href="#tsptbxtrackbar">
+                <area shape="rect" coords="65,50,95,79" href="#tsptbxsplitter">
+                <area shape="rect" coords="95,50,125,79" href="#tsptbxpanel">
+                <area shape="rect" coords="125,50,155,79" href="#tsptbxgroupbox">
+                <area shape="rect" coords="155,50,185,79" href="#tsptbxradiogroup">
+                <area shape="rect" coords="185,50,215,79" href="#tsptbxedit">
+                <area shape="rect" coords="215,50,245,79" href="#tsptbxbuttonedit">
+                <area shape="rect" coords="245,50,275,79" href="#tsptbxspinedit">
+                <area shape="rect" coords="275,50,305,79" href="#tsptbxcoloredit">				
+                <area shape="rect" coords="305,50,335,79" href="#tsptbxcombobox">
+                <area shape="rect" coords="335,50,365,79" href="#tsptbxfontcombobox">
+                <area shape="rect" coords="365,50,395,79" href="#tsptbxlistbox">				
+                <area shape="rect" coords="395,50,425,79" href="#tsptbxchecklistbox">
+                <area shape="rect" coords="425,50,455,79" href="#tsptbxcolorlistbox">
+                <area shape="rect" coords="455,50,485,79" href="#tsptbxpagescroller">
+                <area shape="rect" coords="485,50,515,79" href="#tsptbxcustomizer">				
+              </map>
+          </p>
+            <table width="100%" border="0" cellpadding="2" cellspacing="2">
+              <tr valign="top">
+                <td class="tableHeaderBlue">TSpTBXDock<a name="tsptbxdock"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p><strong>Unit:<br>
+                </strong> SpTBXItem</p>
+                    <p><strong>Hierarchy:<br>
+                      </strong> TTBDock - TSpTBXDock</p>
+                    <p><strong>Description:<br>
+                    </strong> TSpTBXDock extends TTBDock with support for custom painting events and item alignment, it adds the following properties and events:</p>
+                    <p><strong>Published:</strong></p>
+                    <ul>
+                      <li>OnCanResize (Sender: TObject; var NewWidth, NewHeight: Integer; var Resize: Boolean);<br>
+          Occurs when an attempt is made to resize the control.</li>
+                      <li>OnDrawBackground(Sender: TObject; ACanvas: TCanvas; ARect: TRect; const PaintStage: TSpTBXPaintStage; var PaintDefault: Boolean);<br>
+          Occurs when the control needs to be painted, the PaintStage indicates the current stage in the drawing process. DefaultDraw indicates whether the control should continue with the default painting after the event handler exits. Set DefaultDraw to false to prevent the drawing of the control after the event handler exits. If DefaultDraw remains set to true, the control continues with the default painting process.<br>
+          <a href="support.htm#custompainting">More info on custom painting events</a></li>
+                  </ul></td>
+              </tr>
+              <tr valign="top">
+                <td class="tableHeaderBlue">TSpTBXMultiDock<a name="tsptbxmultidock"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p><strong>Unit:<br>
+                </strong> SpTBXDkPanels</p>
+                    <p><strong>Hierarchy:</strong><br>
+        TTBDock - TSpTBXCustomMultiDock - TSpTBXMultiDock</p>
+                    <p><strong>Description:</strong><br>
+        TSpTBXMultiDock extends TTBDock with  client aligning support, it adds the following properties and events:</p>
+                    <p><strong>Published:</strong></p>
+                    <ul>
+                      <li>property AutoSplitterVisibility: Boolean;<br>
+                        Use this property to automatically hide the adjacent 
+splitter when the MultiDock is empty.</li>
+                      <li>property Position: TSpTBXDockPosition;<br>
+                        TSpTBXDockPosition = (dpxLeft, dpxTop, dpxRight, dpxBottom, dpxClient);<br>
+                      Determines where the MultiDock is located on the form, it can be client aligned.</li>
+                    </ul></td>
+              </tr>
+              <tr valign="top">
+                <td class="tableHeaderBlue">TSpTBXToolbar<a name="tsptbxtoolbar"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p><strong>Unit:<br>
+                </strong> SpTBXItem</p>
+                    <p><strong>Hierarchy:<br>
+                      </strong> TTBCustomToolbar - TSpTBXToolbar</p>
+                    <p><strong>Description:<br>
+                    </strong> TSpTBXToolbar extends TTBCustomToolbar with support for unicode hints for items, custom painting events, custom item sizing, anchored and right aligned items, it adds the following properties and events:</p>
+                    <p><strong>Public:</strong></p>
+                    <ul>
+                      <li>function IsCustomizing: Boolean;<br>
+                      Returns true if the toolbar is being customized. </li>
+                      <li>function IsItemMoving: Boolean;<br>
+                      Returns true if a toolbar item is being moved with the mouse (e.g. TabDragReorder on the TabSet toolbar).</li>
+                      <li>function IsVertical: Boolean;<br>
+                      Returns true if the toolbar has a vertical orientation. </li>
+                      <li>property MaxSize: Integer;<br>
+          Determines the maximum height the toolbar can have.</li>
+                    </ul>
+                    <p><strong>Published:</strong></p>
+                    <ul>
+                      <li>property ChevronVertical: Boolean;<br>
+          Determines the chevron popup layout. </li>
+                      <li>property Customizable: Boolean;<br>
+          Determines whether the toolbar is customizable or not.</li>
+                      <li>property DisplayMode: TSpTBXToolbarDisplayMode;<br>
+          TSpTBXToolbarDisplayMode = (tbdmSelectiveCaption, tbdmImageOnly,<br> 
+          tbdmImageAboveCaption);<br>
+          Determines whether the item's image is to be displayed.</li>
+                      <li>OnDrawBackground(Sender: TObject; ACanvas: TCanvas; ARect: TRect; const PaintStage: TSpTBXPaintStage; var PaintDefault: Boolean);<br>
+          Occurs when the control needs to be painted, the PaintStage indicates the current stage in the drawing process. DefaultDraw indicates whether the control should continue with the default painting after the event handler exits. Set DefaultDraw to false to prevent the drawing of the control after the event handler exits. If DefaultDraw remains set to true, the control continues with the default painting process.<br>
+          <a href="support.htm#custompainting">More info on custom painting events</a></li>
+                      <li>OnItemNotification (Sender: TObject; Ancestor: TTBCustomItem; Relayed: Boolean; Action: TTBItemChangedAction; Index: Integer; Item: TTBCustomItem);<br>
+          Occurs when an item on the toolbar is added, deleted, renamed, updated or changed. Action can be one of the following values (tbicInserted, tbicDeleting, tbicSubitemsChanged, tbicSubitemsBeginUpdate, tbicSubitemsEndUpdate, tbicInvalidate, tbicInvalidateAndResize, tbicRecreateItemViewers, tbicNameChanged, tbicSubMenuImagesChanged). </li>
+                  </ul></td>
+              </tr>
+              <tr valign="top">
+                <td class="tableHeaderBlue">TSpTBXToolWindow<a name="tsptbxtoolwindow"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p><strong>Unit:<br>
+                  </strong> SpTBXItem</p>
+                    <p><strong>Hierarchy:</strong><br>
+                      TTBCustomDockableWindow - TSpTBXCustomToolWindow - TSpTBXToolWindow</p>
+                  <p><strong>Description:</strong><br>
+                    TSpTBXToolWindow extends TTBToolWindow  with unicode support and  skinning.<br>
+                    TSpTBXToolWindow inherits many properties, methods, and events from TTBToolWindow; see its help topic for details on the properties, methods, and events not listed here.</p>                  </td>
+              </tr>
+              <tr valign="top">
+                <td class="tableHeaderBlue">TSpTBXDockablePanel<a name="tsptbxdockablepanel"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p><strong>Unit:<br>
+                </strong> SpTBXDkPanels</p>
+                    <p><strong></strong><strong>Hierarchy:<br>
+                      </strong>  TSpTBXCustomToolWindow - TSpTBXCustomDockablePanel - TSpTBXDockablePanel</p>
+                    <p><strong>Description:<br>
+                    </strong> TSpTBXDockablePanel is a fully customizable DockablePanel component with toolbar items support, you can add TB2K items. It supports unicode, custom painting events and has skin type selection, it can render skins and WinXP themes (without using a manifest).</p>
+                    <p> To add/edit/delete items just double-click the component in the form designer to invoke the Item Editor. In addition to TB2K and SpTBXLib built-in items, regular controls may also be placed. Simply drop them on the component the same way you would on any other control.</p>
+                    <p align="center"><img src="images/dockablepanel.png" alt="TSpTBXDockablePanel" width="449" height="292"></p>
+                    <p> It adds the following methods, properties and events:</p>
+                    <p><strong>Public:</strong></p>
+                    <ul>
+                      <li> function Maximize: Boolean;<br>
+                      Maximizes the DockablePanel. </li>
+                      <li>function Maximized: Boolean;<br>
+                      Returns True if the DockablePanel is maximized. </li>
+                      <li>function Minimize: Boolean;<br>
+                      Minimizes the DockablePanel. </li>
+                      <li>function Minimized: Boolean;<br>
+                      Returns True if the DockablePanel is minimized. </li>
+                      <li>function Restore: Boolean;<br>
+                      Restores the DockablePanel.</li>
+                      <li>function SizeToggle(ToMaximize: Boolean): Boolean;<br>
+                      Minimizes or maximizes the DockablePanel. </li>
+                      <li>property CaptionPanelSize: TPoint;<br>
+          Read only property that specifies the caption panel area size.</li>
+                      <li>property FloatingClientWidth: Integer;<br>
+Determines the width of the floating DockablePanel. </li>
+                      <li>property FloatingClientHeight: Integer;<br>
+                      Determines the height of the floating DockablePanel.</li>
+                      <li>property EffectiveWidth: Integer;<br>
+                      Determines the width of the DockablePanel. </li>
+                      <li>property EffectiveHeight: Integer;<br>
+                      Determines the height of the DockablePanel.</li>
+                      <li> property View: TTBToolbarView;<br>
+          Access to the TTBView component that the control uses to render the items on the screen.</li>
+                    </ul>
+                    <p><strong>Published:</strong></p>
+                    <ul>
+                      <li> property DefaultDockedSize: Boolean;<br>
+                      When the DockablePanel  is being docked on an empty MultiDock it will use the 
+DefaultDockedSize property to set its size. 
+If DefaultDockedSize is 0 it will use the floating size.</li>
+                      <li> property Images: TCustomImageList;<br>
+                        Provides a list of icon images to display for each item in the control.</li>
+                      <li> property Items: TTBRootItem;<br>
+          DockablePanel items. </li>
+                      <li>property FixedDockedSize: Boolean;<br>
+          Determines if the dockable panel is resizable when docked. </li>
+                      <li>property Options: TSpTBXDockablePanelButtonOptions;<br>
+          Use the Options property to show/hide the default DockablePanel buttons: Caption, Minimize, Maximize, Close.</li>
+                      <li>property ShowCaption: Boolean;<br>
+                      Determines if the caption area is visible when the DockablePanel is floating. </li>
+                      <li>property ShowCaptionWhenDocked: Boolean;<br>
+                      Determines if the caption area is visible when the DockablePanel is docked.</li>
+                      <li>property ShowVerticalCaption;<br>
+                      This property is used to rotate the caption panel vertically. 
+When the DockablePanel is floating or docked on a vertical 
+MultiDock the caption will be horizontal regardless of the 
+value of ShowVerticalCaption.</li>
+                      <li>OnDrawCaptionPanel (Sender: TObject; ACanvas: TCanvas; ARect: TRect; const PaintStage: TSpTBXPaintStage; var PaintDefault: Boolean);<br>
+                        Occurs when the control needs to be painted, the PaintStage indicates the current stage in the drawing process. DefaultDraw indicates whether the control should continue with the default painting after the event handler exits. Set DefaultDraw to false to prevent the drawing of the control after the event handler exits. If DefaultDraw remains set to true, the control continues with the default painting process.<br>
+                        <a href="support.htm#custompainting">More info on custom painting events</a></li>
+                      <li>OnWindowStateChanged (Sender: TObject; AWindowState: TWindowState);<br>
+                      Occurs when  the DockablePanel gets minimized,
+maximized or restored.</li>
+                  </ul></td>
+              </tr>
+              <tr valign="top">
+                <td class="tableHeaderBlue">TSpTBXTabSet<a name="tsptbxtabset"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p><strong>Unit:<br>
+                </strong> SpTBXTabs</p>
+                    <p><strong></strong><strong>Hierarchy:<br>
+                      </strong> TCustomControl - TSpTBXCompoundItemsControl - TSpTBXCustomTabSet - TSpTBXTabSet</p>
+                    <p><strong>Description:<br>
+                    </strong> TSpTBXTabSet is a fully customizable TabSet component with toolbar items support, you can add TB2K items. It supports unicode, custom painting events and has skin type selection, it can render skins and WinXP themes (without using a manifest).</p>
+                    <p> To add/edit/delete items just double-click the component in the form designer to invoke the Item Editor. In addition to TB2K  and SpTBXLib built-in items, regular controls may also be placed. Simply drop them on the component the same way you would on any other control.<br>
+        To add a tab to the control insert a TSpTBXTabItem. </p>
+                    <p align="center"><img src="images/tabset.png" alt="TSpTBXTabSet" width="449" height="293"></p>
+                    <p> It adds the following methods, properties and events:</p>
+                    <p><strong>Public:</strong></p>
+                    <ul>
+                      <li> function Add (ACaption: WideString): TSpTBXTabItem;<br>
+          Adds a tab to the control. </li>
+                      <li>function Insert(NewIndex: Integer; ACaption: WideString): TSpTBXTabItem;<br>
+          Inserts a tab to the control. </li>
+                      <li> function DrawBackground(DC: HDC; ARect: TRect): Boolean;<br>
+          Draws the background to a canvas. </li>
+                      <li> function GetTabSetHeight: Integer;<br>
+          Gets the tabs height. </li>
+                      <li>procedure MakeVisible(ATab: TSpTBXTabItem);<br>
+                      Scrolls the tabset, if necessary, to ensure a Tab is in view.</li>
+                      <li> procedure ScrollLeft;<br>
+          Scrolls to the previous tab. </li>
+                      <li> procedure ScrollRight;<br>
+          Scrolls to the next tab. </li>
+                      <li>procedure ScrollState(out Left, Right: Boolean);<br>
+          Specifies if it can scroll to the previous and the next tabs. </li>
+                      <li> procedure TabClick(ATab: TSpTBXTabItem);<br>
+          Clicks the specified tab item. </li>
+                      <li>property Canvas;<br>
+          Provides access to the drawing area of the control. </li>
+                      <li>property Toolbar: TSpTBXTabToolbar;<br>
+                      Access to the toolbar component that the control uses to render the tab items.</li>
+                  </ul>
+                    <p><strong>Published:</strong></p>
+                    <ul>
+                      <li>propety ActiveTabIndex: Integer; <br>
+          Determines the index of the tab in the list of items maintained by the control. The first (leftmost) tab has an index of 0, the next has 1, and so on. If no tabs are selected, ActiveTabIndex has a value of -1. Set ActiveTabIndex to programmatically change the selected tab in the tab control.</li>
+                      <li>property Images: TCustomImageList;<br>
+          Provides a list of icon images to display for each item in the control.</li>
+                      <li> property Items: TTBRootItem;<br>
+          TabSet items. </li>
+                      <li>property TabAutofit: Boolean;<br>
+                      When TabAutofit is true the tabs are resized to fit the tabset.                      </li>
+                      <li>property TabAutofitMaxSize: Integer; <br>
+                      Specifies the maximum size the tabs should have when TabAutofit is true.</li>
+                      <li>property TabBackgroundColor: TColor;<br>
+          Determines the background color of the TabSet control. Use TabBackgroundColor to indicate the color that the tab set control uses to paint the area between the tabs and the border of the control. </li>
+                      <li>property TabBackgroundBorders: Boolean;<br>
+                      Determines if the tabs area is painted with borders.</li>
+                      <li>property TabCloseButton: Boolean;<br>
+                        Determines the visibility of the close button on the tab items.</li>
+                      <li>property TabCloseButtonImageIndex: Integer;<br>
+                        The ImageIndex to use or -1 if the item has no image.                      </li>
+                      <li>property TabDragReorder: Boolean;<br>
+                      When TabDragReorder is true it allows tabs reordering with mouse drag &amp; drop.          </li>
+                      <li>property TabMaxSize: Integer;<br>
+                        The maximum size tab items can have.</li>
+                      <li>property TabPosition: TSpTBXTabPosition;<br>
+          TSpTBXTabPosition = (ttpTop, ttpBottom);<br>
+          Determines the TabSet alignment. When TabPosition is ttpTop the tabs are aligned to the top of the control, when TabPosition is ttpBottom the tabs are aligned to the bottom. </li>
+                      <li>property TabVisible: Boolean;<br>
+          Determines whether the tabs are visible or not. </li>
+                      <li>OnActiveTabChange (Sender: TObject; TabIndex: Integer);<br>
+          Occurs when the active tab index is changed.</li>
+                      <li>OnActiveTabChanging (Sender: TObject; TabIndex, NewTabIndex: Integer; var Allow: Boolean);<br>
+          Occurs when the active tab index is about to be changed. </li>
+                      <li>OnActiveTabReorder (Sender: TObject; TabIndex: Integer);<br>
+                        Occurs when the active tab is reordered with mouse drag &amp; drop.                      </li>
+                      <li>OnActiveTabReordering (Sender: TObject; TabIndex, NewTabIndex: Integer; var Allow: Boolean);<br>
+                        Occurs when the active tab is about to be reordered with mouse drag &amp; drop.</li>
+                      <li>OnDrawBackground (Sender: TObject; ACanvas: TCanvas; ARect: TRect; const PaintStage: TSpTBXPaintStage; var PaintDefault: Boolean);<br>
+          Occurs when the control needs to paint the background, the PaintStage indicates the current stage in the drawing process. DefaultDraw indicates whether the control should continue with the default painting after the event handler exits. Set DefaultDraw to false to prevent the drawing of the control after the event handler exits. If DefaultDraw remains set to true, the control continues with the default painting process.<br>
+          <a href="support.htm#custompainting">More info on custom painting events</a></li>
+                      <li>OnTabClick (Sender: TObject; ATab: TSpTBXTabItem);<br>
+          Occurs when a tab is clicked or when the ActiveTabIndex is changed.</li>
+                  </ul></td>
+              </tr>
+              <tr valign="top">
+                <td class="tableHeaderBlue">TSpTBXTabControl<a name="tsptbxtabcontrol"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p><strong>Unit:<br>
+                </strong> SpTBXTabs</p>
+                    <p><strong>Hierarchy:<br>
+                      </strong> TCustomControl - TSpTBXCustomTabSet - TSpTBXTabControl</p>
+<p><strong>Description:<br>
+                    </strong> TSpTBXTabControl is a fully customizable multipage TabSet component with toolbar items support, you can add TB2K items. It supports unicode, custom painting events and has skin type selection, it can render skins and WinXP themes (without using a manifest).</p>
+                    <p> To add/edit/delete items just double-click the component in the form designer to invoke the Item Editor. In addition to TB2K and SpTBXLib built-in items, regular controls may also be placed. Simply drop them on the component the same way you would on any other control.<br>
+        To add a tab to the control insert a TSpTBXTabItem, for every tab item a TabSheet is created where you can drop the controls related to that page.</p>
+                    <p>TSpTBXTabControl inherits many properties, methods, and events from <a href="#tsptbxtabset">TSpTBXTabSet</a>; see its help topic for details on the properties, methods, and events not listed here.</p>
+                    <p><strong></strong><strong>Public:</strong></p>
+                    <ul>
+                      <li>function GetPage(Item: TSpTBXTabItem): TSpTBXTabSheet;<br>
+                      Returns the tabsheet linked to the specified tab item</li>
+                      <li>property ActivePage: TSpTBXTabSheet;<br>
+                      The active tabsheet</li>
+                      <li> property Pages[Index: Integer]: TSpTBXTabSheet;<br>
+                      Read only property that lists all the tab sheets on the control.</li>
+                      <li> property PagesCount: Integer<br>
+                        Read only property that returns the tabsheet count.</li>
+                  </ul></td>
+              </tr>
+              <tr valign="top">
+                <td class="tableHeaderBlue">TSpTBXStatusBar<a name="tsptbxstatusbar"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p><strong>Unit:<br>
+                </strong> SpTBXItem </p>
+                    <p><strong>Hierarchy:</strong><br>
+        TCustomControl - TSpTBXCustomStatusBar - TSpTBXStatusBar</p>
+                  <p><strong>Description:</strong><br>
+        TSpTBXStatusBar is a fully customizable status bar component with toolbar items support, you can add TB2K items. It supports unicode, custom painting events and has skin type selection, it can render skins and WinXP themes (without using a manifest).</p>
+                    <p> To add/edit/delete items just double-click the component in the form designer to invoke the Item Editor. In addition to TB2K and SpTBXLib built-in items, regular controls may also be placed. Simply drop them on the component the same way you would on any other control.<br>
+        To add a status panel just insert a TSpTBXLabelItem and a TSpTBXSeparator item.</p>
+                    <p align="center"><img src="images/statusbar.png" alt="TSpTBXStatusBar" width="449" height="293"></p>
+                    <p> It adds the following properties and events:</p>
+                    <p><strong>Public:</strong></p>
+                    <ul>
+                      <li>property Toolbar: TSpTBXStatusToolbar;<br>
+                      Access to the toolbar used by the control to hold the items. </li>
+                      <li>property View: TTBToolbarView;<br>
+                        Access to the TTBView component that the control uses to render the items on the screen. </li>
+                    </ul>
+                    <p><strong>Published:</strong></p>
+                    <ul>
+                      <li>property Images: TCustomImageList;<br>
+          Provides a list of icon images to display for each item in the control.</li>
+                      <li> property Items: TTBRootItem;<br>
+          StatusBar items.</li>
+                      <li>property SizeGrip;<br>
+                        Determines whether the status bar is resizable at runtime.</li>
+                      <li>OnDrawDockBackground (Sender: TObject; ACanvas: TCanvas; ARect: TRect; const PaintStage: TSpTBXPaintStage; var PaintDefault: Boolean);<br>
+          Occurs when the control needs to paint the background, the PaintStage indicates the current stage in the drawing process. DefaultDraw indicates whether the control should continue with the default painting after the event handler exits. Set DefaultDraw to false to prevent the drawing of the control after the event handler exits. If DefaultDraw remains set to true, the control continues with the default painting process.<br>
+          <a href="support.htm#custompainting">More info on custom painting events</a></li>
+                  </ul></td>
+              </tr>
+              <tr valign="top">
+                <td class="tableHeaderBlue">TSpTBXPopupMenu<a name="tsptbxpopupmenu"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p><strong>Unit:<br>
+                </strong> SpTBXItems</p>
+                    <p><strong>Hierarchy:</strong><br>
+        TTBPopupMenu - TSpTBXPopupMenu</p>
+                    <p><strong>Description:</strong><br>
+        TSpTBXPopupMenu extends TTBPopupMenu with an OnInitPopup event to setup the items before the popup is showed, it could be used for example to set the focus to an EditItem inside the popup.</p>
+                    <p><strong>Public:</strong></p>
+                    <ul>
+                      <li>function PopupEx(X, Y: Integer; PopupControl: TControl = nil; ReturnClickedItemOnly: Boolean = False): TTBCustomItem;<br>
+                        An enhanced version of the Popup method that returns the item the user selected, or nil if the menu was dismissed with no selection. It also supports a pair of additional parameters:<br>
+                        PopupControl, when is set to a control the PopupMenu will be positioned according to the control coordenates.<br>
+                      ReturnClickedItemOnly, when set to False  the OnClick event handler of the selected item will be invoked automatically. If True, the OnClick event handler will not be invoked; the selected item will merely be returned.</li>
+                    </ul>
+                    <p><strong>Published:</strong></p>
+                    <ul>
+                      <li>property ToolBoxPopup: Boolean;<br>
+                      Determines if the popup items are rendered with toolbar style, for example use this property when you want to create a color-picker style popup using the TSpTBXColorPallette item. </li>
+                      <li>OnInitPopup (Sender: TObject; PopupView: TTBView);<br>
+                        Use this event to setup the items before the popup is showed. </li>
+                  </ul></td>
+              </tr>
+              <tr valign="top">
+                <td class="tableHeaderBlue">TSpTBXFormPopupMenu<a name="tsptbxformpopupmenu" id="tsptbxformpopupmenu"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p><strong>Unit:<br>
+                </strong> SpTBXFormPopupMenu</p>
+                  <p><strong>Hierarchy:</strong><br>
+                    TPopupMenu - TSpTBXFormPopupMenu</p>
+                  <p><strong>Description:</strong><br>
+                  TSpTBXFormPopupMenu is a fully customizable Popup component that can be linked to any control to popup or rolldown a custom Form.</p>
+                  <p align="center"><img src="images/formpopup.png" alt="TSpTBXFormPopupMenu" width="372" height="306"></p>
+                  <p><strong>Public:</strong></p>
+                  <ul>
+                      <li>procedure  Popup(X, Y: Integer);<br>
+                        Shows the PopupForm at the coordinates indicated by X and Y parameters.</li>
+                      <li> procedure PopupEx(X, Y: Integer; ForceFocus: Boolean); overload;<br>
+                      Shows the PopupForm at the coordinates indicated by X and Y parameters, when ForceFocus is true the PopupForm is focused. </li>
+                      <li>                        procedure PopupEx(PopupControl: TControl; ForceFocus: Boolean); overload;<br>
+                      Shows the PopupForm at the coordinates where PopupControl is placed, when ForceFocus is true the PopupForm is focused.</li>
+                      <li>property PopupForm: TCustomForm;<br>
+                       Form to be showed when the Popup is displayed.</li>
+                  </ul>
+                  <p><strong>Published:</strong></p>
+                  <ul>
+                      <li> property BorderStyle: TSpTBXPopupBorderStyleType;<br>
+                    Specifies the border style, the border can be fixed or sizeable.</li>
+                      <li> property PopupFocus: Boolean;<br>
+                      Determines if the focus is set to the Popup when it is showed.</li>
+                      <li>                        property ShowShadows: Boolean;<br>
+                      Determines if the shadows are showed or not.</li>
+                      <li>  OnClosePopup (Sender: TObject; Selected: Boolean);<br>
+                        Occurs when the 
+                      Popup is closed. 
+                      If the Selected parameter is true the popup was closed because a selection was made.</li>
+                      <li> OnPopupEx (Sender: TObject; var FormWidth, FormHeight: Integer);<br>
+                      Occurs when the Popup is opened. Use the FormWidth and FormHeight params to specify the popup window size. </li>
+                  </ul></td>
+              </tr>
+              <tr valign="top">
+                <td class="tableHeaderBlue">TSpTBXMDIHandler<a name="tsptbxmdihandler"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p><strong>Unit:<br>
+                </strong> SpTBXMDIMRU</p>
+                  <p><strong>Hierarchy:</strong><br>
+                    TComponent - TSpTBXMDIHandler</p>
+                  <p><strong>Description:</strong><br>
+                    TSpTBXMDIHandler extends TTBMDIHandler  with unicode support and items skinning.<br>
+                  TSpTBXMDIHandler and TTBMDIHandler are only designed to work with wrapped (ShrinkMode = tbsmWrap) menu bars. To right align the buttons set toolbar's FullSize to true.</p>
+                  <p>TSpTBXMDIHandler inherits many properties, methods, and events from TTBMDIHandler; see its help topic for details on the properties, methods, and events not listed here.</p>                  </td>
+              </tr>
+              <tr valign="top">
+                <td class="tableHeaderBlue">TSpTBXTitleBar<a name="tsptbxtitlebar"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p><strong>Unit:<br>
+                </strong> SpTBXItems</p>
+                    <p><strong>Hierarchy:</strong><br>
+        TCustomControl - TSpTBXCompoundItemsControl - TSpTBXCompoundBar - TSpTBXCustomTitleBar</p>
+                    <p><strong>Description:</strong><br>
+        TSpTBXTitleBar is a fully customizable title bar component with toolbar items support, you can add TB2K items. It supports unicode, custom painting events and has skin type selection, it can render skins and WinXP themes (without using a manifest).</p>
+                    <p> To add/edit/delete items just double-click the component in the form designer to invoke the Item Editor. In addition to TB2K and SpTBXLib built-in items, regular controls may also be placed. Simply drop them on the component the same way you would on any other control. </p>
+                    <p align="center"><img src="images/titlebar.png" alt="TSpTBXTitleBar" width="418" height="240"></p>
+                    <p> It adds the following properties and events:</p>
+                    <p><strong>Public:</strong></p>
+                    <ul>
+                      <li> function GetClientAreaRect: TRect;<br>
+                      Returns the ClientArea rect. </li>
+                      <li>                        procedure ShowSystemMenu(ScreenPos: TPoint); virtual;<br>
+                      Opens the SystemMenu popup. </li>
+                      <li>property View: TTBToolbarView;<br>
+                      Access to the TTBView component that the control uses to render the items on the screen. </li>
+                    </ul>
+                    <p><strong>Published:</strong></p>
+                    <ul>
+                      <li>property Active: Boolean;<br>
+                      Determines if the TitleBar is activated. </li>
+                      <li>                      property FixedSize: Boolean;<br>
+          Determines if the TitleBar can be resized.</li>
+                      <li>property FullScreenMaximize: Boolean;<br>
+                        Determines if the TitleBar is maximized at fullscreen.                      </li>
+                      <li> property Images: TCustomImageList;<br>
+          Provides a list of icon images to display for each item in the control.</li>
+                      <li> property Items: TTBRootItem;<br>
+          TitleBar items. </li>
+                      <li>property Options: TSpTBXTitleBarButtonOptions;<br>
+          Use the Options property to show/hide the default title bar buttons: Caption, Minimize, Maximize, Close, SystemMenu.</li>
+                      <li>OnDrawBackground (Sender: TObject; ACanvas: TCanvas; ARect: TRect; const PaintStage: TSpTBXPaintStage; var PaintDefault: Boolean);<br>
+Occurs when the control needs to paint the background.<br>
+<a href="support.htm#custompainting">More info on custom painting events</a></li>
+                      <li>OnDrawDockBackground (Sender: TObject; ACanvas: TCanvas; ARect: TRect; const PaintStage: TSpTBXPaintStage; var PaintDefault: Boolean);<br>
+            Occurs when the control needs to paint the title bar caption area.<br>
+            <a href="support.htm#custompainting">More info on custom painting events</a></li>
+                      <li> OnSystemMenuPopup (Sender: TObject; PopupView: TTBView);<br>
+                      Occurs when the SystemMenu popup is opened. </li>
+                  </ul></td>
+              </tr>
+              <tr valign="top">
+                <td class="tableHeaderBlue">TSpTBXTextObject<a name="tsptbxtextobject"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p><strong>Unit:<br>
+                </strong> SpTBXControls</p>
+                  <p><strong>Hierarchy:<br>
+                  </strong> TCustomControl</p>
+                  <p><strong>Description:<br>
+                  </strong> Base class used for all the SpTBXLib controls it   supports  unicode hints and captions and custom painting events, it adds the following properties and events:</p>
+                  <p><strong>Public:</strong></p>
+                  <ul>
+                    <li> procedure GetSize(out TotalR, TextR, GlyphR: TRect);<br>
+                    Returns the size of the control, the size of the text and the size of the glyph.</li>
+                    <li> function GetTextFlags: Cardinal;<br>
+                    Returns the text flags used to paint the text. </li>
+                    <li>                      function GetGlyphSize: TSize;<br>
+                    Returns the size of the glyph. </li>
+                    <li> property MouseInControl: Boolean;<br>
+                    Read only property used to find out if the mouse is inside the control. </li>
+                    <li>property Pushed: Boolean read GetPushed;<br>
+                    Read only property used to find out if the control is being pushed.</li>
+                  </ul></td>
+              </tr>
+              <tr valign="top">
+                <td class="tableHeaderBlue">TSpTBXLabel<a name="tsptbxlabel"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p><strong>Unit:<br>
+                </strong> SpTBXControls</p>
+                    <p><strong>Hierarchy:<br>
+                      </strong>  TSpTBXTextObject - TSpTBXCustomLabel - TSpTBXLabel</p>
+                    <p><strong>Description:<br>
+                    </strong> TSpTBXLabel extends TLabel with support for unicode hints and captions and custom painting events, it  inherits many properties, methods, and events from <a href="#tsptbxtextobject">TSpTBXTextObject</a>; see its help topic for details on the properties, methods, and events not listed here.</p>
+                    <p><strong></strong><strong></strong><strong>Published:</strong></p>
+                    <ul>
+                      <li>property Alignment: TAlignment;<br>
+          TAlignment = (taLeftJustify, taRightJustify, taCenter);<br>
+          Controls the horizontal placement of the caption. Set Alignment to specify how the caption is justified within the ClientRect of the control.</li>
+                      <li>property CaptionGlow: Boolean;<br>
+          Specifies if the caption outline is painted or not. </li>
+                      <li>property CaptionGlowColor: TColor;<br>
+          Specifies the caption outline color.</li>
+                      <li>property FocusControl: TControl;<br>
+          Set FocusControl to the windowed control that should receive focus when the user presses the accelerator key specified by the label. Specify an accelerator key by preceding a character in the label text with an ampersand (&amp;) and setting the ShowAccelChar property to true.</li>
+                      <li>property GlyphLayout: TSpGlyphLayout<br>
+TSpGlyphLayout = (ghlGlyphLeft, 
+ghlGlyphTop);<br>
+Determines the position of the glyph image.</li>
+                      <li>property Images: TCustomImageList;<br>
+                        Provides a list of icon images to display next to the caption.</li>
+                      <li> property ImageIndex: Integer;<br>
+          Identifies the image that appears next to the caption.</li>
+                      <li>property LinkText: WideString;<br>
+          Use the LinkText property to open a folder, execute an application or browse for a web site. <br>
+          Some of the values that LinkText can execute are:<br>
+          - mailto:name@name.com<br>
+          - http://www.embarcadero.com<br>
+          - ftp://www.embarcadero.com<br>
+          - news://news.jrsoftware.org<br>
+          - C:\Windows (opens a folder in Windows Explorer, use the LinkTextParams property to specify the parameters).<br>
+          - Notepad.exe (runs an application, use the LinkTextParams property to specify the parameters).<br>
+          Note: the control can execute unicode links and params, for example you can open a folder named with unicode text.</li>
+                      <li>property LinkTextParams: WideString;<br>
+          Specifies the parameters to be passed to the LinkText property to execute the link.</li>
+                      <li>property LinkFont: TFont;<br>
+          Specifies the font that is used when the mouse is over the control and LinkText is valid.</li>
+                      <li>property Underline: Boolean;<br>
+          Indicates wether the the label is underlined.</li>
+                      <li>property UnderlineColor: TColor;<br>
+          Specifies the color of the underline.</li>
+                      <li>OnDraw (Sender: TObject; ACanvas: TCanvas; ARect: TRect; const PaintStage: TSpTBXPaintStage; var PaintDefault: Boolean);<br>
+          Occurs when the control needs to be painted, the PaintStage indicates the current stage in the drawing process. DefaultDraw indicates whether the control should continue with the default painting after the event handler exits. Set DefaultDraw to false to prevent the drawing of the control after the event handler exits. If DefaultDraw remains set to true, the control continues with the default painting process.<br>
+          <a href="support.htm#custompainting">More info on custom painting events</a></li>
+                      <li>OnDrawCaption (Sender: TObject; ACanvas: TCanvas; ClientAreaRect: TRect; var ACaption: WideString; var CaptionRect: TRect; IsTextRotated: Boolean; const PaintStage: TSpTBXPaintStage; var PaintDefault: Boolean)<br>
+          Occurs when the control needs to paint the caption, the PaintStage indicates the current stage in the drawing process. DefaultDraw indicates whether the control should continue with the default painting after the event handler exits. Set DefaultDraw to false to prevent the drawing of the control after the event handler exits. If DefaultDraw remains set to true, the control continues with the default painting process.<br>
+          <a href="support.htm#custompainting">More info on custom painting events</a></li>
+                      <li>OnDrawHint (Sender: TObject; AHintBitmap: TBitmap; var AHint: WideString; var PaintDefault: Boolean);<br>
+          Occurs when the control needs to paint the hint, AHintBitmap represents the hint canvas, it can change the size, font, and background colors. AHint is the hint text to be painted, and PaintDefault indicates whether the control should continue with the default painting after the event handler exits. Set DefaultDraw to false to prevent the drawing of the control after the event handler exits. If DefaultDraw remains set to true, the control continues with the default painting process.<br>
+          <a href="support.htm#custompainting">More info on custom painting events</a></li>
+                      <li> OnGetImageIndex (Sender: TObject; var AImageList: TCustomImageList;<br> 
+                        var AItemIndex: integer);<br>
+          Occurs when the icon image is about to be displayed, use OnGetImageIndex to dynamically assign an ImageList and an ImageIndex to the control before it is displayed.</li>
+                  </ul></td>
+              </tr>
+              <tr valign="top">
+                <td class="tableHeaderBlue">TSpTBXCheckBox<a name="tsptbxcheckbox"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p><strong>Unit:<br>
+                </strong> SpTBXControls</p>
+                    <p><strong>Hierarchy:<br>
+                      </strong>  TSpTBXTextObject - TSpTBXButtonControl - TSpTBXCustomCheckBox - TSpTBXCheckBox</p>
+                    <p><strong>Description:<br>
+                  </strong> TSpTBXCheckBox extends TCheckBox with support for unicode hints and caption and custom painting events, it  inherits many properties, methods, and events from <a href="#tsptbxlabel">TSpTBXLabel</a>; see its help topic for details on the properties, methods, and events not listed here.<strong></strong></p>
+                    <p><strong></strong><strong></strong><strong>Published:</strong></p>
+                    <ul>
+                      <li>property AllowGrayed: Boolean;<br>
+  Determines whether the check box can be in a &ldquo;grayed&rdquo; state. If AllowGrayed is set to true, the control has three possible states: checked, unchecked, and grayed. If AllowGrayed is set to false, it has only two possible states: checked and unchecked. </li>
+                      <li>property Checked: Boolean;<br>
+          Specifies whether the control is checked.</li>
+                      <li>property State: TCheckBoxState;<br>
+          TCheckBoxState = (cbUnchecked, cbChecked, cbGrayed);<br>
+          Indicates whether the check box is selected, deselected, or grayed.</li>
+                  </ul></td>
+              </tr>
+              <tr valign="top">
+                <td class="tableHeaderBlue">TSpTBXRadioButton<a name="tsptbxradiobutton"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p><strong>Unit:<br>
+                </strong> SpTBXControls</p>
+                    <p><strong>Hierarchy:<br>
+                    </strong>  TSpTBXTextObject - TSpTBXButtonControl - TSpTBXCustomRadioButton - TSpTBXRadioButton</p>
+                    <p><strong>Description:<br>
+                      </strong> TSpTBXRadioButton extends TTBXRadioButton with support for unicode hints and caption and custom painting events.<br>
+        TSpTBXRadioButton inherits many properties, methods, and events from <a href="#tsptbxlabel">TSpTBXLabel</a>; see its help topic for details on the properties, methods, and events not listed here.<strong></strong></p>
+                    <p><strong></strong><strong>Published:</strong></p>
+                    <ul>
+                      <li>property Checked: Boolean;<br>
+          Specifies whether the control is checked.</li>
+                      <li>property GroupIndex: Integer;<br>
+          Use GroupIndex to separate radio buttons contained within the same windowed control container into several logical groups. </li>
+                  </ul></td>
+              </tr>
+              <tr valign="top">
+                <td class="tableHeaderBlue">TSpTBXButton<a name="tsptbxbutton"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p><strong>Unit:<br>
+                </strong> SpTBXControls</p>
+                    <p><strong>Hierarchy:<br>
+                    </strong>  TSpTBXTextObject - TSpTBXButtonControl - TSpTBXCustomButton - TSpTBXButton</p>
+                    <p><strong>Description:<br>
+                      </strong> TSpTBXButton extends TButton with support for unicode captions and custom painting events.<br>
+        TSpTBXButton inherits many properties, methods, and events from <a href="#tsptbxlabel">TSpTBXLabel</a>; see its help topic for details on the properties, methods, and events not listed here.<strong></strong></p>
+                    <p><strong></strong><strong></strong><strong>Published:</strong></p>
+                    <ul>
+                      <li>property Bitmap: TBitmap;<br>
+          Specifies the skin bitmap to be used to paint the button. The bitmap should have 4 states normal, hottrack, pushed, disabled.<br>
+          For example:<br>
+          <img src="images/bitmapskin.png" width="83" height="100"> </li>
+                      <li>property BitmapTransparent: Boolean;<br>
+          Specifies whether the Bitmap property is transparent, the transparent color is determined by the bottom-leftmost pixel of the bitmap image. </li>
+                      <li>property Cancel: Boolean;<br>
+          If Cancel is true, the button&rsquo;s OnClick event handler executes when the user presses Esc. Although an application can have more than one Cancel button, the form calls the OnClick event handler only for the first visible button in the tab order. </li>
+                      <li>property Checked: Boolean;<br>
+          Specifies whether the control is checked.</li>
+                      <li>property Default: Boolean;<br>
+          Determines whether the button&rsquo;s OnClick event handler executes when the Enter key is pressed. Although an application can have more than one Default button, the form calls the OnClick event handler only for the first visible button in the tab order. Moreover, any button that has focus becomes the Default button temporarily; hence, if the user selects another button before pressing Enter, the selected button&rsquo;s OnClick event handler executes instead.</li>
+                      <li>property DropDownArrow: Boolean;<br>
+                        Determines if an arrow icon is painted when DropDownMenu is used.</li>
+                      <li>property Flat: Boolean;<br>
+                      Determines whether the button has a 3D border when the mouse is not over the control. </li>
+                      <li>property GlyphLayout: TSpGlyphLayout<br>
+                        TSpGlyphLayout = (ghlGlyphLeft, 
+ghlGlyphTop);<br>
+                      Determines the position of the glyph image. </li>
+                      <li>property GroupIndex: Integer;<br>
+Use GroupIndex to separate  buttons contained within the same windowed control container into several logical groups. </li>
+                      <li>property ModalResult: TModalResult;<br>
+          Determines whether and how the button closes its (modal) parent form. Setting the ModalResult property is an easy way to make clicking the button close a modal form. When a button is clicked, the ModalResult property of its parent form is set to the same value as the button&rsquo;s ModalResult property.</li>
+                  </ul></td>
+              </tr>
+              <tr valign="top">
+                <td class="tableHeaderBlue">TSpTBXSpeedButton<a name="tsptbxspeedbutton"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p><strong>Unit:<br>
+                </strong> SpTBXControls</p>
+                    <p><strong>Hierarchy:<br>
+                    </strong>  TSpTBXTextObject - TSpTBXButtonControl - TSpTBXCustomButton - TSpTBXCustomSpeedButton - TSpTBXSpeedButton</p>
+                    <p><strong>Description:<br>
+                      </strong> TSpTBXSpeedButton extends TSpeedButton with support for unicode captions and custom painting events.<br>
+      TSpTBXSpeedButton inherits many properties, methods, and events from <a href="#tsptbxbutton">TSpTBXButton</a>; see its help topic for details on the properties, methods, and events not listed here.</p>                  </td>
+              </tr>
+              <tr valign="top">
+                <td class="tableHeaderBlue">TSpTBXProgressBar<a name="tsptbxprogressbar"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p><strong>Unit:<br>
+                </strong> SpTBXControls</p>
+                    <p><strong>Hierarchy:<br>
+                    </strong>  TSpTBXTextObject - TSpTBXProgressBar</p>
+                    <p><strong>Description:<br>
+                      </strong> TSpTBXProgressBar is a fully customizable progress bar component, it supports unicode, transparency, custom painting events and has skin type selection, it can render skins and WinXP themes (without using a manifest).<br>
+        TSpTBXProgressBar inherits many properties, methods, and events from <a href="#tsptbxlabel">TSpTBXLabel</a>; see its help topic for details on the properties, methods, and events not listed here.<strong></strong></p>
+                    <p><strong>Published:</strong></p>
+                    <ul>
+                      <li>property CaptionType: TSpTBXProgressCaption;<br>
+          TSpTBXProgressCaption = (pctNone, pctDefault, pctPercentage, pctProgress);<br>
+          Determines how the caption is painted.</li>
+                      <li>property Max: Integer;<br>
+          Specifies the upper limit of the range of possible positions.</li>
+                      <li>property Min: Integer;<br>
+          Specifies the lower limit of the range of possible positions.</li>
+                      <li>property Position: Integer;<br>
+          Specifies the current position of the progress bar.</li>
+                      <li>property Smooth: Boolean;<br>
+          Specifies whether the progress bar is smooth or segmented, this property only works when the ThemeType is thtNone.</li>
+                      <li>property Vertical: Boolean;<br>
+          Specifies whether the progress bar is oriented vertically or horizontally.</li>
+                  </ul></td>
+              </tr>
+              <tr valign="top">
+                <td class="tableHeaderBlue">TSpTBXTrackBar<a name="tsptbxtrackbar"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p><strong>Unit:<br>
+                </strong> SpTBXControls</p>
+                    <p><strong>Hierarchy:<br>
+                    </strong> TWinControl - TTrackBar - TSpTBXTrackBar</p>
+                    <p><strong>Description:<br>
+                      </strong> TSpTBXTrackBar is a fully customizable track bar component, it supports transparency, custom painting events and has skin type selection, it can render skins and WinXP themes (without using a manifest).<br>
+      TSpTBXTrackBar inherits many properties, methods, and events from TTrackBar; see its help topic for details on the properties, methods, and events not listed here.</p>
+                    <p><strong>Public:</strong></p>
+                    <ul>
+                      <li> function MouseInThumb: Boolean;<br>
+        Returns True if the mouse is over the slider of the track bar. </li>
+                      <li>procedure ForceRepaint;<br>
+        Repaints the track bar.</li>
+                    </ul>
+                    <p><strong>Published:</strong></p>
+                    <ul>
+                      <li>property TickMarks: TSpTBXTickMark<br>
+                        TSpTBXTickMark = (tmxBottomRight, tmxTopLeft, tmxBoth, tmxCenter);<br>
+                      Specifies the location of the tick marks.</li>
+                      <li>OnDrawChannel (Sender: TObject; ACanvas: TCanvas; ARect: TRect; const PaintStage: TSpTBXPaintStage; var PaintDefault: Boolean);<br>
+        Occurs when the control needs to paint the channel part of the track bar.<br>
+        <a href="support.htm#custompainting">More info on custom painting events</a></li>
+                      <li>OnDrawChannelTics (Sender: TObject; ACanvas: TCanvas;<br>
+X, Y: Integer; var PaintDefault: Boolean);<br>
+        Occurs when the control needs to paint the channel tics of the track bar.<br>
+        <a href="support.htm#custompainting">More info on custom painting events</a></li>
+                      <li>OnDrawThumb (Sender: TObject; ACanvas: TCanvas; ARect: TRect; const PaintStage: TSpTBXPaintStage; var PaintDefault: Boolean);<br>
+        Occurs when the control needs to paint the slider of the track bar.<br>
+        <a href="support.htm#custompainting">More info on custom painting events</a></li>
+                  </ul></td>
+              </tr>
+              <tr valign="top">
+                <td class="tableHeaderBlue">TSpTBXSplitter<a name="tsptbxsplitter" id="tsptbxsplitter"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p><strong>Unit:<br>
+                </strong> SpTBXControls</p>
+                    <p><strong>Hierarchy:<br>
+                    </strong> TCustomControl - TSpTBXCustomPanel - TSpTBXCustomSplitter - TSpTBXSplitter</p>
+                    <p><strong>Description:<br>
+                      </strong> TSpTBXSplitter is a fully customizable splitter component, it supports transparency, custom painting events and has skin type selection, it can render skins and WinXP themes (without using a manifest).<br>
+      TSpTBXSplitter inherits many properties, methods, and events from TSplitter; see its help topic for details on the properties, methods, and events not listed here.</p>
+                    <p><strong>Public:</strong></p>
+                    <ul>
+                      <li> function ValidateSplitControl(var SplitControl: TControl): Boolean;<br>
+        Returns a valid SplitControl. The SplitControl is the control the splitter should resize.</li>
+                      <li>procedure ChangeSplitControlSize(NewControlSize: Integer);<br>
+                        Resizes the SplitControl.</li>
+                      <li>procedure InvalidateGrip;<br>
+                        Invalidates the  grip
+handle of the splitter.                  </li>
+                      <li>procedure Minimize;<br>
+                        Minimizes the splitter.                      </li>
+                      <li>procedure Restore;<br>
+                        Restores the splitter.                      </li>
+                      <li>procedure Toggle;<br>
+                        Minimizes or
+restores the splitter.                    </li>
+                      <li> property GripRect: TRect;<br>
+                      Returns the grip handle rect of the splitter</li>
+                      <li>                        property Minimized: Boolean;<br>
+                      Returns true if the splitter is minimized.</li>
+                      <li>                        property MouseOverGrip: Boolean;<br>
+                      Returns true if the mouse pointer is over the grip handle.</li>
+                      <li>                        property Moving: Boolean;<br>
+                      Returns true if the splitter is being moved.</li>
+                    </ul>
+                    <p><strong>Published:</strong></p>
+                    <ul>
+                      <li>property GripSize: Integer;<br>
+                      Specifies the grip handle size.</li>
+                      <li>property MinSize: Integer;<br>
+                        Specifies the minimum size, in pixels, of the panes on either side of the splitter.</li>
+                      <li>property ResizeStyle: TResizeStyle;<br>
+                        TResizeStyle = (rsNone, rsLine, rsUpdate, rsPattern);<br>
+                      Specifies the effect of moving the splitter.                      </li>
+                      <li>OnDrawBackground(Sender: TObject; ACanvas: TCanvas; ARect: TRect; const PaintStage: TSpTBXPaintStage; var PaintDefault: Boolean);<br>
+Occurs when the control needs to be painted, the PaintStage indicates the current stage in the drawing process. DefaultDraw indicates whether the control should continue with the default painting after the event handler exits. Set DefaultDraw to false to prevent the drawing of the control after the event handler exits. If DefaultDraw remains set to true, the control continues with the default painting process.<br>
+<a href="support.htm#custompainting">More info on custom painting events</a></li>
+                      <li> OnMoving (Sender: TObject; var NewSize: Integer; var Accept: Boolean);<br>
+                      Occurs when the splitter is being moved.</li>
+                      <li> OnMoved (Sender: TObject);<br>
+                        Occurs after the splitter was moved.</li>
+                  </ul></td>
+              </tr>
+              <tr valign="top">
+                <td class="tableHeaderBlue">TSpTBXPanel<a name="tsptbxpanel"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p><strong>Unit:<br>
+                </strong> SpTBXControls</p>
+                    <p><strong>Hierarchy:<br>
+                    </strong> TCustomControl - TSpTBXCustomPanel - TSpTBXPanel</p>
+                    <p><strong>Description:<br>
+                  </strong> TSpTBXPanel is a fully customizable panel component, it supports transparency, custom painting events and has skin type selection, it can render skins and WinXP themes (without using a manifest).</p>
+                    <p><strong>Public:</strong></p>                    <ul>
+                      <li>procedure InvalidateBackground(InvalidateChildren: Boolean = True);<br>
+                      Invalidates the background of the control. If InvalidateChildren it recursively invalidates all the control childrens. </li>
+                      <li>property HotTracking: Boolean read FHotTracking;<br>
+                        Specifies whether the panel borders are being highlighted.</li>
+                    </ul>
+                    <p> <strong>Published:</strong></p>
+                    <ul>
+                      <li> property Borders: Boolean;<br>
+          Specifies whether the panel borders are visible or not. </li>
+                      <li>property BorderType: TSpTBXPanelBorder;<br>
+                        TSpPanelBorder 
+                        = (pbrRaised, 
+pbrDoubleRaised, 
+pbrSunken, 
+pbrDoubleSunken, 
+pbrBumped, 
+pbrEtched, 
+pbrFramed);<br>
+Specifies the border type.</li>
+                      <li>property HotTrack: Boolean;<br>
+          Specifies whether the panel borders are highlighted when the mouse passes over.</li>
+                      <li>property TBXStyleBackground: Boolean;<br>
+          Use the TBXStyleBackground to paint a TBX style background.</li>
+                      <li>OnDrawBackground(Sender: TObject; ACanvas: TCanvas; ARect: TRect; const PaintStage: TSpTBXPaintStage; var PaintDefault: Boolean);<br>
+          Occurs when the control needs to be painted, the PaintStage indicates the current stage in the drawing process. DefaultDraw indicates whether the control should continue with the default painting after the event handler exits. Set DefaultDraw to false to prevent the drawing of the control after the event handler exits. If DefaultDraw remains set to true, the control continues with the default painting process.<br>
+          <a href="support.htm#custompainting">More info on custom painting events</a></li>
+                  </ul></td>
+              </tr>
+              <tr valign="top">
+                <td class="tableHeaderBlue">TSpTBXGroupBox<a name="tsptbxgroupbox"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p><strong>Unit:<br>
+                </strong> SpTBXControls</p>
+                    <p><strong>Hierarchy:<br>
+                    </strong> TCustomControl - TSpTBXCustomPanel - TSpTBXGroupBox</p>
+                    <p><strong>Description:<br>
+                    </strong>TSpTBXGroupBox is a fully customizable group box component, it supports unicode, transparency, custom painting events and has skin type selection, it can render skins and WinXP themes (without using a manifest). </p>
+                    <p><strong>Published:</strong></p>                    <ul>
+                      <li>property Borders: Boolean;<br>
+          Specifies whether the panel borders are visible or not. </li>
+                      <li>property BorderType: TSpTBXPanelBorder;<br>
+                        TSpPanelBorder 
+                        = (pbrRaised, 
+                        pbrDoubleRaised, 
+                        pbrSunken, 
+                        pbrDoubleSunken, 
+                        pbrBumped, 
+                        pbrEtched, 
+                        pbrFramed);<br>
+                        Specifies the border type.</li>
+                      <li>property TBXStyleBackground: Boolean;<br>
+          Use the TBXStyleBackground to paint a TBX style background.</li>
+                      <li>OnDrawBackground(Sender: TObject; ACanvas: TCanvas; ARect: TRect; const PaintStage: TSpTBXPaintStage; var PaintDefault: Boolean);<br>
+          Occurs when the control needs to be painted, the PaintStage indicates the current stage in the drawing process. DefaultDraw indicates whether the control should continue with the default painting after the event handler exits. Set DefaultDraw to false to prevent the drawing of the control after the event handler exits. If DefaultDraw remains set to true, the control continues with the default painting process.<br>
+          <a href="support.htm#custompainting">More info on custom painting events</a></li>
+                  </ul></td>
+              </tr>
+              <tr valign="top">
+                <td class="tableHeaderBlue">TSpTBXRadioGroup<a name="tsptbxradiogroup" id="tsptbxradiogroup"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p><strong>Unit:<br>
+                </strong> SpTBXControls</p>
+                    <p><strong>Hierarchy:<br>
+                    </strong> TCustomControl - TSpTBXCustomPanel - TSpTBXCustomGroupBox - TSpTBXCustomRadioGroup - TSpTBXRadioGroup</p>
+                    <p><strong>Description:<br>
+                  </strong>TSpTBXRadioGroup is a fully customizable radio group box component, it supports unicode, transparency, custom painting events and has skin type selection, it can render skins and WinXP themes (without using a manifest).<br>
+                  TSpTBXRadioGroup inherits many properties, methods, and events from <a href="#tsptbxgroupbox">TSpTBXGroupBox</a>; see its help topic for details on the properties, methods, and events not listed here.</p>
+                    <p><strong>Published:</strong></p>
+                    <ul>
+                      <li>property Columns: Integer;<br>
+        Specifies number of columns in the radio group. </li>
+                      <li>property ItemIndex: Integer;<br>
+        Indicates which radio button in the group is currently selected.</li>
+                      <li>property Items: TTntStrings;<br>
+        Lists the radio buttons in the radio group.</li>
+                  </ul></td>
+              </tr>
+              <tr valign="top">
+                <td class="tableHeaderBlue">TSpTBXEdit<a name="tsptbxedit"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p><strong>Unit:<br>
+                </strong> SpTBXEditors</p>
+                    <p><strong>Hierarchy:<br>
+                    </strong> TEdit - TSpTBXUnicodeEdit - TSpTBXEdit</p>
+                    <p><strong>Description:<br>
+                      </strong> TSpTBXEdit is a fully customizable edit control, it supports unicode,  custom painting events and has skin type selection, it can render skins and WinXP themes (without using a manifest).<br>
+        TSpTBXEdit inherits many properties, methods, and events from TEdit; see its help topic for details on the properties, methods, and events not listed here.</p>
+                    <p><strong>Public:</strong></p>
+                    <ul>
+                      <li> function AddEditButton(AAlign: TAlign = alRight; AWidth: Integer = -1): TSpTBXEditButton;<br>
+                        Adds a button to the edit control.                      </li>
+                      <li>function HasEditButton: Boolean;<br>
+                      Returns True if the edit  has an edit-button. </li>
+                      <li>function MouseInControl: Boolean;<br>
+            Returns True if the mouse is over the edit control. </li>
+                    </ul>
+                    <p><strong>Published:</strong></p>
+                    <ul>
+                      <li>property Alignment: TAlignment<br>
+          TAlignment = (taLeftJustify, taRightJustify, taCenter); <br>
+          Controls the horizontal placement of the text. Set Alignment to specify how the text is justified within the ClientRect of the control. </li>
+                      <li>property HotTrack: Boolean;<br>
+          Specifies whether the control borders are highlighted when the mouse passes over.</li>
+                      <li>OnDrawBackground(Sender: TObject; ACanvas: TCanvas; ARect: TRect; const PaintStage: TSpTBXPaintStage; var PaintDefault: Boolean);<br>
+          Occurs when the control needs to be painted, the PaintStage indicates the current stage in the drawing process. DefaultDraw indicates whether the control should continue with the default painting after the event handler exits. Set DefaultDraw to false to prevent the drawing of the control after the event handler exits. If DefaultDraw remains set to true, the control continues with the default painting process.<br>
+          <a href="support.htm#custompainting">More info on custom painting events</a></li>
+                  </ul></td>
+              </tr>
+              <tr valign="top">
+                <td class="tableHeaderBlue">TSpTBXButtonEdit<a name="tsptbxbuttonedit" id="tsptbxbuttonedit"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p><strong>Unit:<br>
+                </strong> SpTBXEditors</p>
+                    <p><strong>Hierarchy:<br>
+                    </strong> TEdit - TSpTBXUnicodeEdit - TSpTBXEdit - TSpTBXButtonEdit</p>
+                    <p><strong>Description:<br>
+                      </strong> TSpTBXButtonEdit is a fully customizable edit control, it supports unicode,  custom painting events and has skin type selection, it can render skins and WinXP themes (without using a manifest).<br>
+      TSpTBXButtonEdit inherits many properties, methods, and events from <a href="#tsptbxedit">TSpTBXEdit</a>; see its help topic for details on the properties, methods, and events not listed here.</p>
+                    <p><strong>Published:</strong></p>
+                    <ul>
+                      <li>property EditButton: TSpTBXEditButton<br>
+EditButton is the attached button control.</li>
+                  </ul></td>
+              </tr>
+              <tr valign="top">
+                <td class="tableHeaderBlue">TSpTBXSpinEdit<a name="tsptbxspinedit" id="tsptbxspinedit"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p><strong>Unit:<br>
+                </strong> SpTBXEditors</p>
+                    <p><strong>Hierarchy:<br>
+                    </strong> TEdit - TSpTBXUnicodeEdit - TSpTBXEdit - TSpTBXSpinEdit </p>
+                    <p><strong>Description:<br>
+                      </strong> TSpTBXSpinEdit is a fully customizable edit control, it supports unicode,  custom painting events and has skin type selection, it can render skins and WinXP themes (without using a manifest).<br>
+      TSpTBXSpinEdit inherits many properties, methods, and events from <a href="#tsptbxedit">TSpTBXEdit</a>; see its help topic for details on the properties, methods, and events not listed here.</p>
+                    <p><strong>Published:</strong></p>
+                    <ul>
+                      <li>                       property SpinButton: TSpTBXSpinButton;<br>
+                      SpinButton is the attached spin button.</li>
+                      <li>property SpinOptions: TSpTBXSpinEditOptions;<br>
+                      Property that holds the spin edit options, refer to <a href="reference.htm#tsptbxspineditoptions">TSpTBXSpinEditOptions</a> for more info. </li>
+                      <li> property Value: Extended;<br>
+                        This property conains the numeric value displayed by the control in floaging point format.<br>
+                      When ValueType if set to evtInteger or evtHex, the Value property is automatically rounded to the nearest integer. In this case it may also be convenient to access the numeric value using the AsInteger property.                      </li>
+                      <li>  OnValueChanged(Sender: TObject);<br>
+                      Occurs when the value property is changed.</li>
+                  </ul></td>
+              </tr>
+              <tr valign="top">
+                <td class="tableHeaderBlue">TSpTBXSpinEditOptions<a name="tsptbxspineditoptions"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p><strong>Unit:<br>
+                </strong> SpTBXEditors</p>
+                  <p><strong>Hierarchy:<br>
+                    </strong> TPersistent - TSpTBXSpinEditOptions</p>
+                  <p><strong>Description:<br>
+                      </strong> TSpTBXSpinEditOptions is a class used by the  spin edit controls (<a href="#tsptbxspinedit">TSpTBXSpinEdit</a> and <a href="items.htm#tsptbxspinedititem">TSpTBXSpinEditItem</a>) to hold the spin edit options.</p>
+                  <p><strong>Public:</strong></p>
+                  <ul>
+                      <li> procedure ValueInc;<br>
+                        Increments the value using the Increment property. </li>
+                    <li> procedure ValueDec;<br>
+                      Decrements the value using the Increment property. </li>
+                    <li> property ValueAsInteger: Int64;<br>
+                      Specifies the Value as an integer.</li>
+                  </ul>
+                  <p><strong>Published:</strong></p>
+                  <ul>
+                      <li> property Decimal: TDecimal<br>
+                        Number of digits after the decimal separator.</li>
+                    <li>property Increment: Extended;<br>
+                      Specifies the amount by which the Value property changes when one of the spin buttons is pressed or when either the up or down arrow key is pressed.</li>
+                    <li> property MaxValue: Extended;<br>
+                      Use MaxValue to limit the largest Value that can be entered. </li>
+                    <li> property MinValue: Extended;<br>
+                      Use MinValue to limit the smallest Value that can be entered. </li>
+                    <li> property MouseWheel: Boolean;<br>
+                      When set to True the mouse wheel increments or decrements the Value. </li>
+                    <li> property Postfix: WideString;<br>
+                      The string of characters which appears after the number. Use Postfix to display units, percentage, etc. </li>
+                    <li> property Prefix: WideString;<br>
+                      The string of characters which appears before the number. For example, prefix can be used to display  currency symbols. </li>
+                    <li>  property Value: Extended;<br>
+                      This property conains the numeric value displayed by the control in floaging point format.<br>
+                      When ValueType if set to evtInteger or evtHex, the Value property is automatically rounded to the nearest integer. In this case it may also be convenient to access the numeric value using the AsInteger property. </li>
+                    <li> property ValueSnap: Boolean;<br>
+                      Snap controls how the number is altered using the spin buttons. When the snapping is activated, the new Value after pressing the button is snapped to the grid with the step equal to Increment.<br>
+                      For example, consider the situation when the current Value is 0.32 and Increment is 0.1. When snapping is disabled, pressing the up button will change Value to 0.42, but with snapping the new Value will be 0.4. Correspondingly, pressing the down button in the first case, will change Value to 0.22, and with snapping it will be 0.2. </li>
+                    <li>property ValueType: TSEValueType;<br>
+                      TSEValueType = (evtInteger, evtFloat, evtHex);<br>
+                      Specifies the type of the value. This affects both displaying and editing of the number.</li>
+                  </ul></td>
+              </tr>
+              <tr valign="top">
+                <td class="tableHeaderBlue">TSpTBXColorEdit<a name="tsptbxcoloredit" id="tsptbxcoloredit"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p><strong>Unit:<br>
+                  </strong> SpTBXExtEditors</p>
+                    <p><strong>Hierarchy:<br>
+                    </strong> TEdit - TSpTBXUnicodeEdit - TSpTBXEdit - TSpTBXColorEdit </p>
+                  <p><strong>Description:<br>
+                      </strong> TSpTBXColorEdit is an edit control with a color selection button.<br>
+                    TSpTBXColorEdit inherits many properties, methods, and events from <a href="#tsptbxedit">TSpTBXEdit</a>; see its help topic for details on the properties, methods, and events not listed here.</p>
+                  <p align="center"><img src="images/coloredit.png" alt="ColorEdit" width="234" height="252"></p>
+                  <p><strong>Published:</strong></p>
+                  <ul>
+                      <li>     property SelectedColor: TColor;<br>
+                        Determines the currently selected color.</li>
+                      <li>                        property SelectedFormat: TSpTBXColorTextType;<br>
+                        TSpTBXColorTextType = (<br>
+cttDefault,        // Use color idents (clWhite), if not possible use Delphi format ($FFFFFF)<br>
+cttHTML,           // HTML format (#FFFFFF)<br>
+cttIdentAndHTML    // Use color idents (clWhite), if not possible use HTML format<br>
+);<br>
+                      Determines how the SelectedColor is formated in the edit box.</li>
+                      <li>OnSelectedColorChanged(Sender: TObject);<br>
+                      Occurs when the SelectedColor property is changed.</li>
+                  </ul></td>
+              </tr>
+              <tr valign="top">
+                <td class="tableHeaderBlue">TSpTBXComboBox<a name="tsptbxcombobox"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p><strong>Unit:<br>
+                </strong> SpTBXEditors</p>
+                    <p><strong>Hierarchy:<br>
+                    </strong> TComboBox - TSpTBXComboBox</p>
+                    <p><strong>Description:<br>
+                      </strong> TSpTBXComboBox is a fully customizable edit control, it supports unicode, custom painting events and has skin type selection, it can render skins and WinXP themes (without using a manifest).<br>
+        TSpTBXComboBox inherits many properties, methods, and events from TComboBox; see its help topic for details on the properties, methods, and events not listed here.</p>
+                    <p><strong>Public:</strong></p>
+                    <ul>
+                      <li>function GetDropDownButtonRect: TRect;<br>
+                      Returns the Rect corresponding to the dropdown button. </li>
+                      <li>function GetMouseInDropDownButton: Boolean;<br>
+                      Returns True if the mouse is over the dropdown button.</li>
+                      <li>                        procedure InvalidateFrame;<br>
+                      Invalidates the control frame. </li>
+                      <li>property MouseInControl: Boolean;<br>
+                      Returns True if the mouse is over the edit control. </li>
+                    </ul>
+                    <p><strong>Published:</strong></p>
+                    <ul>
+                      <li>property AutoItemHeight: Boolean;<br>
+                      Use this
+to automatically calculate the ItemHeight property when the
+Style is csDropDown, csDropDownList or csSimple.</li>
+                      <li>property HotTrack: Boolean;<br>
+                        Specifies whether the control borders are highlighted when the mouse passes over.</li>
+                      <li>OnDrawBackground(Sender: TObject; ACanvas: TCanvas; ARect: TRect; const PaintStage: TSpTBXPaintStage; var PaintDefault: Boolean);<br>
+          Occurs when the control needs to be painted, the PaintStage indicates the current stage in the drawing process. DefaultDraw indicates whether the control should continue with the default painting after the event handler exits. Set DefaultDraw to false to prevent the drawing of the control after the event handler exits. If DefaultDraw remains set to true, the control continues with the default painting process.<br>
+          <a href="support.htm#custompainting">More info on custom painting events</a></li>
+                  </ul></td>
+              </tr>
+              <tr valign="top">
+                <td class="tableHeaderBlue">TSpTBXFontComboBox<a name="tsptbxfontcombobox" id="tsptbxfontcombobox"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p><strong>Unit:<br>
+                  </strong> SpTBXExtEditors</p>
+                    <p><strong>Hierarchy:<br>
+                    </strong> TComboBox - TSpTBXComboBox - TSpTBXFontComboBox</p>
+                  <p><strong>Description:<br>
+                      </strong> TSpTBXFontComboBox is a ComboBox that displays all the installed fonts on the system.<br>
+                  TSpTBXFontComboBox inherits many properties, methods, and events from <a href="#tsptbxcombobox">TSpTBXComboBox</a>; see its help topic for details on the properties, methods, and events not listed here.</p>
+                  <p align="center"><img src="images/fontcombobox.png" alt="FontComboBox" width="411" height="210"></p>
+                  <p><strong>Public:</strong></p>
+                  <ul>
+                    <li>procedure MRUAdd(AFontName: TFontName);<br>
+                    Adds a new MRU font to the font list. </li>
+                      <li>                        function MRUDelete(AFontName: TFontName): Boolean;<br>
+                      Deletes a  MRU font from the font list.</li>
+                      <li>                        property MRUCount: Integer read FMRUCount;<br>
+                      Returns the number of MRU fonts on the font list.</li>
+                  </ul>
+                  <p><strong>Published:</strong></p>
+                  <ul>
+                    <li> property FontPreview: Boolean;<br>
+                    Determines if the Font Preview Panel has to be visible when the ComboBox is dropped down.<br>
+                    The Font Preview Panel is a small window that is placed at the right side of the ComboBox list that shows a small sample of the selected font.</li>
+                    <li>                      property FontNamePreview: Boolean;<br>
+                      Determines if the items of the ComboBox list are painted using the font that they represent.                    </li>
+                    <li>property MaxMRUItems: Integer;<br>
+                    Specifies the maximum MRU items the ComboBox should have.</li>
+                    <li>property SelectedFont: TFontName;<br>
+                    Determines the current selected font.</li>
+                    <li>                       OnFontPreview (Sender: TObject; var AText: WideString);<br>
+                      Occurs when the Font Preview Panel is showed, change the AText param to change the text sample that is used to show the selected font.</li>
+                  </ul></td>
+              </tr>
+              <tr valign="top">
+                <td class="tableHeaderBlue">TSpTBXListBox<a name="tsptbxlistbox"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p><strong>Unit:<br>
+                </strong> SpTBXEditors</p>
+                    <p><strong>Hierarchy:<br>
+                    </strong> TListBox  - TSpTBXListBox</p>
+                    <p><strong>Description:<br>
+                      </strong> TSpTBXListBox is a fully customizable listbox control, it supports unicode,  custom painting events and has skin type selection, it can render skins and WinXP themes (without using a manifest).<br>
+        TSpTBXListBox inherits many properties, methods, and events from TListBox; see its help topic for details on the properties, methods, and events not listed here.</p>
+                    <p><strong>Public:</strong></p>
+                    <ul>
+                      <li> property HotTracking: Boolean;<br>
+          Returns True if the mouse is over the control. </li>
+                    </ul>
+                    <p><strong>Published:</strong></p>
+                    <ul>
+                      <li>property HotTrack: Boolean;<br>
+          Specifies whether the control borders are highlighted when the mouse passes over.</li>
+                      <li>OnDrawItemBackground(Control: TWinControl; Index: Integer; Rect: TRect; <br>
+                        State: TOwnerDrawState);<br>
+          Occurs when the items needs to be painted, the State indicates whether the item is selected, checked, focused, and so on.<br>
+          <a href="support.htm#custompainting">More info on custom painting events</a></li>
+                  </ul></td>
+              </tr>
+              <tr valign="top">
+                <td class="tableHeaderBlue">TSpTBXCheckListBox<a name="tsptbxchecklistbox"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p><strong>Unit:<br>
+                </strong> SpTBXEditors</p>
+                    <p><strong>Hierarchy:<br>
+                    </strong>  TCheckListBox -  TSpTBXCheckListBox</p>
+                    <p><strong>Description:<br>
+                      </strong> TSpTBXCheckListBox is a fully customizable check listbox control, it supports unicode,  custom painting events and has skin type selection, it can render skins and WinXP themes (without using a manifest).<br>
+        TSpTBXCheckListBox inherits many properties, methods, and events from TCheckListBox; see its help topic for details on the properties, methods, and events not listed here.</p>
+                    <p><strong>Public:</strong></p>
+                    <ul>
+                      <li> property HotTracking: Boolean;<br>
+          Returns True if the mouse is over the control. </li>
+                    </ul>
+                    <p><strong>Published:</strong></p>
+                    <ul>
+                      <li>property HotTrack: Boolean;<br>
+          Specifies whether the control borders are highlighted when the mouse passes over.</li>
+                      <li>OnDrawItemBackground(Control: TWinControl; Index: Integer; Rect: TRect; <br>
+                        State: TOwnerDrawState);<br>
+          Occurs when the items needs to be painted, the State indicates whether the item is selected, checked, focused, and so on.<br>
+          <a href="support.htm#custompainting">More info on custom painting events</a></li>
+                  </ul></td>
+              </tr>
+              <tr valign="top">
+                <td class="tableHeaderBlue">TSpTBXColorListBox<a name="tsptbxcolorlistbox" id="tsptbxcolorlistbox"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p><strong>Unit:<br>
+                  </strong> SpTBXExtEditors</p>
+                    <p><strong>Hierarchy:<br>
+                    </strong> TListBox - TSpTBXListBox - TSpTBXColorListBox</p>
+                  <p><strong>Description:<br>
+                      </strong> TSpTBXColorListBox is a fully customizable listbox control that lets users select a color, it supports unicode,  custom painting events and has skin type selection, it can render skins and WinXP themes (without using a manifest).<br>
+                    TSpTBXColorListBox inherits many properties, methods, and events from <a href="#tsptbxlistbox">TSpTBXListBox</a>; see its help topic for details on the properties, methods, and events not listed here.</p>
+                  <p><strong>Public:</strong></p>
+                  <ul>
+                      <li> procedure AddColor(AColor: TColor; AColorName: string);<br>
+                    Adds a new color to the ListBox. </li>
+                      <li>                        function ColorCount: Integer;<br>
+                      Returns the color count.</li>
+                      <li>property Colors[Index: Integer]: TColor;<br>
+                      Use this property to get a color from a specified index.</li>
+                      <li>property ColorNames[Index: Integer]: string;<br>
+                      Use this property to get a color name from a specified index. </li>
+                  </ul>
+                  <p><strong>Published:</strong></p>
+                  <ul>
+                      <li> property Selected: TColor;<br>
+                        Determines the selected color.</li>
+                      <li> property Style: TSpTBXColorListBoxStyles;<br>
+                        TSpTBXColorListBoxStyle = (<br>
+clbsStandardColors,   // First 16 RGBI colors + 4 additional extended colors<br>
+clbsSystemColors,     // System colors<br>
+clbsIncludeNone,      // Include clNone color<br>
+clbsIncludeDefault,   // Include clDefault color<br>
+clbsCustomColor,      // First color is customizable<br>
+clbsPrettyNames,      // Draw text with pretty names<br>
+clbsNoneAsTransparent // Draw clNone as transparent color<br>
+);<br>
+Determines how the ListBox is populated.</li>
+                  </ul></td>
+              </tr>
+              <tr valign="top">
+                <td class="tableHeaderBlue">TSpTBXPageScroller<a name="tsptbxpagescroller" id="tsptbxpagescroller"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p><strong>Unit:<br>
+                  </strong> SpTBXPageScroller</p>
+                    <p><strong>Hierarchy:<br>
+                    </strong> TWinControl - TSpTBXPageScroller</p>
+                  <p><strong>Description:<br>
+                    </strong> TSpTBXPageScroller serves the same purpose as standard TPageScroller and TScrollBox allowing access to child controls when the client area is larger than the window of the page scroller itself. However, there are some substantial differences in the way it is handled. For example, TSpTBXPageScroller allows having child controls with the Align property set.<br>
+                  Currently, the proper alignment of child controls can be obtained if their Align property is set to alTop, alClient, or alBottom for vertical page scrollers, and alLeft, alClient, or alRight for horizontal page scrollers. The further restriction is that only one control amongst children can have alClient alignment.</p>
+                  <p><strong>Public:</strong></p>
+                  <ul>
+                      <li> property Position: Integer;<br>
+                    Specifies the scroll position of the page scroller.</li>
+                  </ul>
+                  <p><strong>Published:</strong></p>
+                  <ul>
+                      <li> property AutoRange: Boolean;<br>
+                      When set to True the page scroller calculates the range of scrolling automatically.</li>
+                      <li>                        property AutoScroll: Boolean;<br>
+                        Controls how the scrolling is activated. If AutoScroll is set to True (default), the scrolling starts when the mouse cursor is hovered over a scroll button button. When AutoScroll is set to False, the button needs to be pushed.</li>
+                      <li>                        property ButtonSize: Integer;<br>
+                        The size of scrolling buttons. The scrolling buttons are visible only when Range exceeds the size of the control.</li>
+                      <li>                        property Margin: Integer;<br>
+                        Specifies the margin between the contained controls and the inside edges of the page scroller.</li>
+                      <li>                        property Orientation: TSpTBXPageScrollerOrientation;<br>
+                        TSpTBXPageScrollerOrientation = (tpsoVertical, tpsoHorizontal);<br>
+                        Defines the direction of scrolling.</li>
+                      <li>                        property Range: Integer;<br>
+                        Defines the range of scrolling. Setting range explicitly will also set AutoRange to False.</li>
+                  </ul></td>
+              </tr>
+              <tr valign="top">
+                <td class="tableHeaderBlue">TSpTBXCustomizer<a name="tsptbxcustomizer"></a></td>
+              </tr>
+              <tr valign="top">
+                <td><p><strong>Unit:<br>
+                </strong> SpTBXCustomizer</p>
+                    <p><strong>Hierarchy:<br>
+                    </strong> TComponent - TSpTBXCustomizer</p>
+                    <p><strong>Description:<br>
+                    </strong> TSpTBXCustomizer is a toolbar customizer component, it supports unicode, Drag and Drop and skins.</p>
+                    <p>To add/edit/delete items just double-click the component in the form designer to invoke the Item Editor.</p>
+                    <p><strong>Public:</strong></p>
+                    <ul>
+                      <li> procedure Close;<br>
+          Closes the customizer form.</li>
+                      <li>procedure DeleteLayout;<br>
+                      Deletes the specified layout from an ini file or registry. </li>
+                      <li>procedure Load;<br>
+          Loads the items and layouts from an ini file or registry.</li>
+                      <li>procedure LoadLayout<br>
+                        Loads a specified layout.</li>
+                      <li>procedure Reset;<br>
+                      Restores the default toolbar items position and customizer options.</li>
+                      <li>procedure Save;<br>
+                        Saves the items and layouts to an ini file or registry.</li>
+                      <li> procedure SaveLayout<br>
+          Saves the current layout.</li>
+                      <li>procedure Show;<br>
+                        Shows the customizer form.</li>
+                      <li>procedure ShowEmbedded(AParent: TWinControl = nil);<br>
+                        Embeds and shows the customizer form. You can embed the customizer to another control, but the form of this control cannot be modal or the drag & drop will not work.
+You also need to close the customizer explicitly by calling the Close method.</li>
+                      <li>property CustomizeForm: TSpTBXCustomCustomizeForm;<br>
+          Gets the customizer form instance. </li>
+                      <li>property Layouts: TStringList;<br>
+          Gets the layouts list.</li>
+                      <li> property Showing: Boolean;<br>
+          Showing is true when the form customizer is visible.</li>
+                    </ul>
+                    <p><strong>Published:</strong></p>
+                    <ul>
+                      <li> property MenuBar: TTBCustomToolbar;<br>
+          The customizer uses this property to fill all the items shortcuts.</li>
+                      <li> property Images: TCustomImageList;<br>
+          Provides a list of icon images to display for each item in the control.</li>
+                      <li> property Items: TTBRootItem;<br>
+          Customizer items.</li>
+                      <li>property SaveFormState: Boolean;<br>
+                      When True it will save the form state to the ini file or registry. </li>
+                      <li> OnShow (Sender: TObject);<br>
+          Occurs when the customizer form is showed.</li>
+                      <li>OnClose (Sender: TObject);<br>
+          Occurs when the customizer form is closed.</li>
+                      <li> OnGetCustomizeForm (Sender: TObject; var CustomizeFormClass: TSpTBXCustomizeFormClass);<br>
+          Use this event to replace the customizer form type.</li>
+                      <li>OnGetShortcutsList (Sender: TObject; AItem: TTBCustomItem; var Accept: Boolean)<br>
+          Use this event to filter the Shortcuts list. </li>
+                      <li>OnLoad (Sender: TObject; ExtraOptions: TStringList);<br>
+          Occurs when the items customizations are loaded from the ini file or registry.</li>
+                      <li>OnSave (Sender: TObject; ExtraOptions: TStringList)<br>
+          Occurs when the items customizations are saved to the ini file or registry.<br>
+                      To load and store your custom data or options related to the application use the OnLoad and OnSave events:<br>
+                      <table width="925" height="281" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td width="410" height="281"><pre>
+procedure TForm1.SpTBXCustomizer1Save(Sender: TObject;
+  LayoutName: String; ExtraOptions: TStringList);
+begin
+  // Save the Form's font size
+  ExtraOptions.Values['FontSize'] := IntToStr(Font.Size);
+end;
+  
+procedure TForm1.SpTBXCustomizer1Load(Sender: 
+TObject; LayoutName: String; ExtraOptions: TStringList);
+var
+  S: string;
+begin
+  // Restore the Form's font size
+  S := ExtraOptions.Values['FontSize'];
+  if S <> '' then
+    Font.Size := StrToInt(S);
+end;</pre></td>
+                        </tr>
+                      </table>
+                      </li>
+<li>OnLayoutLoad (Sender: TObject; LayoutName: string; ExtraOptions: TStringList);<br>
+                      Occurs when a layout is loaded.</li>
+                      <li>OnLayoutSave (Sender: TObject; LayoutName: string; ExtraOptions: TStringList);<br>
+                      Occurs when a layout is saved.<br>
+                      The layout is just the position and visibility of the toolbars and dockable panels, but you can store more options related to it.
+To store custom data or options related to a specific layout use OnLayoutLoad and OnLayoutSave events:<br>
+<table width="925" height="302" border="0" cellpadding="0" cellspacing="0">
+                          <tr>
+                            <td width="410" height="302"><pre>procedure TForm1.SpTBXCustomizer1LayoutSave(Sender: 
+TObject;
+  LayoutName: String; ExtraOptions: TStringList);
+begin
+  // Save the Form's WindowState
+  ExtraOptions.Values['MyOption'] := IntToStr(Ord(WindowState));
+end;
+  
+procedure TForm1.SpTBXCustomizer1LayoutLoad(Sender: 
+TObject; LayoutName: String; ExtraOptions: TStringList);
+var
+  S: string;
+begin
+  // Restore the Form's WindowState
+  S := ExtraOptions.Values['MyOption'];
+  if S <> '' then
+    WindowState := TWindowState(StrToInt(S));
+end;</pre></td>
+                          </tr>
+                        </table>
+                      </li>
+                      <li>OnIconOptionsChange (Sender: TObject; Toolbar: TTBCustomToolbar; <br>
+                        UseSmallImages: Boolean);<br>
+                      Occurs when the user changes the toolbar icon options in the customizer form.</li>
+                      <li>OnSkinChange (Sender: TObject)<br>
+                      Occurs when the theme is changed.</li>
+                  </ul></td>
+              </tr>
+            </table>
+            <p>&nbsp;</p>
+            <!-- InstanceEndEditable --></td>
+          <td width="159" height="405" align="left" valign="top" bgcolor="#FFFFFF">
+            <table width="145"  border="0" align="center" cellpadding="0" cellspacing="0" class="menu">
+              <tr>
+                <td valign="top" class="menuMiddle">
+                  <p><span class="menuTitle">SpTBXLib</span><a href="index.htm">Home</a><a href="../skineditor/index.htm">Skin Editor</a><a href="registration.htm">Register</a><a href="downloads.htm">Downloads</a><a href="Release%20History.txt">Release History</a>
+                    <span class="menuTitle">Support</span><a href="support.htm">Support</a><a href="support.htm#license">License</a><a href="support.htm#installation">Installation</a><a href="support.htm#gettingstarted">Getting Started</a><a href="support.htm#faq">FAQ</a><a href="reference.htm">Reference</a> <a href="items.htm">Items Reference</a> 
+                    <span class="menuTitle">Resources</span><a href="http://www.jrsoftware.org">TB2K</a></p>
+                </td>
+              </tr>
+          </table>
+            <!-- InstanceBeginEditable name="edright2" --><!-- InstanceEndEditable -->
+            <p>&nbsp;</p>						
+	  <div align="center">
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="2533519">
+<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG_global.gif" border="0" name="submit" alt="">
+<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+	  </div>			
+            <p>&nbsp;</p>			
+          <p>&nbsp;</p>		  </td>
+        </tr>
+        <tr>
+          <td width="159" align="left" valign="bottom" bgcolor="#FFFFFF">
+            <p>&nbsp;</p>					  
+          <p>&nbsp;</p></td>
+        </tr>
+        <tr>
+          <td background="../images/footerleft.png">&nbsp;</td>
+          <td colspan="2" valign="top" background="../images/footer.png" bgcolor="#FFFFFF"><p align="center" class="footer">&nbsp;</p>          </td>
+          <td background="../images/footerright.png">&nbsp;</td>
+        </tr>
+</table>      
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+<!-- InstanceEnd --></html>
