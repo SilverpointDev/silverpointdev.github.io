@@ -54,15 +54,15 @@
             <h3>Installation<a name="installation"></a></h3>
           <p>Requirements:</p>
           <ul>
-            <li> RAD Studio XE or newer</li>
+            <li> RAD Studio XE2 or newer</li>
             <li>  Jordan Russell's Toolbar 2000 (<a href="http://www.jrsoftware.org">http://www.jrsoftware.org</a>)</li>
-            <li> TB2K patch (<a href="http://www.silverpointdevelopment.com/sptbxlib/downloads.htm">http://www.silverpointdevelopment.com/sptbxlib/downloads.htm</a>)</li>
           </ul>
           <p>To install SpTBXLib manually:</p>
           <ul>
-            <li> Install TB2K and apply  <a href="downloads.htm">TB2K patch</a> or make the changes manually <a href="http://www.silverpointdevelopment.com/sptbxlib/support.htm#1">http://www.silverpointdevelopment.com/sptbxlib/support.htm#1</a></li>
+            <li> Install TB2K and apply  <a href="#1">TB2K patch</a></li>
             <li> If you have a previous version of SpTBXLib installed in the IDE remove it from Component-&gt;Install Packages, select SpTBXLib from the list and press the Remove button.</li>
-            <li> Add the SpTBXLib 'Source' directory to Tools-&gt;Options-&gt;Environment Options-&gt;Library-&gt;Library Path</li>
+            <li> Add the SpTBXLib 'Source' directory to:<br> 
+            Tools-&gt;Options-&gt;Language-&gt;Delphi-&gt;Library-&gt;Library Path</li>
             <li> Open the <strong>SpTBXLibDsgn_*.dpk</strong> design package corresponding to the IDE version, press <strong>Compile</strong> and then press <strong>Install</strong>, close the package window (don't save the changes).</li>
           </ul>
           <p>To install SpTBXLib with <a href="../multiinstaller/index.htm">Silverpoint MultiInstaller</a>:</p>
@@ -122,8 +122,10 @@
               <tr valign="top">
                 <td><p>You have 2 options to install TB2K:</p>
                   <ol>
-                    <li> Use <a href="../multiinstaller/index.htm">MultiInstaller</a> to install TB2K and <a href="downloads.htm">TB2K patch</a> </li>
-                    <li> Install TB2K and apply <a href="downloads.htm">TB2K patch</a> manually.</li>
+                    <li> Use <a href="../multiinstaller/index.htm">MultiInstaller</a> to install TB2K and TB2K patch </li>
+                    <li>Manually apply the TB2K patch:<br>
+                      1) Copy the contents of SpTBXLib\TB2K Patch folder to TB2K\Source folder.<br>
+                      2) Run tb2kpatch.bat</li>
                   </ol>                </td>
               </tr>
               <tr>
@@ -270,11 +272,10 @@ end;
             <!-- InstanceBeginEditable name="edright2" --><!-- InstanceEndEditable -->
             <p>&nbsp;</p>						
 	  <div align="center">
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="2533519">
-<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG_global.gif" border="0" name="submit" alt="">
-<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+<form action="https://www.paypal.com/donate" method="post" target="_top">
+<input type="hidden" name="hosted_button_id" value="GL24RPUCBBXGU" />
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
 </form>
 	  </div>			
             <p>&nbsp;</p>			
